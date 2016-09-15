@@ -250,7 +250,7 @@ INSTALLED_APPS = (
     "mezzanine.accounts",
     "mezzanine.mobile",
     # customize apps
-    "tks.apps.calrendar",
+    "tks.apps.calendar",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
