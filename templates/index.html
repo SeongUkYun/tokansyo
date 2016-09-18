@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n staticfiles %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
 {% block title %}{% trans "Home" %}{% endblock %}
@@ -8,7 +8,37 @@
 <li class="active">{% trans "Home" %}</li>
 {% endblock %}
 
+{% block extra_css %}
+<link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      auto: true,
+      infiniteLoop: true
+    });
+  });
+</script>
+{% endblock %}
+
 {% block main %}
+<ul class="bxslider">
+  <li><img src="{% static 'images/main_image2.jpg' %}"></li>
+  <li><img src="{% static 'images/main_image3.jpg' %}"></li>
+</ul>
+<ul class="banner">
+  <div style="width: 240px; margin-right: 0px;">
+    <li><img src="{% static 'images/banner_introduce.jpg' %}"></li></div>
+  <div style="width: 240px; margin-right: 0px;">
+    <li><img src="{% static 'images/banner_recruit.jpg' %}"></li></div>
+  <div style="width: 240px; margin-right: 0px;">
+    <li><img src="{% static 'images/banner_member.jpg' %}"></li></div>
+  <div style="width: 240px; margin-right: 0px;">
+    <li><img src="{% static 'images/banner_inquery.jpg' %}"></li></div>
+</ul>
 {% blocktrans %}
 <h2>Congratulations!</h2>
 <p>
