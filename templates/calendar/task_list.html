@@ -3,6 +3,7 @@
 {% block main %}
 {% for task in tasks %}
   <a href="{{ task.id }}/">{{ task.title }}</a>
+  <hr />
 {% endfor %}
 {% endblock %}
 

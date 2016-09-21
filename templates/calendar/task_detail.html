@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block main %}
-  {{ object.date }} - {{ object.title }} - {{ object.content }}
+<h2>{{ object.title }}</h2>
+<hr />
+<table>
+  <tr><th height="50px" width="30%">日付</th><td>{{ object.date }}</td></tr>
+  <tr><th height="50px" width="30%">場所</th><td>{{ object.locate }}</td></tr>
+  <tr><th height="50px" width="30%">内容</th><td>{{ object.content }}</td><tr>
+</table>
 {% endblock %}
 
