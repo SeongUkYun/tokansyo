@@ -10,7 +10,7 @@ class MemberMixin(object):
 
 class MemberListView(MemberMixin, generic.ListView):
     paginate_by = 10
-    template_name= 'member/member_list.html'
+    template_name = 'member/member_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(MemberListView, self).get_context_data(**kwargs)

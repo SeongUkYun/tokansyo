@@ -6,13 +6,12 @@ from django.db import models
 
 class recruit(models.Model):
 
-    EMPLOYMENT_TYPES = ((10, '正社員'), (20, '契約社員'), (30, 'パートタイム'))
+    STATUS_TYPES = (('D', '申請中'), ('P', '承認'), ('C', '却下'))
 
-    member = models.ForeignKey('member.member', on_delete=models.CASCADE, related_name='company')
-    work_type = models.CharField(max_length=256)
-    work_descript = models.TextField()
-    condition = models.TextField()
-    employment_type = models.IntegerField(choices=EMPLOYMENT_TYPES)
-    contact_to = models.CharField(max_length=128)
+    company_name = models.CharField(max_length=128, null=False)
+    address = models.TextField(null=False)
+    tel = models.CharField(max_length=14, null=False)
+    descript = models.TextField()
+    status = models.CharField(max_length=1, default='D', choices=STATUS_TYPES)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()

@@ -4,6 +4,6 @@ from models import recruit as Recruit
 
 @admin.register(Recruit)
 class recruitAdmin(admin.ModelAdmin):
-    list_display = ['work_type', 'employment_type', 'start_date', 'end_date']
+    list_display = ['company_name', 'status', 'start_date', 'end_date']
 
-    list_filter = ['employment_type']
+    list_filter = ['status']

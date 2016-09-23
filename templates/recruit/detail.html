@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load easy_maps_tags %}
+
+{% block main %}
+<table>
+  <tr><th height="50px" width="30%">会社名</th><td>{{ object.company_name }}</td></tr>
+  <tr><th height="50px" width="30%">住所</th><td>{{ object.address }}</td></tr>
+  <tr><th height="50px" width="30%">電話</th><td>{{ object.tel }}</td></tr>
+  <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
+  <tr><th height="50px" width="30%">求人情報</th><td>{{ object.descript }}</td></tr>
+</table>
+{% endblock %}

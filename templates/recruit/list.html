@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% for recruit in recruits %}
+{{ recruit.id }} <a href="{{ recruit.id }}/">{{ recruit.company_name }}</a><br />
+<hr />
+{% endfor %}
+{% endblock %}
+
