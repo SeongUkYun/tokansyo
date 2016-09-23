@@ -1,4 +1,7 @@
 Mezzanine==4.2.0
-mezzanine-events=0.1.4
 psycopg2==2.6.2
 backports.csv==1.0.2
+django-appconf==1.0.2
+django-classy-tags==0.6.2
+django-easy-maps==0.9.2
+geopy==1.11.0

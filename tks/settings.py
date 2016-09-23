@@ -249,6 +249,8 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "mezzanine.accounts",
     "mezzanine.mobile",
+    # custom added apps
+    "easy_maps",
     # customize apps
     "tks.apps.calendar",
     "tks.apps.member",
