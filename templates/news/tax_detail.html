@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load easy_maps_tags %}
+
+{% block main %}
+<table>
+  <tr><th height="50px" width="30%">主題</th><td>{{ object.title }}</td></tr>
+  <tr><th height="50px" width="30%">要約</th><td>{{ object.descript }}</td></tr>
+</table>
+{% endblock %}

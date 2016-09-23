@@ -255,6 +255,7 @@ INSTALLED_APPS = (
     "tks.apps.calendar",
     "tks.apps.member",
     "tks.apps.recruit",
+    "tks.apps.news",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,

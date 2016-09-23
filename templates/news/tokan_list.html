@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% for news in newses %}
+{{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
+<hr />
+{% endfor %}
+{% endblock %}
+
