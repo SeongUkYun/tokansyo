@@ -252,6 +252,7 @@ INSTALLED_APPS = (
     # custom added apps
     "easy_maps",
     # customize apps
+    "tks.apps.tokansho",
     "tks.apps.calendar",
     "tks.apps.member",
     "tks.apps.recruit",

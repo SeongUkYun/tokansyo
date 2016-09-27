@@ -15,3 +15,5 @@ class news(models.Model):
     descript = models.TextField()
     image = models.ImageField(upload_to='media/uploads/news/', blank=True)
     news_file = models.FileField(upload_to='media/uploads/news/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

@@ -39,6 +39,21 @@
   <div style="width: 240px; margin-right: 0px;">
     <li><img src="{% static 'images/banner_inquery.jpg' %}"></li></div>
 </ul>
+{% for task in tasks %}
+  {{ task.id }} <a href="{{ task.id }}/">{{ task.title }}</a><br />
+{% endfor %}
+{% for recruit in recruits %}
+  {{ recruit.id }} <a href="{{ recruit.id }}/">{{ recruit.title }}</a><br />
+{% endfor %}
+{% for news in tokanNews %}
+  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
+{% endfor %}
+{% for news in taxNews %}
+  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
+{% endfor %}
+{% for news in weekNews %}
+  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
+{% endfor %}
 {% blocktrans %}
 <h2>Congratulations!</h2>
 <p>
