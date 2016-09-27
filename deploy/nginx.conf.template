@@ -41,6 +41,13 @@ server {
         expires 30d;
     }
 
+    location /media/uploads/news/ {
+        root            /home/ubuntu/mezzanine/tks/static/media;
+        access_log      off;
+        log_not_found   off;
+        expires 30d;
+    }
+
     location /robots.txt {
         root            %(proj_path)s/static;
         access_log      off;
