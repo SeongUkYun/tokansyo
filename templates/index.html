@@ -24,35 +24,81 @@
 {% endblock %}
 
 {% block main %}
+<table align="center">
+  <tr>
 <ul class="bxslider">
   <li><img src="{% static 'images/main_image2.jpg' %}"></li>
   <li><img src="{% static 'images/main_image3.jpg' %}"></li>
 </ul>
-<ul class="banner">
-  <div style="width: 240px; margin-right: 0px;">
-    <li><img src="{% static 'images/banner_introduce.jpg' %}"></li></div>
-  <div style="width: 240px; margin-right: 0px;">
-    <li><img src="{% static 'images/banner_recruit.jpg' %}"></li></div>
-  <div style="width: 240px; margin-right: 0px;">
-    <li><img src="{% static 'images/banner_member.jpg' %}"></li></div>
-  <div style="width: 240px; margin-right: 0px;">
-    <li><img src="{% static 'images/banner_inquery.jpg' %}"></li></div>
-</ul>
-{% for task in tasks %}
-  {{ task.id }} <a href="{{ task.id }}/">{{ task.title }}</a><br />
-{% endfor %}
-{% for recruit in recruits %}
-  {{ recruit.id }} <a href="{{ recruit.id }}/">{{ recruit.title }}</a><br />
-{% endfor %}
-{% for news in tokanNews %}
-  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
-{% endfor %}
-{% for news in taxNews %}
-  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
-{% endfor %}
-{% for news in weekNews %}
-  {{ news.id }} <a href="{{ news.id }}/">{{ news.title }}</a><br />
-{% endfor %}
+  </tr>
+  <tr>
+    <td><img src="{% static 'images/banner_introduce.jpg' %}"></td>
+    <td><img src="{% static 'images/banner_recruit.jpg' %}"></td>
+    <td><img src="{% static 'images/banner_member.jpg' %}"></td>
+    <td><img src="{% static 'images/banner_inquery.jpg' %}"></td>
+  </tr>
+</table>
+
+<div style="font-size: 17pt;" align="center">
+  <h3>今後の予定</h3>
+</div>
+<div style="font-size: 15pt;">
+  <table align="center">
+  {% for task in tasks %}
+  {% if forloop.counter == 1 %}
+    <tr><td width="400" height="50"><a href="{{ task.id }}/">{{ task.title }}</a></td>
+  {% else %}
+    <td width="400" height="50"><a href="{{ task.id }}/">{{ task.title }}</a></td></tr>
+  {% endif %}
+  {% endfor %}
+  </table>
+</div>
+
+<div style="font-size: 17pt;" align="center">
+  <h3>リクルート</h3>
+</div>
+<div style="font-size: 15pt;">
+  <table align="center">
+  {% for recruit in recruits %}
+  {% if forloop.counter == 1 %}
+  <tr><td width="400" height="50"><a href="{{ recruit.id }}/">{{ recruit.title }}</a></td>
+  {% else %}
+  <td width="400" height="50"><a href="{{ recruit.id }}/">{{ recruit.title }}</a></td></tr>
+  {% endif %}
+  {% endfor %}
+  </table>
+</div>
+
+<div style="font-size: 17pt;" align="center">
+  <h3>ニューズ</h3>
+</div>
+<div style="font-size: 15pt;">
+  <table align="center">
+  {% for news in tokanNews %}
+  {% if forloop.counter == 1 %}
+  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
+  {% else %}
+  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
+  {% endif %}
+  {% endfor %}
+
+  {% for news in taxNews %}
+  {% if forloop.counter == 1 %}
+  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
+  {% else %}
+  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
+  {% endif %}
+  {% endfor %}
+
+  {% for news in weekNews %}
+  {% if forloop.counter == 1 %}
+  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
+  {% else %}
+  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
+  {% endif %}
+  {% endfor %}
+  </table>
+</div>
 {% blocktrans %}
 {% endblocktrans %}
 {% endblock %}
