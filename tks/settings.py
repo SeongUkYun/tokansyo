@@ -248,7 +248,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     "mezzanine.twitter",
     "mezzanine.accounts",
-    "mezzanine.mobile",
+    # "mezzanine.mobile",
     # custom added apps
     "easy_maps",
     # customize apps
