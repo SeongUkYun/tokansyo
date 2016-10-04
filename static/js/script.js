@@ -111,7 +111,7 @@ jQuery(function ($) {
             $('#spot_page_'+index_ary[1]).addClass('aon');
 
             $('.spot_image2').css('left',temp_left+'px').css('display','block');
-            $('.spot_image2 img').attr('src','../imgs/sub/sub_visual_0'+temp_index+'.jpg');
+            $('.spot_image2 img').attr('src','../../static/images/sub/sub_visual_0'+temp_index+'.jpg');
 
             if (support_css_check == 1) {
                 $('.slider').transition({x:'+='+t_left2},change_speed,function() {
@@ -126,7 +126,7 @@ jQuery(function ($) {
         }
 
         function end_move_transition(newIndexAry) {
-            $('.spot_image img').attr('src','../imgs/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
+            $('.spot_image img').attr('src','../../static/images/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
             $('.slider').transition({x:'0'},0);
             $('.spot_image2').css('display','none').css('left','0px');
 
@@ -140,7 +140,7 @@ jQuery(function ($) {
         }
 
         function end_move(newIndexAry) {
-            $('.spot_image img').attr('src','../imgs/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
+            $('.spot_image img').attr('src','../../static/images/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
             $('.spot_image2').css('left','0px');
             $('.slider').css('left','0px');
 

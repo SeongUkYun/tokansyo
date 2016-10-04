@@ -24,7 +24,7 @@ var supports = (function() {
 
 jQuery(function ($) {
 	$(document).ready(function() {
-        var image_max = 2;
+        var image_max = 3;
         var current_index = 1;
         var checkIng = 0;
         var change_speed = 700;
@@ -111,7 +111,7 @@ jQuery(function ($) {
             $('#spot_page_'+index_ary[1]).addClass('aon');
 
             $('.spot_image2').css('left',temp_left+'px').css('display','block');
-            $('.spot_image2 img').attr('src', '../static/images/main/main_visual_0'+temp_index+'.jpg');
+            $('.spot_image2 img').attr('src','/static/images/sub/sub_visual_0'+temp_index+'.jpg');
 
             if (support_css_check == 1) {
                 $('.slider').transition({x:'+='+t_left2},change_speed,function() {
@@ -126,7 +126,7 @@ jQuery(function ($) {
         }
 
         function end_move_transition(newIndexAry) {
-            $('.spot_image img').attr('src', '../static/images/main/main_visual_0'+newIndexAry[1]+'.jpg')
+            $('.spot_image img').attr('src','/static/images/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
             $('.slider').transition({x:'0'},0);
             $('.spot_image2').css('display','none').css('left','0px');
 
@@ -140,7 +140,7 @@ jQuery(function ($) {
         }
 
         function end_move(newIndexAry) {
-            $('.spot_image img').attr('src', '../static/images/main/main_visual_0'+newIndexAry[1]+'.jpg')
+            $('.spot_image img').attr('src','/static/images/sub/sub_visual_0'+newIndexAry[1]+'.jpg')
             $('.spot_image2').css('left','0px');
             $('.slider').css('left','0px');
 
@@ -158,7 +158,13 @@ jQuery(function ($) {
 
             if(current_index == t_id) { return; }
 
-            if(t_id > current_index) {
+            if(current_index == image_max && t_id == 1) {
+                move(right_dir,t_id);
+            }
+            else if(current_index == 1 && t_id == image_max) {
+                move(left_dir,t_id);
+            }
+            else if(t_id > current_index) {
                 move(right_dir,t_id);
             }
             else {
@@ -201,128 +207,8 @@ jQuery(function ($) {
             $('.slider').transition({x:'0'},0);
             $('.slider').css('left','0px');
             $('.spot_image2').css('left','0px');
-
-            // pmenu
-            if(window_width <= 518) {
-                pmenu_li_moveval = $('.pmenu').width();
-                $('.ins_pmenu li').width(pmenu_li_moveval);
-
-                $('.ins_pmenu').width($('.ins_pmenu li').width()*4 + 8);
-            }
-            else if(window_width <= 759) {
-                pmenu_li_moveval = $('.pmenu').width()/2 -2;
-                $('.ins_pmenu li').width(pmenu_li_moveval);
-
-                $('.ins_pmenu').width($('.ins_pmenu li').width()*4 + 8);
-            }
-            else {
-                $('.ins_pmenu li').css('width','calc(25% - 2px)');
-
-                $('.ins_pmenu').css('width', '100%');
-            }
         });
         $(window).resize();
-
-        $('.btn_pnb_left').click(function() {
-            if(checkIng !== 0) { return; }
-            checkIng = 1;
-
-            if (support_css_check == 1) {
-                p_move_val = (pmenu_li_moveval + 2);
-
-                $('.ins_pmenu li').last().insertBefore($('.ins_pmenu li').eq(0));
-                $('.ins_pmenu').css('x',p_move_val*-1+'px');
-
-                $('.ins_pmenu').transition({x:'+='+p_move_val},change_speed,function() {
-                    checkIng = 0;
-                });
-            }
-            else {
-                p_move_val = (pmenu_li_moveval + 2);
-
-                $('.ins_pmenu li').last().insertAfter($('.ins_pmenu li').eq(0));
-                $('.ins_pmenu').css('left',p_move_val*-1+'px');
-
-                $('.slider').animate({left:p_move_val},change_speed,function() {
-                    checkIng = 0;
-                });
-            }
-        });
-        $('.btn_pnb_rig').click(function() {
-            if(checkIng !== 0) { return; }
-            checkIng = 1;
-
-            if (support_css_check == 1) {
-                p_move_val = (pmenu_li_moveval + 2)*-1;
-                $('.ins_pmenu').transition({x:'+='+p_move_val},change_speed,function() {
-                    $('.ins_pmenu li').eq(0).insertAfter($('.ins_pmenu li').last());
-                    $('.ins_pmenu').transition({x:'0'},0);
-                    checkIng = 0;
-                });
-            }
-            else {
-                p_move_val = (pmenu_li_moveval + 2)*-1;
-                $('.slider').animate({left:p_move_val},change_speed,function() {
-                    $('.ins_pmenu li').eq(0).insertAfter($('.ins_pmenu li').last());
-                    $('.ins_pmenu').css('left','0px');
-                    checkIng = 0;
-                });
-            }
-        });
-
-        var banner_dir = -1;
-        function move_loop() {
-            var c_left = $('.lst_b1').css('left');
-            var c_left_val = c_left.substr(0, c_left.length - 2) * banner_dir;
-            var t_move_val = (parseInt(c_left_val) + 1)*banner_dir;
-            
-            if(t_move_val > 68) {
-                if(banner_dir == 1) {
-                    for(var i = 0; i < 28; i++) {
-                        $('.lst_b1 li').last().insertAfter($('.lst_b1 li').eq(0));
-                        $('.lst_b1 li').eq(0).insertAfter($('.lst_b1 li').eq(1));
-                    }
-
-                    $('.lst_b1').css('left','-5564px');
-                }
-                
-                move_loop();
-                return;
-            }
-            else if(t_move_val < -5564) {
-                if(banner_dir == -1) {
-                    for(var i = 0; i < 28; i++) {
-                        $('.lst_b1 li').eq(0).insertAfter($('.lst_b1 li').last());
-                    }
-
-                    $('.lst_b1').css('left','67px');
-                }
-
-                move_loop();
-                return;
-            }
-
-            $('.lst_b1').stop().clearQueue().animate({left:t_move_val+'px'}, 20, 'linear', move_loop);
-        }
-        move_loop();
-
-        $('.lst_b1').hover(function(){
-            $('.lst_b1').stop().clearQueue();
-        }, function() {
-            move_loop();
-        });
-
-        $('.btn_roll_left').click(function() {
-            console.log('left');
-            banner_dir = -1;
-            move_loop();
-        });
-
-        $('.btn_roll_rig').click(function() {
-            console.log('right');
-            banner_dir = 1;
-            move_loop();
-        });
 
         $('.btn_menu_m').click(function() {
             $('#layer_bg').toggle();

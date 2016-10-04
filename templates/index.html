@@ -91,12 +91,12 @@
 					</li>
 					<li class="m2">
 						<strong>
-							<a href="./news/" title="ニュース">ニュース</a>
+							<a href="./news/tokan/" title="ニュース">ニュース</a>
 						</strong>
 					</li>
 					<li class="m3">
 						<strong>
-							<a href="./schedule/" title="スケジュール">スケジュール</a>
+							<a href="./calendar/" title="スケジュール">スケジュール</a>
 						</strong>
 					</li>
 					<li class="m4">
@@ -224,7 +224,7 @@
           <a href="./news/tokan/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
             <span class="cnt">{{ news.title }}</span>
-						<span class="date">2016-08-02</span>
+            <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>
         {% endfor %}
@@ -233,7 +233,7 @@
           <a href="./news/tokan/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
             <span class="cnt">{{ news.title }}</span>
-						<span class="date">2016-08-02</span>
+            <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>
         {% endfor %}
@@ -242,7 +242,7 @@
           <a href="./news/tokan/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
             <span class="cnt">{{ news.title }}</span>
-						<span class="date">2016-08-02</span>
+            <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>
         {% endfor %}
@@ -260,7 +260,7 @@
 						<ul class="lst_s2">
               <li class="ls2">日付：{{ task.task_date }}</li>
 						</ul>
-						<span class="date">2016-08-01</span>
+            <span class="date">{{ task.created_at }}</span>
 					</a>
 				</li>
         {% endfor %}
@@ -276,7 +276,7 @@
           <a href="./recruit/{{ recruit.id }}/">
             <strong class="tit">{{ recruit.company_name }}</strong>
             <span class="cnt">{{ recruit.descript }}... </span>
-						<span class="date">2016-08-02</span>
+            <span class="date">{{ recruit.created_at }}</span>
 					</a>
 				</li>
         {% endfor %}
