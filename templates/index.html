@@ -1,104 +1,427 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% load pages_tags mezzanine_tags i18n staticfiles %}
 {% load i18n staticfiles %}
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
+<html lang="ja">
+<head>
+	<title>東京韓国商工会議所</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="東京韓国商工会議所" />
+	<meta name="keywords" content="東京韓国商工会議所" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
+	<!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/common.css' %}" />
 
-{% block extra_css %}
-<link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet" />
-{% endblock %}
 
-{% block extra_js %}
-<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
-<script>
-  $(document).ready(function(){
-    $('.bxslider').bxSlider({
-      auto: true,
-      infiniteLoop: true
-    });
-  });
-</script>
-{% endblock %}
+	<!-- JS -->
 
-{% block main %}
-<table align="center">
-  <tr>
-<ul class="bxslider">
-  <li><img src="{% static 'images/main_image2.jpg' %}"></li>
-  <li><img src="{% static 'images/main_image3.jpg' %}"></li>
-</ul>
-  </tr>
-  <tr>
-    <td><img src="{% static 'images/banner_introduce.jpg' %}"></td>
-    <td><img src="{% static 'images/banner_recruit.jpg' %}"></td>
-    <td><img src="{% static 'images/banner_member.jpg' %}"></td>
-    <td><img src="{% static 'images/banner_inquery.jpg' %}"></td>
-  </tr>
-</table>
+	<!--common JS-->
+</head>
 
-<div style="font-size: 17pt;" align="center">
-  <h3>今後の予定</h3>
+<body>
+<!-- ///////// BACKGROUND LAYER START //////////////////////////////////////////////////////////////////// -->
+<div id="layer_bg"></div>
+<!-- ///////// BACKGROUND LAYER END //////////////////////////////////////////////////////////////////// -->
+
+<!-- ///////// HEADER START //////////////////////////////////////////////////////////////////// -->
+<div id="header">
+	<div class="ins_header">
+		<h1 id="h_logo">
+			<a href="./" title="東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo">
+				<span class="blind">東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo</span>
+			</a>
+		</h1>
+		<div id="h_search_p">
+			<div class="ins_wrap">
+				<form>
+					<fieldset>
+						<legend accesskey="a">検索</legend>
+						<input type="text" name="search" title="検索" value="" class="input_search" ><button type="submit" class="btn_search" onclick="">検索</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id="menu_p">
+			<ul id="mnb_p">
+				<li class="m1">
+					<strong>
+						<a href="./" title="ホーム">ホーム</a>
+					</strong>
+				</li>
+				<li class="m2">
+					<strong>
+						<a href="./news/tokan/" title="ニュース">ニュース</a>
+					</strong>
+				</li>
+				<li class="m3">
+					<strong>
+						<a href="./calendar/" title="スケジュール">スケジュール</a>
+					</strong>
+				</li>
+				<li class="m4">
+					<strong>
+						<a href="./recruit/" title="リクルート">リクルート</a>
+					</strong>
+				</li>
+			</ul>
+			<ul id="gnb_p">
+				<li class="gm1">
+					<strong>
+						<a href="" title="マイページ">マイページ</a>
+					</strong>
+				</li>
+				<li class="gm2">
+					<strong>
+						<a href="" title="ログイン">ログイン</a>
+					</strong>
+				</li>
+			</ul>
+		</div>
+		<div id="menu_m">
+			<div class="ins_menu_m">
+				<a href="javascript:void(0);" title="メニュー" class="btn_menu_m">
+					<span class="blind">メニュー</span>
+				</a>
+				<ul id="mnb_m">
+					<li class="m1">
+						<strong>
+							<a href="./" title="ホーム">ホーム</a>
+						</strong>
+					</li>
+					<li class="m2">
+						<strong>
+							<a href="./news/" title="ニュース">ニュース</a>
+						</strong>
+					</li>
+					<li class="m3">
+						<strong>
+							<a href="./schedule/" title="スケジュール">スケジュール</a>
+						</strong>
+					</li>
+					<li class="m4">
+						<strong>
+							<a href="./recruit/" title="リクルート">リクルート</a>
+						</strong>
+					</li>
+					<li class="gm1">
+						<strong>
+							<a href="" title="マイページ">マイページ</a>
+						</strong>
+					</li>
+					<li class="gm2">
+						<strong>
+							<a href="" title="ログイン">ログイン</a>
+						</strong>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
-<div style="font-size: 15pt;">
-  <table align="center">
-  {% for task in tasks %}
-  {% if forloop.counter == 1 %}
-    <tr><td width="400" height="50"><a href="{{ task.id }}/">{{ task.title }}</a></td>
-  {% else %}
-    <td width="400" height="50"><a href="{{ task.id }}/">{{ task.title }}</a></td></tr>
-  {% endif %}
-  {% endfor %}
-  </table>
-</div>
+<!-- ///////// HEADER END //////////////////////////////////////////////////////////////////// -->
+<div id="wrap" class="wrap_main">
+	<!-- ///////// SPOT START //////////////////////////////////////////////////////////////////// -->
+	<div id="spot">
+		<div class="ins_spot">
+			<div class="slider_cont">
+				<ul class="lst_spot slider">
+					<li class="spot1 spot_image spot_image1">
+          <img src="{% static 'images/main/main_visual_01.jpg' %}" alt="日韓ビジネスをつなげる架け橋東京韓国商工会議所" title="日韓ビジネスをつなげる架け橋東京韓国商工会議所" />
+						<p class="para_spot1">
+							<span class="tx1">日韓ビジネスをつなげる架け橋</span>
+							<span class="tx2">東京韓国商工会議所</span>
+						</p>
+					</li>
+					<li class="spot2 spot_image spot_image2">
+          <img src="{% static 'images/main/main_visual_02.jpg' %}" alt="日韓ビジネスをつなげる架け橋東京韓国商工会議所" title="日韓ビジネスをつなげる架け橋東京韓国商工会議所" />
+						<p class="para_spot1">
+							<span class="tx1">日韓ビジネスをつなげる架け橋</span>
+							<span class="tx2">東京韓国商工会議所</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="opacity_div noselect">
+				<div class="spot_page">
+					<a href="javascript:void(0)" id="spot_page_1" title="1" class="aon"></a>
+					<a href="javascript:void(0)" id="spot_page_2" title="2"></a>
+				</div>
+				<div class="btn_wrap">
+					<a href="javascript:void(0)" title="前へ" class="btn_spot_left">
+						<span class="blind">前へ</span>
+					</a>
+					<a href="javascript:void(0)" title="次へ" class="btn_spot_rig">
+						<span class="blind">次へ</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ///////// SPOT END //////////////////////////////////////////////////////////////////// -->
+	
+	<!-- ///////// SEARCH MOBILE START //////////////////////////////////////////////////////////////////// -->
+	<div id="search_m">
+		<div class="ins_wrap">
+			<form>
+				<fieldset>
+					<legend accesskey="b">検索</legend>
+					<input type="text" name="search" title="検索" value="" class="input_search" ><button type="submit" class="btn_search" onclick="">検索</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- ///////// SEARCH MOBILE END //////////////////////////////////////////////////////////////////// -->
+	
+	<!-- ///////// PNB START //////////////////////////////////////////////////////////////////// -->
+	<div id="pnb">
+		<a href="javascript:void(0)" title="前へ" class="btn_pnb_left">
+			<span class="blind">前へ</span>
+		</a>
+		<a href="javascript:void(0)" title="次へ" class="btn_pnb_rig">
+			<span class="blind">次へ</span>
+		</a>
+		<div class="pmenu">
+			<ul class="ins_pmenu cf">
+				<li class="pm1">
+					<a href="" title="東京韓商紹介">
+						<strong>東京韓商紹介</strong>
+            <img src="{% static 'images/main/main_banner_tn_01.jpg' %}" alt="東京韓商紹介" title="東京韓商紹介" />
+					</a>
+				</li>
+				<li class="pm2">
+					<a href="./recruit/" title="リクルート">
+						<strong>リクルート</strong>
+            <img src="{% static 'images/main/main_banner_tn_02.jpg' %}" alt="リクルート" title="リクルート" />
+					</a>
+				</li>
+				<li class="pm3">
+					<a href="" title="会員ページ">
+						<strong>会員ページ</strong>
+            <img src="{% static 'images/main/main_banner_tn_03.jpg' %}" alt="会員ページ" title="会員ページ" />
+					</a>
+				</li>
+				<li class="pm4">
+					<a href="" title="お問い合わせ">
+						<strong>お問い合わせ</strong>
+            <img src="{% static 'images/main/main_banner_tn_04.jpg' %}" alt="お問い合わせ" title="お問い合わせ" />					
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- ///////// PNB END //////////////////////////////////////////////////////////////////// -->
 
-<div style="font-size: 17pt;" align="center">
-  <h3>リクルート</h3>
-</div>
-<div style="font-size: 15pt;">
-  <table align="center">
-  {% for recruit in recruits %}
-  {% if forloop.counter == 1 %}
-  <tr><td width="400" height="50"><a href="{{ recruit.id }}/">{{ recruit.title }}</a></td>
-  {% else %}
-  <td width="400" height="50"><a href="{{ recruit.id }}/">{{ recruit.title }}</a></td></tr>
-  {% endif %}
-  {% endfor %}
-  </table>
-</div>
+	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
+	<div id="main_content">
+		<div id="sec_news">
+			<h3 class="tit_s1">
+				<strong class="ins_tit1">ニュース</strong>
+			</h3>
+			<ul class="lst_s1">
+        {% for news in tokanNews %}
+				<li class="ls1">
+          <a href="./news/tokan/{{ news.id }}/">
+            <strong class="tit">{{ news.title }}</strong>
+            <span class="cnt">{{ news.title }}</span>
+						<span class="date">2016-08-02</span>
+					</a>
+				</li>
+        {% endfor %}
+        {% for news in taxNews %}
+				<li class="ls1">
+          <a href="./news/tokan/{{ news.id }}/">
+            <strong class="tit">{{ news.title }}</strong>
+            <span class="cnt">{{ news.title }}</span>
+						<span class="date">2016-08-02</span>
+					</a>
+				</li>
+        {% endfor %}
+        {% for news in weekNews %}
+				<li class="ls1">
+          <a href="./news/tokan/{{ news.id }}/">
+            <strong class="tit">{{ news.title }}</strong>
+            <span class="cnt">{{ news.title }}</span>
+						<span class="date">2016-08-02</span>
+					</a>
+				</li>
+        {% endfor %}
+			</ul>
+		</div>
+		<div id="sec_schedule">
+			<h3 class="tit_s1">
+				<strong class="ins_tit2">スケジュール</strong>
+			</h3>
+			<ul class="lst_s1">
+        {% for task in tasks %}
+				<li class="ls1">
+          <a href="./calendar/{{ task.id }}/">
+            <strong class="tit">{{ task.title }}</strong>						
+						<ul class="lst_s2">
+              <li class="ls2">日付：{{ task.task_date }}</li>
+						</ul>
+						<span class="date">2016-08-01</span>
+					</a>
+				</li>
+        {% endfor %}
+			</ul>
+		</div>
+		<div id="sec_recruit">
+			<h3 class="tit_s1">
+				<strong class="ins_tit1">リクルート</strong>
+			</h3>
+			<ul class="lst_s1">
+        {% for recruit in recruits %}
+				<li class="ls1 l2">
+          <a href="./recruit/{{ recruit.id }}/">
+            <strong class="tit">{{ recruit.company_name }}</strong>
+            <span class="cnt">{{ recruit.descript }}... </span>
+						<span class="date">2016-08-02</span>
+					</a>
+				</li>
+        {% endfor %}
+			</ul>
+		</div>
 
-<div style="font-size: 17pt;" align="center">
-  <h3>ニューズ</h3>
-</div>
-<div style="font-size: 15pt;">
-  <table align="center">
-  {% for news in tokanNews %}
-  {% if forloop.counter == 1 %}
-  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
-  {% else %}
-  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
-  {% endif %}
-  {% endfor %}
+    <!-- ///////// 데이터가 없어서 코맨트 아웃 ///////////////////////////////////////////////// -->
+		<!-- div id="sec_banner">
+			<ul class="lst_b1">
+				<li id="lst_b1_li_1">
+					<img src="./imgs/main/bnr_01.jpg" alt="bnr01" title="bnr01" />
+				</li>
+				<li id="lst_b1_li_2">
+					<img src="./imgs/main/bnr_02.jpg" alt="bnr02" title="bnr02" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_03.jpg" alt="bnr03" title="bnr03" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_04.jpg" alt="bnr04" title="bnr04" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_05.jpg" alt="bnr05" title="bnr05" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_06.jpg" alt="bnr06" title="bnr06" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_07.jpg" alt="bnr07" title="bnr07" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_08.jpg" alt="bnr08" title="bnr08" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_09.jpg" alt="bnr09" title="bnr09" />
+				</li>
+				<li id="lst_b1_li_10">
+					<img src="./imgs/main/bnr_10.jpg" alt="bnr10" title="bnr10" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_11.jpg" alt="bnr11" title="bnr11" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_12.jpg" alt="bnr12" title="bnr12" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_13.jpg" alt="bnr13" title="bnr13" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_14.jpg" alt="bnr14" title="bnr14" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_15.jpg" alt="bnr15" title="bnr15" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_16.jpg" alt="bnr16" title="bnr16" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_17.jpg" alt="bnr17" title="bnr17" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_18.jpg" alt="bnr18" title="bnr18" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_19.jpg" alt="bnr19" title="bnr19" />
+				</li>
+				<li id="lst_b1_li_20">
+					<img src="./imgs/main/bnr_20.jpg" alt="bnr20" title="bnr20" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_21.jpg" alt="bnr21" title="bnr21" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_22.jpg" alt="bnr22" title="bnr22" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_23.jpg" alt="bnr23" title="bnr23" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_24.jpg" alt="bnr24" title="bnr24" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_25.jpg" alt="bnr25" title="bnr25" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_26.jpg" alt="bnr26" title="bnr26" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_27.jpg" alt="bnr27" title="bnr27" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_28.jpg" alt="bnr28" title="bnr28" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_29.jpg" alt="bnr29" title="bnr29" />
+				</li>
+				<li id="lst_b1_li_30">
+					<img src="./imgs/main/bnr_30.jpg" alt="bnr30" title="bnr30" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_31.jpg" alt="bnr31" title="bnr31" />
+				</li>
+				<li>
+					<img src="./imgs/main/bnr_32.jpg" alt="bnr32" title="bnr32" />
+				</li>
+				<li id="lst_b1_li_33">
+					<img src="./imgs/main/bnr_33.jpg" alt="bnr33" title="bnr33" />
+				</li>
+			</ul>
+			<a href="javascript:void(0)" title="前へ" class="btn_roll_left">
+				<span class="blind">前へ</span>
+			</a>
+			<a href="javascript:void(0)" title="次へ" class="btn_roll_rig">
+				<span class="blind">次へ</span>
+			</a>
+		</div -->
+	</div>
+	<!-- ///////// CONTENT END //////////////////////////////////////////////////////////////////// -->
 
-  {% for news in taxNews %}
-  {% if forloop.counter == 1 %}
-  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
-  {% else %}
-  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
-  {% endif %}
-  {% endfor %}
-
-  {% for news in weekNews %}
-  {% if forloop.counter == 1 %}
-  <tr><td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td>
-  {% else %}
-  <td width="400" height="50"><a href="{{ news.id }}/">{{ news.title }}</a></td></tr>
-  {% endif %}
-  {% endfor %}
-  </table>
+	<!-- ///////// FOOTER START //////////////////////////////////////////////////////////////////// -->
+	<div id="footer">
+		<div id="f_info_wrap">
+			<div class="tit">
+				<a href="./" title="東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo">
+					<span class="blind">東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo</span>
+				</a>
+			</div>
+			<div class="f_info">
+				<address>
+					所在地 〒160－0021<br />
+					東京都新宿区歌舞伎町２－３２－９<br />
+					あすか信用組合６階<br />
+				</address>
+				TEL : 03－3209－1961 | FAX : 03－3209－1962
+			</div>
+		</div>
+		<div id="f_cr">
+			<p class="tx_cr">
+				Copyright &copy; 東京韓国商工会議所. All rights reserved.
+			</p>
+		</div>
+	</div>
+	<!-- ///////// FOOTER END //////////////////////////////////////////////////////////////////// -->
 </div>
-{% blocktrans %}
-{% endblocktrans %}
-{% endblock %}
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
