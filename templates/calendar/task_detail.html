@@ -1,12 +1,232 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% load pages_tags mezzanine_tags i18n staticfiles %}
+{% load i18n staticfiles %}
 
-{% block main %}
-<h2>{{ object.title }}</h2>
-<hr />
-<table>
-  <tr><th height="50px" width="30%">日付</th><td>{{ object.date }}</td></tr>
-  <tr><th height="50px" width="30%">場所</th><td>{{ object.locate }}</td></tr>
-  <tr><th height="50px" width="30%">内容</th><td>{{ object.content }}</td><tr>
-</table>
-{% endblock %}
+<html lang="ja">
+<head>
+	<title>東京韓国商工会議所-スケジュール</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="東京韓国商工会議所" />
+	<meta name="keywords" content="東京韓国商工会議所" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
+	<!-- CSS -->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/common.css' %}" />
+
+	<!-- JS -->
+
+	<!--common JS-->
+</head>
+
+<body>
+<!-- ///////// BACKGROUND LAYER START //////////////////////////////////////////////////////////////////// -->
+<div id="layer_bg"></div>
+<!-- ///////// BACKGROUND LAYER END //////////////////////////////////////////////////////////////////// -->
+
+<!-- ///////// HEADER START //////////////////////////////////////////////////////////////////// -->
+<div id="header">
+	<div class="ins_header">
+		<h1 id="h_logo">
+			<a href="/" title="東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo">
+				<span class="blind">東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo</span>
+			</a>
+		</h1>
+		<div id="h_search_p">
+			<div class="ins_wrap">
+				<form>
+					<fieldset>
+						<legend accesskey="a">検索</legend>
+						<input type="text" name="search" title="検索" value="" class="input_search" ><button type="submit" class="btn_search" onclick="" accesskey="b">検索</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div id="menu_p">
+			<ul id="mnb_p">
+				<li class="m1">
+					<strong>
+						<a href="/" title="ホーム">ホーム</a>
+					</strong>
+				</li>
+				<li class="m2">
+					<strong>
+						<a href="/news/tokan/" title="ニュース">ニュース</a>
+					</strong>
+				</li>
+				<li class="m3">
+					<strong>
+						<a href="/calendar/" title="スケジュール">スケジュール</a>
+					</strong>
+				</li>
+				<li class="m4">
+					<strong>
+						<a href="/recruit/" title="リクルート">リクルート</a>
+					</strong>
+				</li>
+			</ul>
+			<ul id="gnb_p">
+				<li class="gm1">
+					<strong>
+						<a href="" title="マイページ">マイページ</a>
+					</strong>
+				</li>
+				<li class="gm2">
+					<strong>
+						<a href="" title="ログイン">ログイン</a>
+					</strong>
+				</li>
+			</ul>
+		</div>
+		<div id="menu_m">
+			<div class="ins_menu_m">
+				<a href="javascript:void(0);" title="メニュー" class="btn_menu_m">
+					<span class="blind">メニュー</span>
+				</a>
+				<ul id="mnb_m">
+					<li class="m1">
+						<strong>
+							<a href="/" title="ホーム">ホーム</a>
+						</strong>
+					</li>
+					<li class="m2">
+						<strong>
+							<a href="/news/tokan/" title="ニュース">ニュース</a>
+						</strong>
+					</li>
+					<li class="m3">
+						<strong>
+							<a href="/calendar/" title="スケジュール">スケジュール</a>
+						</strong>
+					</li>
+					<li class="m4">
+						<strong>
+							<a href="/recruit/" title="リクルート">リクルート</a>
+						</strong>
+					</li>
+					<li class="gm1">
+						<strong>
+							<a href="" title="マイページ">マイページ</a>
+						</strong>
+					</li>
+					<li class="gm2">
+						<strong>
+							<a href="" title="ログイン">ログイン</a>
+						</strong>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ///////// HEADER END //////////////////////////////////////////////////////////////////// -->
+<div id="wrap" class="wrap_main">
+	<!-- ///////// SPOT START //////////////////////////////////////////////////////////////////// -->
+	<div id="sub_spot">
+		<div class="ins_spot">
+			<div class="slider_cont">
+				<ul class="lst_spot slider">
+					<li class="spot1 spot_image spot_image1">
+						<img src="/static/images/sub/sub_visual_01.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
+						<p class="para_spot2">						
+							<span class="tx1">東京韓国商工会議所</span>
+						</p>
+					</li>
+					<li class="spot2 spot_image spot_image2">
+						<img src="/static/images/sub/sub_visual_02.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
+						<p class="para_spot2">						
+							<span class="tx1">東京韓国商工会議所</span>
+						</p>
+					</li>
+					<li class="spot3 spot_image spot_image3">
+						<img src="/static/images/sub/sub_visual_03.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
+						<p class="para_spot2">						
+						<span class="tx1">東京韓国商工会議所</span>
+					</p>
+					</li>
+				</ul>
+			</div>
+			<div class="opacity_div noselect">
+				<div class="spot_page">
+					<a href="javascript:void(0)" id="spot_page_1" title="1" class="aon"><span class="blind">1</span></a>
+					<a href="javascript:void(0)" id="spot_page_2" title="2"><span class="blind">2</span></a>
+					<a href="javascript:void(0)" id="spot_page_3" title="3"><span class="blind">3</span></a>
+				</div>
+				<div class="btn_wrap">
+					<a href="javascript:void(0)" title="前へ" class="btn_spot_left">
+						<span class="blind">前へ</span>
+					</a>
+					<a href="javascript:void(0)" title="次へ" class="btn_spot_rig">
+						<span class="blind">次へ</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ///////// SPOT END //////////////////////////////////////////////////////////////////// -->	
+
+	<!-- ///////// SEARCH MOBILE START //////////////////////////////////////////////////////////////////// -->
+	<div id="search_m">
+		<div class="ins_wrap">
+			<form>
+				<fieldset>
+					<legend accesskey="c">検索</legend>
+					<input type="text" name="search" title="検索" value="" class="input_search" ><button type="submit" class="btn_search" onclick="" accesskey="d">検索</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- ///////// SEARCH MOBILE END //////////////////////////////////////////////////////////////////// -->
+		
+	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
+	<div id="sub_content">
+		<h2 class="tit_page">
+			<strong>スケジュール</strong>
+			<span class="point"></span>
+		</h2>
+		<div class="board_view_tit">
+      <span class="date">{{ object.date }}</span>
+      <p class="tit">{{ object.title }}</p>
+		</div>
+		<div class="board_view">
+			<div class="board_text">
+        {{ object.locate }}
+				<p>
+        {{ object.content }}
+				</p>
+			</div>
+		</div>
+		<div class="board_view_footer">
+			<a href="/calendar/" class="btn_lst">一覧</a>
+		</div>
+	</div>
+	<!-- ///////// CONTENT END //////////////////////////////////////////////////////////////////// -->
+
+	<!-- ///////// FOOTER START //////////////////////////////////////////////////////////////////// -->
+	<div id="footer">
+		<div id="f_info_wrap">
+			<div class="tit">
+				<a href="/" title="東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo">
+					<span class="blind">東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo</span>
+				</a>
+			</div>
+			<div class="f_info">
+				<address>
+					所在地 〒160－0021<br />
+					東京都新宿区歌舞伎町２－３２－９<br />
+					あすか信用組合６階<br />
+				</address>
+				TEL : 03－3209－1961 | FAX : 03－3209－1962
+			</div>
+		</div>
+		<div id="f_cr">
+			<p class="tx_cr">
+				Copyright &copy; 東京韓国商工会議所. All rights reserved.
+			</p>
+		</div>
+	</div>
+	<!-- ///////// FOOTER END //////////////////////////////////////////////////////////////////// -->
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
