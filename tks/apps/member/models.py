@@ -23,3 +23,7 @@ class member(models.Model):
     address = models.CharField(max_length=256, null=True)
     url = models.URLField(max_length=256, null=True)
     image = models.ImageField()
+    created_at = models.DateTimeField(
+        'created time', auto_now_add=True, blank=True, null=True)
+    updated_at = models.DateTimeField(
+        'updated time', auto_now=True, blank=True, null=True)
