@@ -220,3 +220,16 @@ jQuery(function ($) {
         });
     });
 });
+
+// mnb
+jQuery(function ($) {
+    $('#mnb_p > li').hover(function() {
+        $(this).children('.mnb_sub_menu').show();
+    }, function() {
+        $(this).children('.mnb_sub_menu').hide();
+    });
+
+    $('#mnb_m > li').click(function() {
+        $(this).children('.mnb_sub_menu').toggle();
+    });
+});
