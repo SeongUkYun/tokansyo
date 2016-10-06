@@ -2,11 +2,11 @@
 
 {% load mezzanine_tags staticfiles %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static "mezzanine/css/magnific-popup.css" %}">
-{% endblock extra_css %}
+{% block head_title %}
+  <title>東京韓国商工会議所-ニュース-gallery</title>
+{% endblock %}
 
-{% block main %}
+{% block contents %}
 {{ block.super }}
 
 {% editable page.gallery.content %}
@@ -23,11 +23,148 @@
 </div>
 {% endfor %}
 {% endwith %}
+		<div id="sec_gallery">
+			<h3 class="tit_s1">
+				<strong class="ins_tit1">ギャラリー</strong>
+			</h3>
+			<ul class="gallery_ul cf">
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_1.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_2.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_3.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_4.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_5.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img_wrap">
+							<img src="./imgs/main/gallery_img_6.jpg" width="500" height="375" alt="東京韓国商工会議所">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+										<p>東京韓国商工会議所</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+								<span class="date">2016-07-28</span>
+								<span class="name">東京韓国商工会議所</span>
+							</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
 </div>
 {% endblock %}
 
-{% block extra_js %}
-{{ block.super }}
 <script src="{% static "mezzanine/js/magnific-popup.js" %}"></script>
 <script>
 $(document).ready(function() {
@@ -40,4 +177,3 @@ $(document).ready(function() {
     });
 });
 </script>
-{% endblock %}
