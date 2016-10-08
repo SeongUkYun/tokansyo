@@ -84,6 +84,7 @@ urlpatterns += [
     url("^member/", include("tks.apps.member.urls")),
     url("^recruit/", include("tks.apps.recruit.urls")),
     url("^news/", include("tks.apps.news.urls")),
+    url("^gallery/", include("tks.apps.gallery.urls")),
     url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
