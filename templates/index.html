@@ -362,6 +362,37 @@
         {% endfor %}
 			</ul>
 		</div>
+		<div id="sec_gallery">
+			<h3 class="tit_s1">
+				<strong class="ins_tit1">ギャラリー</strong>
+			</h3>
+			<ul class="gallery_ul cf">
+        {% for photo in photos %}
+				<li>
+        <a href="/static/media/{{ photo.image }}">
+						<div class="img_wrap">
+              <img src="/static/media/{{ photo.image }}" width="500" height="375" alt="{{ photo.name }}">
+							<div class="gallery_view_div">
+								<div class="gallery_view_bg"></div>
+								<div class="gallery_view_cont">
+									<div>
+                    <p>{{ photo.descript }}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery_bottom_div">
+							<p class="gallery_bottom_p">
+								<span class="menu">ギャラリー</span>
+                <span class="date">{{ photo.created_at }}</span>
+                <span class="name">{{ photo.name }}</span>
+							</p>
+						</div>
+					</a>
+				</li>
+        {% endfor %}
+      </ul>
+    </div>
 
     <!-- ///////// 데이터가 없어서 비표시 ///////////////////////////////////////////////// -->
 		<div id="sec_banner" style="display: none">

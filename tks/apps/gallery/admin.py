@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from models import gallery as Gallery
+
+@admin.register(Gallery)
+class galleryAdmin(admin.ModelAdmin):
+    list_display = ['image', 'name', 'descript', 'created_at', 'updated_at']
+    list_filter = ['created_at']
