@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+  <title>東京韓国商工会議所-ニュース-gallery</title>
+{% endblock %}
+
+{% block main %}
+  <div id="sec_gallery">
+    <h3 class="tit_s1">
+      <strong class="ins_tit1">ギャラリー</strong>
+    </h3>
+    <ul class="gallery_ul cf">
+      {% for photo in photos %}
+      <li>
+        <a href="/static/media/{{ photo.image }}">
+          <div class="img_wrap">
+            <img src="/static/media/{{ photo.image }}" width="500" height="375" alt="東京韓国商工会議所">
+            <div class="gallery_view_div">
+              <div class="gallery_view_bg"></div>
+              <div class="gallery_view_cont">
+                <div>
+                  <p>東京韓国商工会議所</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery_bottom_div">
+            <p class="gallery_bottom_p">
+              <span class="menu">ギャラリー</span>
+              <span class="date">{{ photo.created_at }}</span>
+              <span class="name">{{ photo.name }}</span>
+            </p>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
