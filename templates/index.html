@@ -104,6 +104,11 @@
 						<a href="/recruit/" title="リクルート">リクルート</a>
 					</strong>
 				</li>
+				<li class="m6">
+					<strong>
+						<a href="/member/" title="会員">会員</a>
+					</strong>
+				</li>
 			</ul>
 			<ul id="gnb_p">
         {% if request.user.is_authenticated %}
@@ -192,6 +197,11 @@
 							<a href="/recruit/" title="リクルート">リクルート</a>
 						</strong>
 					</li>
+          <li class="m6">
+            <strong>
+              <a href="/member/" title="会員">会員</a>
+            </strong>
+          </li>
           {% if request.user.is_authenticated %}
 					<li class="gm2">
 						<strong>
@@ -292,7 +302,7 @@
 					</a>
 				</li>
 				<li class="pm3">
-					<a href="" title="会員ページ">
+					<a href="/member" title="会員ページ">
 						<strong>会員ページ</strong>
             <img src="{% static 'images/main/main_banner_tn_03.jpg' %}" alt="会員ページ" title="会員ページ" />
 					</a>

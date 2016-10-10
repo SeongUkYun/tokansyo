@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block main %}
+<div id="sub_content">
 {% for member in members %}
 <a href="{{ member.id }}/">{{ member.company_name }}</a><br />
 <hr />
 {% endfor %}
+</div>
 {% endblock %}
 

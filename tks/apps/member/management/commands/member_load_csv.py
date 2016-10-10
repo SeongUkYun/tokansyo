@@ -42,13 +42,31 @@ class Command(BaseCommand):
             # print '{0}-{1}-{2}-{3}'.format(row[1], row[4], row[5], row[6])
             # print '{0}-{1}-{2}-{3}'.format(row[7], row[8], row[9], row[10])
 
+            if row[0] == '公開':
+                accessibility = 1
+            elif row[0] == '会員':
+                accessibility = 2
+            else:
+                accessibility = 3
+
+            if row[1] == '名誉会長':
+                rank = '00'
+            elif row[1] == '会長':
+                rank = '01'
+            elif row[1] == '部会長':
+                rank = '02'
+            elif row[1] == '常任理事':
+                rank = '03'
+            elif row[1] == '監事':
+                rank = '04'
+
             member, c = Member.objects.update_or_create(
                 auth_user = user,
                 name = row[2],
                 popular_name = row[3],
                 defaults = {
-                    'accessibility': 1,
-                    'rank': '03',
+                    'accessibility': accessibility,
+                    'rank': rank,
                     'job_title': row[4],
                     'company_name': row[5],
                     'biz_type': row[6],

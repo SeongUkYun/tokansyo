@@ -22,7 +22,7 @@ class member(models.Model):
 
     rank_choices = (('00', '名誉会長'), ('01', '会長'), ('02', '部会長'),
                     ('03', '常任理事'), ('04', '監事'))
-    accessibility_choices = ((1, '公開'), (2, '会員のみ'), (3, '非公開'))
+    accessibility_choices = ((1, '公開'), (2, '会員'), (3, '非公開'))
 
     auth_user = models.ForeignKey('auth.User', null=True, blank=True, related_name='member')
     accessibility = models.IntegerField(choices=accessibility_choices)
@@ -51,3 +51,11 @@ class member(models.Model):
 
     def last_name(self):
         return self.name.split(' ')[0]
+
+    @property
+    def display_rank(self):
+        return dict((x, y) for x, y in self.rank_choices)[self.rank]
+
+    @property
+    def display_level(self):
+        return dict((x, y) for x, y in self.accessibility)[self.accessibility]
