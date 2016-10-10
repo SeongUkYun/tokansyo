@@ -105,9 +105,14 @@
 			</ul>
 			<ul id="gnb_p">
         {% if request.user.is_authenticated %}
-				<li class="gm1">
+				<li class="gm2">
 					<strong>
 						<a href="" title="マイページ">マイページ</a>
+					</strong>
+				</li>
+				<li class="gm2">
+					<strong>
+						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
 					</strong>
 				</li>
         {% else %}
@@ -186,11 +191,16 @@
 						</strong>
 					</li>
           {% if request.user.is_authenticated %}
-					<li class="gm1">
+					<li class="gm2">
 						<strong>
 							<a href="" title="マイページ">マイページ</a>
 						</strong>
 					</li>
+				<li class="gm1">
+					<strong>
+						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
+					</strong>
+				</li>
           {% else %}
 					<li class="gm1">
 						<strong>
@@ -269,6 +279,7 @@
   {% endblock %}
 
   {% block main %}{% endblock %}
+  {% block content %}{% endblock %}
 	<!-- ///////// CONTENT END //////////////////////////////////////////////////////////////////// -->
 
 	<!-- ///////// FOOTER START //////////////////////////////////////////////////////////////////// -->
