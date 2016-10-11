@@ -18,7 +18,10 @@ class MemberListView(MemberMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(MemberListView, self).get_context_data(**kwargs)
-        context['members'] = self.get_queryset()
+        if self.request.user.is_active:
+            context['members'] = self.get_queryset()
+        else:
+            context['members'] = self.get_queryset().filter(accessibility=1)
 
         return context
 
