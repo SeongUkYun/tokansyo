@@ -1,5 +1,6 @@
-{% extends "base.html" %}
+{% extends "pages/base.html" %}
 {% load mezzanine_tags keyword_tags %}
+{% load easy_maps_tags %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
@@ -15,9 +16,12 @@
 {{ page.description }}
 {% endmetablock %}{% endblock %}
 
-{% block title %}
-{% editable page.title %}{{ page.title }}{% endeditable %}
-{% endblock %}
-
-{% block main %}
+{% block page_main %}{{ block.super }}
+<div id="sub_content">
+  {{ page.richtextpage.content|richtext_filter|safe }} 
+  <br />
+  {% if page.title == 'map' %}
+    {% easy_map '東京都新宿区歌舞伎町２-３２-９' 500 300 16 using "member/map.html" %}
+  {% endif %}
+</div>
 {% endblock %}
