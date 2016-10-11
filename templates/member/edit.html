@@ -5,7 +5,19 @@
   {{ member.name }}<br /><hr />
 <form method="GET" action="/member/complete/">{% csrf_token %}
   {{ form.non_field_errors }}
-  {{ form.as_p }}
+  <table>
+    <tr><td width="100px">公開レベル</td><td width="300px">{{ form.accessibility }}</td></tr>
+    <tr><td>職位</td><td>{{ form.rank }}</td></tr>
+    <tr><td>姓名</td><td>{{ form.name }}</td></tr>
+    <tr><td>通称名</td><td>{{ form.popular_name }}</td></tr>
+    <tr><td>役職</td><td>{{ form.job_title }}</td></tr>
+    <tr><td>会社名</td><td>{{ form.company_name }}</td></tr>
+    <tr><td>業種</td><td>{{ form.biz_type }}</td></tr>
+    <tr><td>電話番号</td><td>{{ form.tel }}</td></tr>
+    <tr><td>FAX番号</td><td>{{ form.fax }}</td></tr>
+    <tr><td>郵便番号</td><td>{{ form.zipcode }}</td></tr>
+    <tr><td>住所</td><td>{{ form.address }}</td></tr>
+  </table>
   <input type="submit" value="更新" />
 </form>
 </div>
