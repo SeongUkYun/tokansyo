@@ -7,20 +7,15 @@
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>ニュース</strong>
+			<strong>東京韓商ニュース</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_view_tit">
-			<span class="date">2016.08.02</span>
       <p class="tit">{{ object.title }}</p>
+      <span class="date">{{ object.created_at }}</span>
 		</div>
-		<div class="board_view">
-			<div class="board_text">
-        {{ object.descript }}
-			</div>
-		</div>
-      <a href="/{{ object.news_file }}">記事をダウンロード</a>
-    <div>
+    <div class="board_view_footer">
+      <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
     </div>
 		<div class="board_view_footer">
 			<a href="/news/tokan/" class="btn_lst">一覧</a>

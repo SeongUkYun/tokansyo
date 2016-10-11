@@ -1,11 +1,12 @@
 from django.views import generic
 from django.shortcuts import render
+from django.db.models import Q
 from .models import member as Member
 
 
 class MemberMixin(object):
     def get_queryset(self):
-        return Member.objects.all()
+        return Member.objects.filter(~Q(accessibility=3))
 
 
 class MemberListView(MemberMixin, generic.ListView):

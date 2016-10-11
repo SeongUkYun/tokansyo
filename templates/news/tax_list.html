@@ -7,11 +7,18 @@
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>ニュース</strong>
+			<strong>ニュース-東京税経クラブ</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_lst">
 			<ul>
+        <li class="head">
+          <a class="header" href="">
+            <strong class="num_header">番号</strong>
+            <strong class="tit_header">件名</strong>
+            <strong class="date_header">登録日</strong>
+          </a>
+        </li>
         {% for news in newses %}
 				<li>
           <a href="/news/tax/{{ news.id }}/">

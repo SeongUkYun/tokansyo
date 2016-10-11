@@ -12,6 +12,13 @@
 		</h2>
 		<div class="board_lst">
 			<ul>
+        <li class="header">
+        <a href="">
+          <strong class="num_header">番号</strong>
+          <strong class="tit_header">会社名</strong>
+          <strong class="date_header">登録日</strong>
+        </a>
+        </li>
         {% for recruit in recruits %}
 				<li>
         <a href="{{ recruit.id }}/">

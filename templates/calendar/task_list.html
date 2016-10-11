@@ -12,12 +12,19 @@
 		</h2>
 		<div class="board_lst">
 			<ul>
+        <li class="head">
+          <a class="header" href="">
+            <strong class="num_header">番号</strong>
+            <strong class="tit_header">件名</strong>
+            <strong class="date_header">行事日</strong>
+          </a>
+        </li>
         {% for task in tasks %}
 				<li>
           <a href="{{ task.id }}/">
             <span class="num">{{ forloop.counter }}</span>
             <strong class="tit">{{ task.title }}</strong>
-            <span class="date">{{ task.created_at }}2</span>
+            <span class="date">{{ task.task_date }}</span>
 					</a>
 				</li>
         {% endfor %}
