@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id="sub_content">
+  {{ member.name }}<br /><hr />
+<form method="GET" action="/member/complete/">{% csrf_token %}
+  {{ form.non_field_errors }}
+  {{ form.as_p }}
+  <input type="submit" />
+</form>
+</div>
+{% endblock %}

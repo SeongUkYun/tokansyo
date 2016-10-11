@@ -112,6 +112,11 @@
         {% if request.user.is_authenticated %}
 				<li class="gm2">
 					<strong>
+						<a href="/member/update/" title="マイページ">マイページ</a>
+					</strong>
+				</li>
+				<li class="gm1">
+					<strong>
 						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
 					</strong>
 				</li>
@@ -196,11 +201,16 @@
             </strong>
           </li>
           {% if request.user.is_authenticated %}
-				<li class="gm1">
-					<strong>
-						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
-					</strong>
-				</li>
+          <li class="gm2">
+            <strong>
+              <a href="/member/update/" title="マイページ">マイページ</a>
+            </strong>
+          </li>
+          <li class="gm1">
+            <strong>
+              <a href="/accounts/logout/" title="ログアウト">ログアウト</a>
+            </strong>
+          </li>
           {% else %}
 					<li class="gm1">
 						<strong>

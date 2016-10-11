@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- coding: utf-8 -*- 
 from __future__ import unicode_literals
 
 from django.conf.urls import url
@@ -7,4 +7,6 @@ from . import views as view
 urlpatterns = [
     url("^$", view.MemberListView.as_view(), name="member_list"),
     url("^(?P<pk>\d+)/", view.MemberView.as_view(), name="member_detail"),
+    url("^update/$", view.MemberEditView.as_view(), name="member_update"),
+    url("^complete/$", view.MemberCompleteView.as_view(), name="member_complete"),
 ]
