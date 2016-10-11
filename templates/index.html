@@ -112,11 +112,6 @@
 			</ul>
 			<ul id="gnb_p">
         {% if request.user.is_authenticated %}
-				<li class="gm2">
-					<strong>
-						<a href="" title="マイページ">マイページ</a>
-					</strong>
-				</li>
 				<li class="gm1">
 					<strong>
 						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
@@ -203,11 +198,6 @@
             </strong>
           </li>
           {% if request.user.is_authenticated %}
-					<li class="gm2">
-						<strong>
-							<a href="" title="マイページ">マイページ</a>
-						</strong>
-					</li>
           <li class="gm1">
             <strong>
               <a href="/accounts/logout/" title="ログアウト">ログアウト</a>
