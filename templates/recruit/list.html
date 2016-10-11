@@ -15,7 +15,7 @@
         {% for recruit in recruits %}
 				<li>
         <a href="{{ recruit.id }}/">
-						<span class="num">3</span>
+            <span class="num">{{ forloop.counter }}</span>
 						<strong class="tit">
               <span>{{ recruit.company_name }}</span>
 						</strong>

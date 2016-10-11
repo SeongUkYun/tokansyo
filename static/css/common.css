@@ -173,7 +173,7 @@ a:visited, a:active{text-decoration:none}
 .board_lst{overflow:hidden;border-top:1px solid #ddd}
 .board_lst li a{overflow:hidden;display:block;position:relative;padding:24px 0;border-bottom:1px solid #ddd}
 .board_lst .num{position:absolute;display:block;top:50%;left:10px;margin-top:-12px;height:24px;color:#aaa;font-size:13px;line-height:24px}
-.board_lst .date{position:absolute;display:block;top:50%;right:15px;margin-top:-12px;width:100px;height:24px;text-align:right;color:#666;font-size:13px;line-height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.board_lst .date{position:absolute;display:block;top:50%;right:15px;margin-top:-12px;width:150px;height:24px;text-align:right;color:#666;font-size:13px;line-height:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .board_lst .tit{position:relative;display:block;overflow:hidden;margin:0 120px 0 50px;padding-right:10px;color:#333;font-size:14px;line-height:24px}
 .board_view_tit{overflow:hidden;margin-bottom:24px;line-height:22px}
 .board_view_tit .date{display:block;font-size:13px;color:#666}
