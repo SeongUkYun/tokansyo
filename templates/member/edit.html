@@ -6,7 +6,7 @@
 <form method="GET" action="/member/complete/">{% csrf_token %}
   {{ form.non_field_errors }}
   {{ form.as_p }}
-  <input type="submit" />
+  <input type="submit" value="更新" />
 </form>
 </div>
 {% endblock %}
