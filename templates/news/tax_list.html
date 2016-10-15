@@ -22,7 +22,7 @@
         {% for news in newses %}
 				<li>
           <a href="/news/tax/{{ news.id }}/">
-            <span class="num">{{ forloop.counter }}</span>
+            <span class="num">{{ forloop.revcounter }}</span>
             <strong class="tit">{{ news.title }}</strong>
             <span class="date">{{ news.created_at }}</span>						
 					</a>

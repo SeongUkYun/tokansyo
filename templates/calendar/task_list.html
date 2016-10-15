@@ -22,7 +22,7 @@
         {% for task in tasks %}
 				<li>
           <a href="{{ task.id }}/">
-            <span class="num">{{ forloop.counter }}</span>
+            <span class="num">{{ forloop.revcounter }}</span>
             <strong class="tit">{{ task.title }}</strong>
             <span class="date">{{ task.task_date }}</span>
 					</a>

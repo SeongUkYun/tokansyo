@@ -22,7 +22,7 @@
         {% for recruit in recruits %}
 				<li>
         <a href="{{ recruit.id }}/">
-            <span class="num">{{ forloop.counter }}</span>
+            <span class="num">{{ forloop.revcounter }}</span>
 						<strong class="tit">
               <span>{{ recruit.company_name }}</span>
 						</strong>
