@@ -12,9 +12,9 @@ class HomeView(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        tasks = CalendarTask.objects.all().order_by('-created_at')[:2]
+        tasks = CalendarTask.objects.all().order_by('-created_at')[:4]
         context['tasks'] = tasks
-        recruits = Recruit.objects.all().order_by('-created_at')[:2]
+        recruits = Recruit.objects.all().order_by('-created_at')[:4]
         context['recruits'] = recruits
         TokanNews = News.objects.filter(news_type='N').order_by('-created_at')[:2]
         context['tokanNews'] = TokanNews
