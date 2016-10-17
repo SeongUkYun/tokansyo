@@ -59,6 +59,8 @@ class Command(BaseCommand):
                 rank = '03'
             elif row[1] == '監事':
                 rank = '04'
+            else:
+                rank = '05'
 
             member, c = Member.objects.update_or_create(
                 auth_user = user,
