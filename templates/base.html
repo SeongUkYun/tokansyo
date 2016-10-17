@@ -107,6 +107,11 @@
 						<a href="/member/" title="会員">会員</a>
 					</strong>
 				</li>
+				<li class="m7">
+					<strong>
+						<a href="/inquiry/" title="問合せ">お問い合わせ</a>
+					</strong>
+				</li>
 			</ul>
 			<ul id="gnb_p">
         {% if request.user.is_authenticated %}
@@ -198,6 +203,11 @@
           <li class="m6">
             <strong>
               <a href="/member/" title="会員">会員</a>
+            </strong>
+          </li>
+          <li class="m7">
+            <strong>
+              <a href="/inquiry/" title="問合せ">お問い合わせ</a>
             </strong>
           </li>
           {% if request.user.is_authenticated %}
