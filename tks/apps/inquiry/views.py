@@ -2,6 +2,7 @@ from django import forms
 from django.views import generic
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.core.mail import EmailMessage
 from models import inquiry as Inquiry
 from forms import InquiryForm
 
@@ -32,5 +33,15 @@ class InquiryCompleteView(TemplateView):
         inquiry.title = self.request.GET['title']
         inquiry.content = self.request.GET['content']
         inquiry.save()
+
+        message = EmailMessage(
+            self.request.GET['title'],
+            self.request.GET['content'],
+            self.request.GET['email'],
+            ["dordory@gmail.com"],
+            ["dordory@gmail.com"],
+            headers={'Reply-To': 'dordory@gmail.com'})
+        message.attach_file(report_file_path)
+        message.send()
 
         return context

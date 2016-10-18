@@ -20,9 +20,9 @@ class member(models.Model):
               '会社住所',
               '携帯番号']
 
-    rank_choices = (('00', '名誉会長'), ('01', '会長'), ('02', '部会長'),
+    rank_choices = (('00', '名誉会長'), ('01', '会長'), ('02', '副会長'),
                     ('03', '常任理事'), ('04', '監事'), ('05', '理事'))
-    accessibility_choices = ((1, '公開'), (2, '会員'), (3, '非公開'))
+    accessibility_choices = ((1, '公開'), (2, '会員のみ'), (3, '非公開'))
 
     auth_user = models.ForeignKey('auth.User', null=True, blank=True, related_name='member')
     accessibility = models.IntegerField(choices=accessibility_choices)
