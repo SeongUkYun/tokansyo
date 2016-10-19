@@ -2,7 +2,7 @@
 {% load i18n mezzanine_tags %}
 
 {% block meta_title %}{{ title }}{% endblock %}
-{% block title %}{{ title }}{% endblock %}
+{% block title %}ログイン{% endblock %}<br /><br />
 {% block body_id %}account{% endblock %}
 
 {% block breadcrumb_menu %}
@@ -17,7 +17,9 @@
 <form method="post"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
     <fieldset>
     <legend>{{ title }}</legend>
-    {% fields_for form %}
+    {% csrf_token %}
+    携帯番号：{{ form.username }}<br />
+    秘密番号：{{ form.password }}
     <div class="form-actions">
         {% block account_form_actions %}
         <input class="btn btn-primary btn-lg pull-right" type="submit" value="{{ title }}">

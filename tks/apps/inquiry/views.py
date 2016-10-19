@@ -41,7 +41,6 @@ class InquiryCompleteView(TemplateView):
             ["dordory@gmail.com"],
             ["dordory@gmail.com"],
             headers={'Reply-To': 'dordory@gmail.com'})
-        message.attach_file(report_file_path)
         message.send()
 
         return context
