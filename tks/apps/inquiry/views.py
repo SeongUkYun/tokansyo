@@ -39,8 +39,8 @@ class InquiryCompleteView(TemplateView):
             self.request.GET['content'],
             self.request.GET['email'],
             ["dordory@gmail.com"],
-            ["dordory@gmail.com"],
-            headers={'Reply-To': 'dordory@gmail.com'})
+            ["tks@tokansho.org"],
+            headers={'Reply-To': 'tks@tokansho.org'})
         message.send()
 
         return context
