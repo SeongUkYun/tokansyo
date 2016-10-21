@@ -6,6 +6,14 @@ from models import member as Member
 
 
 class MemberForm(forms.ModelForm):
+    name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    popular_name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    job_title = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    company_name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    biz_type = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    tel = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    fax = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    zipcode = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     address = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
 
     class Meta:
