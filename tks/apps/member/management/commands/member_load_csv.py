@@ -21,6 +21,10 @@ class Command(BaseCommand):
     @transaction.atomic
     def handle(self, *args, **options):
 
+        print Member.rank_choices
+        rank_dict = dict((val, key) for key, val in Member.rank_choices)
+        print rank_dict
+            
         def create_mail(str):
             seed = str.replace('-', '')
             return '{0}@tokansho.org'.format(seed)
@@ -49,18 +53,7 @@ class Command(BaseCommand):
             else:
                 accessibility = 3
 
-            if row[1] == '名誉会長':
-                rank = '00'
-            elif row[1] == '会長':
-                rank = '01'
-            elif row[1] == '部会長':
-                rank = '02'
-            elif row[1] == '常任理事':
-                rank = '03'
-            elif row[1] == '監事':
-                rank = '04'
-            else:
-                rank = '05'
+            rank = rank_dict[row[1]]
 
             member, c = Member.objects.update_or_create(
                 auth_user = user,
