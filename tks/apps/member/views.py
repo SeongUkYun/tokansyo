@@ -1,10 +1,15 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 from django import forms
 from django.views import generic
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.core.mail import EmailMessage
+from django.contrib.auth.models import User
 from django.db.models import Q
 from models import member as Member
-from forms import MemberForm
+from forms import MemberForm, ApplyPasswordForm, PasswordResetForm
 
 
 class MemberMixin(object):
@@ -44,6 +49,7 @@ class MemberEditView(TemplateView):
         member = Member.objects.get(auth_user=self.request.user)
         context['member'] = member
         context['form'] = MemberForm(instance=member)
+        context['reset_form'] = PasswordResetForm()
 
         return context
 
@@ -68,4 +74,59 @@ class MemberCompleteView(TemplateView):
         member.address = self.request.GET['address']
         member.save()
 
+        return context
+
+
+class ApplyPasswordView(TemplateView):
+    template_name = 'member/password.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ApplyPasswordView, self).get_context_data(**kwargs)
+        context['form'] = ApplyPasswordForm()
+
+        return context
+
+
+class ApplyCompleteView(TemplateView):
+    template_name = 'member/complete.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ApplyCompleteView, self).get_context_data(**kwargs)
+
+        tel = self.request.GET['tel']
+        password = self.request.GET['password']
+        try:
+            user = User.objects.get(username=tel)
+            user.set_password(password)
+            user.is_active = False
+            user.save()
+            flag = True
+        except:
+            raise
+            flag = False
+
+        print flag
+        content = '携帯番号{0}からパスワード設定申請が届きました。'.format(tel)
+        message = EmailMessage(
+            'パスワード設定申請が届きました。',
+            content,
+            'tks@tokansho.org',
+            ['tks@tokansho.org'],
+            headers={'Reply-To': 'tks@tokansho.org'})
+        message.send()
+        
+        return context
+
+
+class ResetCompleteView(TemplateView):
+    template_name = 'member/complete.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ResetCompleteView, self).get_context_data(**kwargs)
+
+        user = self.request.user
+        password = self.request.GET['password']
+        user.set_password(password)
+        user.save()
+        
         return context

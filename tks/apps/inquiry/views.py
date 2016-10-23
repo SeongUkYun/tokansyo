@@ -38,8 +38,8 @@ class InquiryCompleteView(TemplateView):
             self.request.GET['title'],
             self.request.GET['content'],
             self.request.GET['email'],
-            ["dordory@gmail.com"],
             ["tks@tokansho.org"],
+            ["dordory@gmail.com"],
             headers={'Reply-To': 'tks@tokansho.org'})
         message.send()
 

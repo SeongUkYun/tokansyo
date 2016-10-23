@@ -20,5 +20,12 @@
     <tr><td></td><td><input type="submit" value="更新" /></td></tr>
   </table>
 </form>
+<br /><br />
+<form method="GET" action="/member/reset_complete/">{% csrf_token %}
+  <table>
+    <tr><td width="100px">パスワード</td><td>{{ reset_form.password }}</td></tr>
+    <tr><td></td><td><input type="submit" value="パスワード更新" /></td></tr>
+  </table>
+</form>
 </div>
 {% endblock %}

@@ -21,3 +21,12 @@ class MemberForm(forms.ModelForm):
         fields = ['accessibility', 'rank', 'name', 'popular_name',
                   'job_title', 'company_name', 'biz_type', 'tel', 'fax',
                   'zipcode', 'address']
+
+
+class ApplyPasswordForm(forms.Form):
+    tel = forms.CharField(label='tel number', max_length=20)
+    password = forms.CharField(label='password', max_length=32)
+
+
+class PasswordResetForm(forms.Form):
+    password = forms.CharField(widget=forms.TextInput(attrs={'size': 50}), label='password', max_length=32)
