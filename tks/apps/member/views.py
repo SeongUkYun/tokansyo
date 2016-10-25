@@ -88,7 +88,7 @@ class ApplyPasswordView(TemplateView):
 
 
 class ApplyCompleteView(TemplateView):
-    template_name = 'member/complete.html'
+    template_name = 'member/apply_complete.html'
 
     def get_context_data(self, **kwargs):
         context = super(ApplyCompleteView, self).get_context_data(**kwargs)
