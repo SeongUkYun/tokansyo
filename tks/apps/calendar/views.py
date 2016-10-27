@@ -5,7 +5,7 @@ from .models import task as Task
 
 class CalendarMixin(object):
     def get_queryset(self):
-        return Task.objects.all()
+        return Task.objects.all().order_by('-task_date')
 
 
 class CalendarListView(CalendarMixin, generic.ListView):
