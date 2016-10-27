@@ -5,7 +5,7 @@ from .models import news as News
 
 class TokanNewsMixin(object):
     def get_queryset(self):
-        return News.objects.filter(news_type='N')
+        return News.objects.filter(news_type='N').order_by('-created_at')
 
 
 class TokanNewsListView(TokanNewsMixin, generic.ListView):
@@ -31,7 +31,7 @@ class TokanNewsView(generic.DetailView):
 
 class TaxNewsMixin(object):
     def get_queryset(self):
-        return News.objects.filter(news_type='T')
+        return News.objects.filter(news_type='T').order_by('-created_at')
 
 
 class TaxNewsListView(TaxNewsMixin, generic.ListView):
@@ -57,7 +57,7 @@ class TaxNewsView(generic.DetailView):
 
 class WeekNewsMixin(object):
     def get_queryset(self):
-        return News.objects.filter(news_type='W')
+        return News.objects.filter(news_type='W').order_by('-created_at')
 
 
 class WeekNewsListView(WeekNewsMixin, generic.ListView):
