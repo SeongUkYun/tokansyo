@@ -20,6 +20,8 @@
   <tr><th height="50px" width="30%">電話</th><td>{{ object.tel }}</td></tr>
   <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax }}</td></tr>
   <tr><th height="50px" width="30%">住所</th><td>{{ object.address }}</td></tr>
+  <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email }}</td></tr>
+  <tr><th height="50px" width="30%">URL</th><td>{{ object.url }}</td></tr>
   <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
   {% endif %}
 </table>

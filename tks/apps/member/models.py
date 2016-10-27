@@ -38,8 +38,9 @@ class member(models.Model):
     fax = models.CharField(max_length=128, null=True)
     zipcode = models.CharField(max_length=8)
     address = models.CharField(max_length=256, null=True)
-    url = models.URLField(max_length=256, null=True)
-    image = models.ImageField()
+    email = models.EmailField(null=True, blank=True)
+    url = models.URLField(max_length=256, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(

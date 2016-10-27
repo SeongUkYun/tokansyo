@@ -15,6 +15,8 @@ class MemberForm(forms.ModelForm):
     fax = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     zipcode = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     address = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'size': 50}))
+    url = forms.URLField(widget=forms.URLInput(attrs={'size': 50}))
 
     class Meta:
         model = Member
