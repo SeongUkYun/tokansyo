@@ -5,7 +5,7 @@ from models import gallery as Gallery
 
 class GalleryMixin(object):
     def get_queryset(self):
-        return Gallery.objects.all()
+        return Gallery.objects.all().order_by('-event_date', '-created_at')
 
 
 class GalleryListView(GalleryMixin, generic.ListView):

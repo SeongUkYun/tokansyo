@@ -22,5 +22,5 @@ class HomeView(generic.TemplateView):
         context['taxNews'] = TaxNews
         WeekNews = News.objects.filter(news_type='W').order_by('-created_at')[:2]
         context['weekNews'] = WeekNews
-        context['photos'] = Gallery.objects.all().order_by('-created_at')[:6]
+        context['photos'] = Gallery.objects.all().order_by('-event_date', '-created_at')[:6]
         return context
