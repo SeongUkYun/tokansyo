@@ -1,5 +1,7 @@
 from django.views import generic
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import news as News
 
 
@@ -19,7 +21,7 @@ class TokanNewsListView(TokanNewsMixin, generic.ListView):
         return context
 
 
-class TokanNewsView(generic.DetailView):
+class TokanNewsView(LoginRequiredMixin, generic.DetailView):
     model = News
     template_name = 'news/tokan_detail.html'
 
@@ -45,7 +47,7 @@ class TaxNewsListView(TaxNewsMixin, generic.ListView):
         return context
 
 
-class TaxNewsView(generic.DetailView):
+class TaxNewsView(LoginRequiredMixin, generic.DetailView):
     model = News
     template_name = 'news/tax_detail.html'
 
@@ -71,7 +73,7 @@ class WeekNewsListView(WeekNewsMixin, generic.ListView):
         return context
 
 
-class WeekNewsView(generic.DetailView):
+class WeekNewsView(LoginRequiredMixin, generic.DetailView):
     model = News
     template_name = 'news/week_detail.html'
 
