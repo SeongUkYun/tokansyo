@@ -14,6 +14,7 @@ class news(models.Model):
     title = models.CharField(max_length=128, null=False)
     descript = models.TextField()
     image = models.ImageField(upload_to='media/uploads/news/', blank=True)
+    stream_link = models.URLField(blank=True, null=True)
     news_file = models.FileField(upload_to='media/uploads/news/')
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)

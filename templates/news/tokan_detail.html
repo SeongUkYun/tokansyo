@@ -15,7 +15,11 @@
       <span class="date">{{ object.created_at }}</span>
 		</div>
     <div class="board_view_footer">
-      <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+      {% if object.stream_link %}
+        <a href="{{ object.stream_link }}" class="btn_lst">動画を見る</a>
+      {% else %}
+        <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+      {% endif %}
     </div>
 		<div class="board_view_footer">
 			<a href="/news/tokan/" class="btn_lst">一覧</a>
