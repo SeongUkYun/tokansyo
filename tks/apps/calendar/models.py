@@ -9,6 +9,7 @@ class task(models.Model):
     title = models.CharField(max_length=512, null=False)
     locate = models.CharField(max_length=256, null=True)
     content = models.TextField(max_length=2014, null=True)
+    task_file = models.FileField(upload_to='media/uploads/task/', null=True, blank=True)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(

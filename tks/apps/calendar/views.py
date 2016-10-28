@@ -1,5 +1,7 @@
 from django.views import generic
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from .models import task as Task
 
 
@@ -19,7 +21,7 @@ class CalendarListView(CalendarMixin, generic.ListView):
         return context
 
 
-class CalendarTaskView(generic.DetailView):
+class CalendarTaskView(LoginRequiredMixin, generic.DetailView):
     model = Task
     template_name = 'calendar/task_detail.html'
 
