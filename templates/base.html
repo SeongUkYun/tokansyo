@@ -97,11 +97,29 @@
 						<a href="/calendar/" title="スケジュール">スケジュール</a>
 					</strong>
 				</li>
-				<li class="m5">
-					<strong>
-						<a href="/recruit/" title="リクルート">リクルート</a>
-					</strong>
-				</li>
+        {% if request.user.is_authenticated %}
+        <li class="m5">
+          <strong>
+            <a href="javascript:void(0)" titile="リクルート">リクルート</a>
+          </strong>
+          <div class="mnb_sub_menu">
+            <ul>
+              <li class="first_li">
+                <a href="/recruit/">リクルート</a>
+              </li>
+              <li>
+                <a href="/recruit/apply/">求人掲載申請</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        {% else %}
+          <li class="m5">
+            <strong>
+              <a href="/recruit/" title="リクルート">リクルート</a>
+            </strong>
+          </li>
+        {% endif %}
 				<li class="m6">
 					<strong>
 						<a href="/member/" title="会員">会員</a>
@@ -195,11 +213,29 @@
 							<a href="/calendar/" title="スケジュール">スケジュール</a>
 						</strong>
 					</li>
-					<li class="m5">
-						<strong>
-							<a href="/recruit/" title="リクルート">リクルート</a>
-						</strong>
-					</li>
+          {% if request.user.is_authenticated %}
+          <li class="m5">
+            <strong>
+              <a href="javascript:void(0)" titile="リクルート">リクルート</a>
+            </strong>
+            <div class="mnb_sub_menu">
+              <ul>
+                <li class="first_li">
+                  <a href="/recruit/">リクルート</a>
+                </li>
+                <li>
+                  <a href="/recruit/apply/">求人掲載申請</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          {% else %}
+            <li class="m5">
+              <strong>
+                <a href="/recruit/" title="リクルート">リクルート</a>
+              </strong>
+            </li>
+          {% endif %}
           <li class="m6">
             <strong>
               <a href="/member/" title="会員">会員</a>
