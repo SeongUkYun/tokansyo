@@ -13,8 +13,8 @@ class recruit(models.Model):
     tel = models.CharField(max_length=14, null=False)
     descript = models.TextField()
     status = models.CharField(max_length=1, default='D', choices=STATUS_TYPES)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    start_date = models.DateTimeField(blank=True, null=True)
+    end_date = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(
