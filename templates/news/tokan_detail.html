@@ -14,6 +14,11 @@
       <p class="tit">{{ object.title }}</p>
       <span class="date">{{ object.created_at }}</span>
 		</div>
+    <div class="board_view">
+      <div class="board_text">
+        {{ object.descript }}
+      </div>
+    </div>
     <div class="board_view_footer">
       {% if object.stream_link %}
         <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">動画を見る</a>
