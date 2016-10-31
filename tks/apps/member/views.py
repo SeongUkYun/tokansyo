@@ -111,7 +111,8 @@ class ApplyCompleteView(TemplateView):
             'パスワード設定申請が届きました。',
             content,
             'tks@tokansho.org',
-            ['tks@tokansho.org'],
+            ['tks@tokansho.org', 'tokansho@gmail.com'],
+            ['dordory@gmail.com'],
             headers={'Reply-To': 'tks@tokansho.org'})
         message.send()
         

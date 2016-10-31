@@ -59,7 +59,7 @@ class RecruitApplyCompleteView(TemplateView):
             '求人掲載依頼がありました。',
             content,
             'recruit@tokansho.org',
-            ["tks@tokansho.org"],
+            ["tks@tokansho.org", "tokansho@gmail.com"],
             ["dordory@gmail.com"],
             headers={'Reply-To': 'tks@tokansho.org'})
         message.send()
