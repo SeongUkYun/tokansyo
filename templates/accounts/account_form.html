@@ -19,7 +19,7 @@
     <legend>{{ title }}</legend>
     {% csrf_token %}
     携帯番号：{{ form.username }}<br />
-    秘密番号：{{ form.password }}
+    ワスワード：{{ form.password }}
     <div class="form-actions">
         {% block account_form_actions %}
         <input class="btn btn-primary btn-lg pull-right" type="submit" value="{{ title }}">
