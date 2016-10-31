@@ -113,7 +113,7 @@ a:visited, a:active{text-decoration:none}
 /* MAIN SECTION CSS */
 #sec_news, #sec_schedule, #sec_recruit, #sec_gallery{overflow:hidden;padding:44px 0 32px}
 #sec_news, #sec_recruit{background-color:#fff}
-#sec_schedule{background-color:#f5f4f3}
+#sec_schedule, #sec_gallery{background-color:#f5f4f3}
 .tit_s1{margin:0 42px;background:url(../images/common/line1.png) repeat-x 0 21px;text-align:center;line-height:41px;font-size:30px;color:#2f2f2f}
 .tit_s1 strong{font-weight:normal}
 .tit_s1 .ins_tit1, .tit_s1 .ins_tit2{display:block;margin:0 auto;width:33.4%}
