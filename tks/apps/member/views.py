@@ -26,7 +26,7 @@ class MemberListView(MemberMixin, generic.ListView):
         if self.request.user.is_active:
             context['members'] = self.get_queryset()
         else:
-            context['members'] = self.get_queryset().filter(accessibility=1)
+            context['members'] = self.get_queryset().filter(accessibility=1).exclude(company_name__isnull=True).exclude(company_name__exact='')
 
         return context
 
@@ -93,7 +93,7 @@ class ApplyCompleteView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(ApplyCompleteView, self).get_context_data(**kwargs)
 
-        tel = self.request.GET['tel']
+        tel = self.request.GET['tel'].replace('-', '')
         password = self.request.GET['password']
         try:
             user = User.objects.get(username=tel)
