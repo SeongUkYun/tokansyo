@@ -2,13 +2,14 @@
 
 {% block main %}
 <div id="sub_content">
-<form method="GET" action="/recruit/apply_complete/">{% csrf_token %}
+<form method="POST" action="/recruit/apply_complete/" enctype="multipart/form-data">{% csrf_token %}
   {{ form.non_field_errors }}
   <table>
     <tr><th width="80px">会社名</th><td>{{ form.company_name }}</td></tr>
     <tr><th>住所</th><td>{{ form.address }}</td></tr>
     <tr><th>電話番号</th><td>{{ form.tel }}</td></tr>
     <tr><th>募集内容</th><td>{{ form.descript }}</td></tr>
+    <tr><th>関連資料</th><td>{{ form.file_name }}</td></tr>
     <tr><th></th><td><input type="submit" value="掲載を申請する" /></td></tr>
   </table>
 </form>

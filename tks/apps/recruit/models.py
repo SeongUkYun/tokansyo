@@ -13,6 +13,7 @@ class recruit(models.Model):
     tel = models.CharField(max_length=14, null=False)
     descript = models.TextField()
     status = models.CharField(max_length=1, default='D', choices=STATUS_TYPES)
+    file_name = models.FileField(upload_to='media/upload/recruit/', blank=True, null=True)
     start_date = models.DateTimeField(blank=True, null=True)
     end_date = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(

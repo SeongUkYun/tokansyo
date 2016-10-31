@@ -10,7 +10,8 @@ class RecruitForm(forms.ModelForm):
     address = forms.CharField(widget=forms.TextInput(attrs={'size': 42}))
     tel = forms.CharField(widget=forms.TextInput(attrs={'size': 42}))
     descript = forms.CharField(widget=forms.Textarea(attrs={'style': 'width: 42;'}))
+    file_name = forms.FileField()
     
     class Meta:
         model = Recruit
-        fields = ['company_name', 'address', 'tel', 'descript']
+        fields = ['company_name', 'address', 'tel', 'descript', 'file_name']

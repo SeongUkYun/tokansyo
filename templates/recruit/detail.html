@@ -25,6 +25,11 @@
 				</table>
 			</div>
 		</div>
+    {% if object.file_name %}
+    <div class="board_view_footer">
+      <a href="/static/media/{{ object.file_name }}" class="btn_lst">資料ダウンロード</a>
+    </div>
+    {% endif %}
 		<div class="board_view_footer">
 			<a href="/recruit/" class="btn_lst">一覧</a>
 		</div>
