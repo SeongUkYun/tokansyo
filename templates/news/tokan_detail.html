@@ -16,7 +16,7 @@
 		</div>
     <div class="board_view_footer">
       {% if object.stream_link %}
-        <a href="{{ object.stream_link }}" class="btn_lst">動画を見る</a>
+        <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">動画を見る</a>
       {% else %}
         <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
       {% endif %}
