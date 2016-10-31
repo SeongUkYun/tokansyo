@@ -20,7 +20,9 @@
 			</div>
 		</div>
     <div class="board_view_footer">
-      <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+      {% if object.news_file %}
+        <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+      {% endif %}
     </div>
 		<div class="board_view_footer">
 			<a href="/news/week/" class="btn_lst">一覧</a>
