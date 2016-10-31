@@ -18,8 +18,10 @@
     <fieldset>
     <legend>{{ title }}</legend>
     {% csrf_token %}
-    携帯番号：{{ form.username }}<br />
-    ワスワード：{{ form.password }}
+    <table>
+      <tr><th align="center">携帯番号</th><td>：{{ form.username }}</td></tr>
+      <tr><th align="center">ワスワード</th><td>：{{ form.password }}</td></tr>
+    </table>
     <div class="form-actions">
         {% block account_form_actions %}
         <input class="btn btn-primary btn-lg pull-right" type="submit" value="{{ title }}">
