@@ -14,7 +14,7 @@ from forms import MemberForm, ApplyPasswordForm, PasswordResetForm
 
 class MemberMixin(object):
     def get_queryset(self):
-        return Member.objects.filter(~Q(accessibility=3)).order_by('company_name')
+        return Member.objects.filter(~Q(accessibility=3)).order_by('company_name').exclude(company_name__isnull=True).exclude(company_name__exact='')
 
 
 class MemberListView(MemberMixin, generic.ListView):
@@ -26,7 +26,7 @@ class MemberListView(MemberMixin, generic.ListView):
         if self.request.user.is_active:
             context['members'] = self.get_queryset()
         else:
-            context['members'] = self.get_queryset().filter(accessibility=1).exclude(company_name__isnull=True).exclude(company_name__exact='')
+            context['members'] = self.get_queryset().filter(accessibility=1)
 
         return context
 
