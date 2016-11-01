@@ -22,7 +22,7 @@ class MemberForm(forms.ModelForm):
         model = Member
         fields = ['accessibility', 'rank', 'name', 'popular_name',
                   'job_title', 'company_name', 'biz_type', 'tel', 'fax',
-                  'zipcode', 'address']
+                  'zipcode', 'address', 'email', 'url']
 
 
 class ApplyPasswordForm(forms.Form):

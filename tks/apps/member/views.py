@@ -72,6 +72,8 @@ class MemberCompleteView(TemplateView):
         member.fax = self.request.GET['fax']
         member.zipcode = self.request.GET['zipcode']
         member.address = self.request.GET['address']
+        member.email = self.request.GET['email']
+        member.url = self.request.GET['url']
         member.save()
 
         return context
