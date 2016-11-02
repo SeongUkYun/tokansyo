@@ -30,7 +30,7 @@ class member(models.Model):
     accessibility = models.IntegerField(choices=accessibility_choices)
     rank = models.CharField(max_length=2, choices=rank_choices)
     name = models.CharField(max_length=128, null=False)
-    popular_name = models.CharField(max_length=128)
+    popular_name = models.CharField(max_length=128, blank=True, null=True)
     job_title = models.CharField(max_length=128)
     company_name = models.CharField(max_length=128, null=False)
     biz_type = models.CharField(max_length=256, null=True)
