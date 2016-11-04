@@ -7,7 +7,7 @@ from models import member as Member
 
 class MemberForm(forms.ModelForm):
     name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
-    popular_name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
+    popular_name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}), required=False)
     job_title = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     company_name = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     biz_type = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
