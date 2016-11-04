@@ -6,24 +6,22 @@
 <br />
 {% if object.accessibility == 3 %}
 <strong>非公開会員</strong>
+{% elif object.accessibility == 2 %}
+<strong>会員のみ公開</strong>
 {% else %}
 <table>
-  <tr><th height="50px" width="30%">職位</th><td>{{ object.display_rank }}</td></tr>
-  <tr><th height="50px" width="50%">姓名</th><td>{{ object.name }}</td></tr>
-  {% if request.user.is_authenticated %}
-  <tr><th height="50px" width="30%">役職</th><td>{{ object.job_title }}</td></tr>
-  {% endif %}
-  <tr><th height="50px" width="30%">会員社名</th><td>{{ object.company_name }}</td></tr>
-  {% if request.user.is_authenticated %}
-  <tr><th height="50px" width="30%">業種</th><td>{{ object.biz_type }}</td></tr>
-  <tr><th height="50px" width="30%">代表者名</th><td>{{ object.name }}</td></tr> 
-  <tr><th height="50px" width="30%">電話</th><td>{{ object.tel }}</td></tr>
-  <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax }}</td></tr>
-  <tr><th height="50px" width="30%">住所</th><td>{{ object.address }}</td></tr>
-  <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email }}</td></tr>
-  <tr><th height="50px" width="30%">URL</th><td>{{ object.url }}</td></tr>
-  <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
-  {% endif %}
+  <tr><th height="50px" width="30%">職位</th><td>{{ object.display_rank|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="50%">姓名</th><td>{{ object.name|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">役職</th><td>{{ object.job_title|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">会員社名</th><td>{{ object.company_name|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">業種</th><td>{{ object.biz_type|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">代表者名</th><td>{{ object.name|default_if_none:'' }}</td></tr> 
+  <tr><th height="50px" width="30%">電話</th><td>{{ object.tel|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">住所</th><td>{{ object.address|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email|default_if_none:'' }}</td></tr>
+  <tr><th height="50px" width="30%">URL</th><td>{{ object.url|default_if_none:'' }}</td></tr>
+  <tr><th>地図</th><td>{% easy_map object.address 300 180 16 using "member/map.html" %}</td></tr>
 </table>
 {% endif %}
 <br />
