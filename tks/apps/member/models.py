@@ -23,7 +23,7 @@ class member(models.Model):
     rank_choices = (('90', '常任顧問'), ('91', '顧問'), ('92', '相談役'),
                     ('93', '参与'), ('00', '名誉会長'), ('01', '会長'), ('02', '副会長'),
                     ('10', '常任理事'), ('12', '理事'), ('19', '会員'),
-                    ('11', '監事'), ('95', '諮問委員'))
+                    ('11', '監事'), ('95', '諮問委員'), ('99', 'サイト管理者'))
     accessibility_choices = ((1, '公開'), (2, '会員のみ'), (3, '非公開'))
 
     auth_user = models.ForeignKey('auth.User', null=True, blank=True, related_name='member')
