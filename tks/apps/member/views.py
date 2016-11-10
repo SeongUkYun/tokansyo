@@ -90,8 +90,6 @@ class ApplyPasswordView(TemplateView):
 
 
 class ApplyCompleteView(TemplateView):
-    template_name = 'member/apply_complete.html'
-
     def get_context_data(self, **kwargs):
         context = super(ApplyCompleteView, self).get_context_data(**kwargs)
 
@@ -99,25 +97,27 @@ class ApplyCompleteView(TemplateView):
         password = self.request.GET['password']
         try:
             user = User.objects.get(username=tel)
-            user.set_password(password)
-            user.is_active = False
-            user.save()
-            flag = True
+            if not user.member.init_entry:
+                user.member.init_entry = True
+                user.set_password(password)
+                user.is_active = False
+                user.save()
+                template_name = 'member/apply_complete.html'
+
+                content = '携帯番号{0}からパスワード設定申請が届きました。'.format(tel)
+                message = EmailMessage(
+                    'パスワード設定申請が届きました。',
+                    content,
+                    'tks@tokansho.org',
+                    ['tks@tokansho.org', 'tokansho@gmail.com'],
+                    ['dordory@gmail.com'],
+                    headers={'Reply-To': 'tks@tokansho.org'})
+                message.send()
+            else:
+                template_name = 'member/apply_already.html'
         except:
             raise
-            flag = False
 
-        print flag
-        content = '携帯番号{0}からパスワード設定申請が届きました。'.format(tel)
-        message = EmailMessage(
-            'パスワード設定申請が届きました。',
-            content,
-            'tks@tokansho.org',
-            ['tks@tokansho.org', 'tokansho@gmail.com'],
-            ['dordory@gmail.com'],
-            headers={'Reply-To': 'tks@tokansho.org'})
-        message.send()
-        
         return context
 
 
