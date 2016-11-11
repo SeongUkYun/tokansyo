@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load easy_maps_tags %}
+{% load pages_tags mezzanine_tags easy_maps_tags %}
 
 {% block head_title %}
   <title>東京韓国商工会議所-リクルート</title>
@@ -20,7 +20,7 @@
           <tr height="30"><th width="30%">会社名</th><td>{{ object.company_name }} </td></tr>
           <tr height="30"><th>連絡先</th><td>{{ object.tel }}</td></tr>
           <tr height="30"><th>住所</th><td>{{ object.address }}</td></tr>
-          <tr height="30"><th>求人情報</th><td>{{ object.descript }}</td></tr>
+          <tr height="30"><th>求人情報</th><td>{{ object.descript|richtext_filter }}</td></tr>
           <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
 				</table>
 			</div>
