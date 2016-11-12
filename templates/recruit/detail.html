@@ -20,7 +20,7 @@
           <tr height="30"><th width="30%">会社名</th><td>{{ object.company_name }} </td></tr>
           <tr height="30"><th>連絡先</th><td>{{ object.tel }}</td></tr>
           <tr height="30"><th>住所</th><td>{{ object.address }}</td></tr>
-          <tr height="30"><th>求人情報</th><td><code>{{ object.descript|linebreaks }}</code></td></tr>
+          <tr height="30"><th>求人情報</th><td>{{ object.descript|linebreaks }}</td></tr>
           <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
 				</table>
 			</div>
