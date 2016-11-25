@@ -14,7 +14,14 @@
   <tr><th height="50px" width="30%">電話</th><td>{{ object.tel|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">住所</th><td>{{ object.address|default_if_none:'' }}</td></tr>
-  <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email|default_if_none:'' }}</td></tr>
+  <tr>
+    <th height="50px" width="30%">e-mail</th>
+    <td>
+      {% if object.email %}
+        <a href="mailto:{{ object.email }}">{{ object.email|default_if_none:'' }}</a>
+      {% endif %}
+    </td>
+  </tr>
   <tr>
     <th height="50px" width="30%">URL</th>
     <td>
