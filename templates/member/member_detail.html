@@ -15,7 +15,14 @@
   <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">住所</th><td>{{ object.address|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email|default_if_none:'' }}</td></tr>
-  <tr><th height="50px" width="30%">URL</th><td>{{ object.url|default_if_none:'' }}</td></tr>
+  <tr>
+    <th height="50px" width="30%">URL</th>
+    <td>
+      {% if object.url %}
+        <a href="{{ object.url }}" target="_blank">{{ object.url }}</a>
+      {% endif %}
+    </td>
+  </tr>
   <tr><th>地図</th><td>{% easy_map object.address 300 180 16 using "member/map.html" %}</td></tr>
 </table>
 <br />
