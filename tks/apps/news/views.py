@@ -47,7 +47,7 @@ class TaxNewsListView(TaxNewsMixin, generic.ListView):
         return context
 
 
-class TaxNewsView(LoginRequiredMixin, generic.DetailView):
+class TaxNewsView(generic.DetailView):
     model = News
     template_name = 'news/tax_detail.html'
 
@@ -73,7 +73,7 @@ class WeekNewsListView(WeekNewsMixin, generic.ListView):
         return context
 
 
-class WeekNewsView(LoginRequiredMixin, generic.DetailView):
+class WeekNewsView(generic.DetailView):
     model = News
     template_name = 'news/week_detail.html'
 

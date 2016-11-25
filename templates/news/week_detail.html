@@ -5,28 +5,34 @@
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
-	<div id="sub_content">
-		<h2 class="tit_page">
-			<strong>日本経済週間動向</strong>
-			<span class="point"></span>
-		</h2>
-		<div class="board_view_tit">
-      <p class="tit">{{ object.title }}</p>
-      <span class="date">{{ object.created_at }}</span>
-		</div>
-		<div class="board_view">
-			<div class="board_text">
-        {{ object.descript }}
-			</div>
-		</div>
-    <div class="board_view_footer">
-      {% if object.news_file %}
-        <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
-      {% endif %}
+  {% if not object.flag or user.is_authenticated %}
+    <div id="sub_content">
+      <h2 class="tit_page">
+        <strong>日本経済週間動向</strong>
+        <span class="point"></span>
+      </h2>
+      <div class="board_view_tit">
+        <p class="tit">{{ object.title }}</p>
+        <span class="date">{{ object.created_at }}</span>
+      </div>
+      <div class="board_view">
+        <div class="board_text">
+          {{ object.descript }}
+        </div>
+      </div>
+      <div class="board_view_footer">
+        {% if object.news_file %}
+          <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+        {% endif %}
+      </div>
+      <div class="board_view_footer">
+        <a href="/news/week/" class="btn_lst">一覧</a>
+      </div>
     </div>
-		<div class="board_view_footer">
-			<a href="/news/week/" class="btn_lst">一覧</a>
-		</div>
-	</div>
+  {% else %}
+    <div>
+      <p>ログイン後に閲覧出来ます。</p>
+    </div>
+  {% endif %}
 {% endblock %}
 	<!-- ///////// CONTENT END //////////////////////////////////////////////////////////////////// -->
