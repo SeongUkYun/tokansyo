@@ -5,34 +5,40 @@
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
-	<div id="sub_content">
-		<h2 class="tit_page">
-			<strong>東京韓商ニュース</strong>
-			<span class="point"></span>
-		</h2>
-		<div class="board_view_tit">
-      <p class="tit">{{ object.title }}</p>
-      <span class="date">{{ object.created_at }}</span>
-		</div>
-    {% if object.image %}
-      <img src="/static/media/{{ object.image }}" width="500">
-    {% endif %}
-    <div class="board_view">
-      <div class="board_text">
-        {{ object.descript|linebreaks }}
+  {% if object.flag or user.is_authenticated %}
+    <div id="sub_content">
+      <h2 class="tit_page">
+        <strong>東京韓商ニュース</strong>
+        <span class="point"></span>
+      </h2>
+      <div class="board_view_tit">
+        <p class="tit">{{ object.title }}</p>
+        <span class="date">{{ object.created_at }}</span>
+      </div>
+      {% if object.image %}
+        <img src="/static/media/{{ object.image }}" width="500">
+      {% endif %}
+      <div class="board_view">
+        <div class="board_text">
+          {{ object.descript|linebreaks }}
+        </div>
+      </div>
+      <div class="board_view_footer">
+        {% if object.stream_link %}
+          <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">動画を見る</a>
+        {% endif %}
+        {% if object.news_file %}
+          <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
+        {% endif %}
+      </div>
+      <div class="board_view_footer">
+        <a href="/news/tokan/" class="btn_lst">一覧</a>
       </div>
     </div>
-    <div class="board_view_footer">
-      {% if object.stream_link %}
-        <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">動画を見る</a>
-      {% endif %}
-      {% if object.news_file %}
-        <a href="/{{ object.news_file }}" class="btn_lst">記事をダウンロード</a>
-      {% endif %}
+  {% else %}
+    <div>
+      <p>ログイン後に閲覧出来ます。</p>
     </div>
-		<div class="board_view_footer">
-			<a href="/news/tokan/" class="btn_lst">一覧</a>
-		</div>
-	</div>
+  {% endif %}
 {% endblock %}
 	<!-- ///////// CONTENT END //////////////////////////////////////////////////////////////////// -->

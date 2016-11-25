@@ -21,7 +21,7 @@ class TokanNewsListView(TokanNewsMixin, generic.ListView):
         return context
 
 
-class TokanNewsView(LoginRequiredMixin, generic.DetailView):
+class TokanNewsView(generic.DetailView):
     model = News
     template_name = 'news/tokan_detail.html'
 

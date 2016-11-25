@@ -16,6 +16,7 @@ class news(models.Model):
     image = models.ImageField(upload_to='media/uploads/news/', blank=True)
     stream_link = models.URLField(blank=True, null=True)
     news_file = models.FileField(upload_to='media/uploads/news/', blank=True, null=True)
+    flag = models.BooleanField('公開可否', default=False)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(
