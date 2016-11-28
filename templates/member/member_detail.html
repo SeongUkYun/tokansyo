@@ -4,11 +4,6 @@
 {% block main %}
 <div id="sub_content">
 <br />
-{% if object.accessibility == 3 %}
-<strong>非公開会員</strong>
-{% elif object.accessibility == 2 %}
-<strong>会員のみ公開</strong>
-{% else %}
 <table>
   <tr><th height="50px" width="30%">職位</th><td>{{ object.display_rank|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="50%">姓名</th><td>{{ object.name|default_if_none:'' }}</td></tr>
@@ -19,11 +14,24 @@
   <tr><th height="50px" width="30%">電話</th><td>{{ object.tel|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">FAX</th><td>{{ object.fax|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">住所</th><td>{{ object.address|default_if_none:'' }}</td></tr>
-  <tr><th height="50px" width="30%">e-mail</th><td>{{ object.email|default_if_none:'' }}</td></tr>
-  <tr><th height="50px" width="30%">URL</th><td>{{ object.url|default_if_none:'' }}</td></tr>
+  <tr>
+    <th height="50px" width="30%">e-mail</th>
+    <td>
+      {% if object.email %}
+        <a href="mailto:{{ object.email }}">{{ object.email|default_if_none:'' }}</a>
+      {% endif %}
+    </td>
+  </tr>
+  <tr>
+    <th height="50px" width="30%">URL</th>
+    <td>
+      {% if object.url %}
+        <a href="{{ object.url }}" target="_blank">{{ object.url }}</a>
+      {% endif %}
+    </td>
+  </tr>
   <tr><th>地図</th><td>{% easy_map object.address 300 180 16 using "member/map.html" %}</td></tr>
 </table>
-{% endif %}
 <br />
 		<div class="board_view_footer">
 			<a href="/member/" class="btn_lst">一覧</a>

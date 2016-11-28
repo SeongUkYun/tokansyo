@@ -383,6 +383,7 @@
             <strong class="tit">{{ task.title }}</strong>						
 						<ul class="lst_s2">
               <li class="ls2">日付：{{ task.task_date }}</li>
+              <li class="ls2">場所：{{ task.locate }}</li>
 						</ul>
             <span class="date">{{ task.created_at }}</span>
 					</a>
@@ -399,7 +400,6 @@
 				<li class="ls1">
           <a href="./news/tokan/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
-            <span class="cnt">{{ news.title }}</span>
             <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>
@@ -408,7 +408,6 @@
 				<li class="ls1">
           <a href="./news/tax/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
-            <span class="cnt">{{ news.title }}</span>
             <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>
@@ -417,7 +416,6 @@
 				<li class="ls1">
           <a href="./news/week/{{ news.id }}/">
             <strong class="tit">{{ news.title }}</strong>
-            <span class="cnt">{{ news.title }}</span>
             <span class="date">{{ news.created_at }}</span>
 					</a>
 				</li>

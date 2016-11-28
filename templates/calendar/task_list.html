@@ -15,7 +15,7 @@
         <li class="head">
           <a class="header" href="">
             <strong class="num_header">番号</strong>
-            <strong class="tit_header">件名</strong>
+            <strong class="tit_header">件名(場所)</strong>
             <strong class="date_header">行事日</strong>
           </a>
         </li>
@@ -23,7 +23,7 @@
 				<li>
           <a href="{{ task.id }}/">
             <span class="num">{{ forloop.revcounter }}</span>
-            <strong class="tit">{{ task.title }}</strong>
+            <strong class="tit">{{ task.title }}({{ task.locate }})</strong>
             <span class="date">{{ task.task_date }}</span>
 					</a>
 				</li>
