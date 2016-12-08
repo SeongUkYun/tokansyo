@@ -1,5 +1,6 @@
 from django.views import generic
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from models import gallery as Gallery
 
 
@@ -8,7 +9,7 @@ class GalleryMixin(object):
         return Gallery.objects.all().order_by('-event_date', '-created_at')
 
 
-class GalleryListView(GalleryMixin, generic.ListView):
+class GalleryListView(GalleryMixin, LoginRequiredMixin, generic.ListView):
     paginate_by = 10
     template_name = 'gallery/list.html'
 
