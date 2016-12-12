@@ -57,26 +57,12 @@ class MemberEditView(TemplateView):
 class MemberCompleteView(TemplateView):
     template_name = 'member/complete.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(MemberCompleteView, self).get_context_data(**kwargs)
-
-        member = Member.objects.get(auth_user=self.request.user)
-        member.accessibility = self.request.GET['accessibility']
-        member.rank = self.request.GET['rank']
-        member.name = self.request.GET['name']
-        member.popular_name = self.request.GET['popular_name']
-        member.job_title = self.request.GET['job_title']
-        member.company_name = self.request.GET['company_name']
-        member.biz_type = self.request.GET['biz_type']
-        member.tel = self.request.GET['tel']
-        member.fax = self.request.GET['fax']
-        member.zipcode = self.request.GET['zipcode']
-        member.address = self.request.GET['address']
-        member.email = self.request.GET['email']
-        member.url = self.request.GET['url']
-        member.save()
-
-        return context
+    def post(self, request, *args, **kwargs):
+        id = int(request.POST['member_id'])
+        member = Member.objects.get(pk=id)
+        form = MemberForm(request.POST, request.FILES, instance=member)
+        form.save()
+        return render(request, self.template_name)
 
 
 class ApplyPasswordView(TemplateView):

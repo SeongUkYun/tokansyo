@@ -17,12 +17,13 @@ class MemberForm(forms.ModelForm):
     address = forms.CharField(widget=forms.TextInput(attrs={'size': 50}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'size': 50}), required=False)
     url = forms.URLField(widget=forms.URLInput(attrs={'size': 50}), required=False)
+    image = forms.ImageField()
 
     class Meta:
         model = Member
         fields = ['accessibility', 'rank', 'name', 'popular_name',
                   'job_title', 'company_name', 'biz_type', 'tel', 'fax',
-                  'zipcode', 'address', 'email', 'url']
+                  'zipcode', 'address', 'email', 'url', 'image']
 
 
 class ApplyPasswordForm(forms.Form):

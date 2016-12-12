@@ -3,8 +3,9 @@
 {% block main %}
 <div id="sub_content">
   {{ member.name }}<br /><hr />
-<form method="GET" action="/member/complete/">{% csrf_token %}
+<form method="POST" action="/member/complete/" enctype="multipart/form-data">{% csrf_token %}
   {{ form.non_field_errors }}
+  <input type='hidden' name='member_id' value='{{ member.id }}'>
   <table>
     <tr><td width="100px">公開レベル</td><td width="300px">{{ form.accessibility }}</td></tr>
     <tr><td>職位</td><td>{{ form.rank }}</td></tr>
@@ -19,6 +20,8 @@
     <tr><td>住所</td><td>{{ form.address }}</td></tr>
     <tr><td>e-mail</td><td>{{ form.email }}</td></tr>
     <tr><td>URL</td><td>{{ form.url }}</td></tr>
+    <tr><td>写真</td><td><img src="/static/media/{{ member.image }}" width="150"></td></tr>
+    <tr><td></td><td>{{ form.image }}</td></tr>
     <tr><td></td><td><input type="submit" value="更新" /></td></tr>
   </table>
 </form>
