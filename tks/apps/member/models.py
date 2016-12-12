@@ -40,7 +40,7 @@ class member(models.Model):
     address = models.CharField(max_length=256, null=True)
     email = models.EmailField(null=True, blank=True)
     url = models.URLField(max_length=256, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, default='noimage.png')
     init_entry = models.BooleanField(default=False)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
