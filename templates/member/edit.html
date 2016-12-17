@@ -20,11 +20,11 @@
     <tr><td>住所</td><td>{{ form.address }}</td></tr>
     <tr><td>e-mail</td><td>{{ form.email }}</td></tr>
     <tr><td>URL</td><td>{{ form.url }}</td></tr>
-    {% ifequal member.image None %}
-      <tr><td>写真</td><td><img src="/static/media/noimage.png" width="150"></td></tr>
-    {% else %}
+    {% if member.image %}
       <tr><td>写真</td><td><img src="/static/media/{{ member.image }}" width="150"></td></tr>
-    {% endifequal %}
+    {% else %}
+      <tr><td>写真</td><td><img src="/static/media/noimage.png" width="150"></td></tr>
+    {% endif %}
     <tr><td></td><td>{{ form.image }}</td></tr>
     <tr><td></td><td><input type="submit" value="更新" /></td></tr>
   </table>

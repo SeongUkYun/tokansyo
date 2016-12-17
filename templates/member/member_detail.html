@@ -5,7 +5,11 @@
 <div id="sub_content">
 <br />
 <table>
-  <tr><th>写真</th><td><img src="/static/media/{{ object.image }}" width="150"></td></tr>
+  {% if object.image %}
+    <tr><th>写真</th><td><img src="/static/media/{{ object.image }}" width="150"></td></tr>
+  {% else %}
+    <tr><th>写真</th><td><img src="/static/media/noimage.png" width="150"></td></tr>
+  {% endif %}
   <tr><th height="50px" width="30%">職位</th><td>{{ object.display_rank|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="50%">姓名</th><td>{{ object.name|default_if_none:'' }}</td></tr>
   <tr><th height="50px" width="30%">役職</th><td>{{ object.job_title|default_if_none:'' }}</td></tr>
