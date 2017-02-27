@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load mezzanine_tags %}
 
 {% block head_title %}
   <title>東京韓国商工会議所-ニュース</title>
@@ -20,7 +21,11 @@
       {% endif %}
       <div class="board_view">
         <div class="board_text">
-          {{ object.descript|linebreaks }}
+          {% if object.content == '' %}
+            {{ object.descript|linebreaks }}
+          {% else %}
+            {{ object.content|richtext_filters|safe }}
+          {% endif %}
         </div>
       </div>
       <div class="board_view_footer">

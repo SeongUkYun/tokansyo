@@ -14,7 +14,7 @@ from forms import MemberForm, ApplyPasswordForm, PasswordResetForm
 
 class MemberMixin(object):
     def get_queryset(self):
-        return Member.objects.filter(~Q(accessibility=3)).order_by('company_name').exclude(company_name__isnull=True).exclude(company_name__exact='')
+        return Member.objects.filter(~Q(accessibility=3)).order_by('rank', 'name').exclude(company_name__isnull=True).exclude(company_name__exact='')
 
 
 class MemberListView(MemberMixin, generic.ListView):
