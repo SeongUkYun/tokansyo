@@ -2,9 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from mezzanine.core.models import RichText
 
 
-class news(models.Model):
+# class news(models.Model, RichText):
+class news(RichText):
 
     NEWS_TYPES = (('N', '韓商ニュース'),
                   ('T', '税経クラブ'),

@@ -27,6 +27,7 @@ class TokanNewsView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(TokanNewsView, self).get_context_data(**kwargs)
+        print (context['object'])
 
         return context
 
