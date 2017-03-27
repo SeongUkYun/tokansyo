@@ -2,24 +2,50 @@
 
 {% block main %}
 <div id="sub_content">
-<table class="border_table" border="1">
-  <tr height="50px">
-    <th width="10%" align="center" bgcolor="#aaaaaa">番号</th>
-    <th width="" align="center" bgcolor="#aaaaaa">会社名</th>
-    <th width="20%" align="center" bgcolor="#aaaaaa">代表者名</th>
-    <th width="20%" align="center" bgcolor="#aaaaaa">業種</th>
-    <th width="30%" align="center" bgcolor="#aaaaaa">電話番号</th>
-  </tr>
-{% for member in members %}
-  <tr height="50px">
-    <td align="center">{{ forloop.counter }}</td>
-    <td align="center"><a href="{{ member.id }}/"><strong>{{ member.company_name }}</strong></a></td>
-    <td align="center">{{ member.name }}</td>
-    <td align="center">{{ member.biz_type }}</td>
-    <td align="center">{{ member.tel }}</td>
-  </tr>
-{% endfor %}
-</table>
+  <div class="board_lst">
+  <div class="container">
+    <div class="row" style="background-color: #aaa;">
+      <div class="col-xs-1 col-md-1">
+        <strong>#</strong>
+      </div>
+      <div class="col-xs-7 col-md-3">
+        <strong>会社名</strong>
+      </div>
+      <div class="col-xs-4 col-md-1">
+        <strong>代表者名</strong>
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <div class="col-xs-7 col-md-7">
+          <strong>業種</strong>
+        </div>
+        <div class="col-xs-5 col-md-5">
+          <strong>電話番号</strong>
+        </div>
+      </div>
+    </div>
+    {% for member in members %}
+    <div class="row">
+      <div class="col-xs-1 col-md-1">
+        {{ forloop.counter }}
+      </div>
+      <div class="col-xs-7 col-md-3">
+        <a href="{{ member.id }}/"><strong>{{ member.company_name }}</strong></a>
+      </div>
+      <div class="col-xs-4 col-md-1">
+        {{ member.name }}
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <div class="col-xs-7 col-md-7">
+          {{ member.biz_type }}
+        </div>
+        <div class="col-xs-5 col-md-5">
+          {{ member.tel }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 </div>
 {% endblock %}
 
