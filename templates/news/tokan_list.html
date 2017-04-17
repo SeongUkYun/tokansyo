@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load news %}
 
 {% block head_title %}
   <title>東京韓国商工会議所-ニュース</title>
@@ -24,7 +25,7 @@
           <a href="/news/tokan/{{ news.id }}">
             <span class="num">{{ forloop.revcounter }}</span>
             <strong class="tit">{{ news.title }} (クリックして記事を見る)</strong>
-            <span class="date">{{ news.created_at }}</span>						
+            <span class="date">{{ news|display_date }}</span>						
 					</a>
 				</li>
         {% endfor %}

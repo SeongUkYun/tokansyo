@@ -7,7 +7,7 @@ from .models import news as News
 
 class TokanNewsMixin(object):
     def get_queryset(self):
-        return News.objects.filter(news_type='N').order_by('-created_at')
+        return News.objects.filter(news_type='N').order_by('-posted_at', '-created_at')
 
 
 class TokanNewsListView(TokanNewsMixin, generic.ListView):
