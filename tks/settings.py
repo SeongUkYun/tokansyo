@@ -251,6 +251,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "simple_history",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -300,6 +301,7 @@ MIDDLEWARE_CLASSES = (
     # "mezzanine.core.middleware.SSLRedirectMiddleware",
     "mezzanine.pages.middleware.PageMiddleware",
     "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    "simple_history.middleware.HistoryRequestMiddleware",
 )
 
 # Store these package names here as they may change in the future since
