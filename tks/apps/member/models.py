@@ -42,6 +42,10 @@ class member(models.Model):
     url = models.URLField(max_length=256, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     init_entry = models.BooleanField(default=False)
+    home_zipcode = models.CharField(max_length=8, null=True)
+    home_address = models.CharField(max_length=256, null=True)
+    home_tel = models.CharField(max_length=128, null=True)
+    home_fax = models.CharField(max_length=128, null=True)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(
