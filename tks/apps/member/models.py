@@ -53,6 +53,9 @@ class member(models.Model):
         'updated time', auto_now=True, blank=True, null=True)
     history = HistoricalRecords(table_name='member_history')
 
+    def __unicode__(self):
+        return self.name
+
     def parsedName(self):
         return self.name.split(' ')
 
