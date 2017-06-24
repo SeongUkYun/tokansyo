@@ -29,8 +29,8 @@ class member(models.Model):
 
     auth_user = models.ForeignKey('auth.User', null=True, blank=True, related_name='member')
     accessibility = models.IntegerField(choices=accessibility_choices)
-    rank = models.CharField(max_length=2, choices=rank_choices)
-    name = models.CharField(max_length=128, null=False)
+    rank = models.CharField('役職', max_length=2, choices=rank_choices)
+    name = models.CharField('お名前', max_length=128, null=False)
     popular_name = models.CharField(max_length=128, blank=True, null=True)
     job_title = models.CharField(max_length=128)
     company_name = models.CharField(max_length=128, null=False)
