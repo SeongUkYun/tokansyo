@@ -17,18 +17,16 @@ admin.autodiscover()
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 
-urlpatterns = i18n_patterns(
-    # Change the admin prefix here to use an alternate URL for the
-    # admin interface, which would be marginally more secure.
-    url("^admin/", include(admin.site.urls)),
-)
-
 if settings.USE_MODELTRANSLATION:
     urlpatterns += [
         url('^i18n/$', set_language, name='set_language'),
     ]
 
-urlpatterns += [
+urlpatterns = i18n_patterns(
+    # Change the admin prefix here to use an alternate URL for the
+    # admin interface, which would be marginally more secure.
+    url("^admin/", include(admin.site.urls)),
+
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
@@ -104,7 +102,7 @@ urlpatterns += [
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
-]
+)
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
