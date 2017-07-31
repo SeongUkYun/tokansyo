@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 18:25+0900\n"
+"POT-Creation-Date: 2017-08-01 00:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "パスワード"
 msgid ""
 "You're already logged in. If you'd like to log in as a different user, "
 "you'll need to log out first."
-msgstr ""
+msgstr "既にログインされております。"
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
@@ -106,14 +106,14 @@ msgid "View entries"
 msgstr ""
 
 #: templates/admin/forms/entries.html:14 templates/admin/index.html:15
-#: templates/pages/menus/breadcrumb.html:4
+#: templates/index.html:50 templates/pages/menus/breadcrumb.html:4
 #: templates/pages/menus/breadcrumb.html:10
 #: templates/pages/menus/dropdown.html:10
 #: templates/pages/menus/footer_tree.html:11
 #: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
 #: templates/pages/menus/tree.html:9 templates/search_results.html:13
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: templates/admin/forms/entries.html:28
 msgid "Field"
@@ -233,6 +233,26 @@ msgstr ""
 
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
+msgstr ""
+
+#: templates/base.old.html:55
+msgid "Toggle Navigation"
+msgstr ""
+
+#: templates/base.old.html:134
+msgid "Powered by"
+msgstr ""
+
+#: templates/base.old.html:137
+msgid "and"
+msgstr ""
+
+#: templates/base.old.html:140
+msgid "Theme by"
+msgstr ""
+
+#: templates/base.old.html:143
+msgid "View Mobile Site"
 msgstr ""
 
 #: templates/blog/blog_post_detail.html:29
@@ -516,6 +536,42 @@ msgstr ""
 #: templates/includes/search_form.html:26
 msgid "Go"
 msgstr ""
+
+#: templates/index.html:55
+msgid "about tks"
+msgstr "東京韓商概要"
+
+#: templates/index.html:82
+msgid "news"
+msgstr "ニュース"
+
+#: templates/index.html:103
+msgid "schedule"
+msgstr "スケジュール"
+
+#: templates/index.html:109 templates/index.html:125
+msgid "recruit"
+msgstr "リクルート"
+
+#: templates/index.html:131
+msgid "member"
+msgstr "会員"
+
+#: templates/index.html:136
+msgid "inquiry"
+msgstr "問合せ"
+
+#: templates/index.html:144
+msgid "mypage"
+msgstr "マイページ"
+
+#: templates/index.html:149
+msgid "logout"
+msgstr "ログアウト"
+
+#: templates/index.html:155
+msgid "login"
+msgstr "ログイン"
 
 #: templates/pages/form.html:29
 msgid "Submit"

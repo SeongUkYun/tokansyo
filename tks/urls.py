@@ -17,11 +17,6 @@ admin.autodiscover()
 # You can also change the ``home`` view to add your own functionality
 # to the project's homepage.
 
-if settings.USE_MODELTRANSLATION:
-    urlpatterns += [
-        url('^i18n/$', set_language, name='set_language'),
-    ]
-
 urlpatterns = i18n_patterns(
     # Change the admin prefix here to use an alternate URL for the
     # admin interface, which would be marginally more secure.
@@ -103,6 +98,11 @@ urlpatterns = i18n_patterns(
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
 
 )
+
+if settings.USE_MODELTRANSLATION:
+    urlpatterns += [
+        url('^i18n/$', set_language, name='set_language'),
+    ]
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.

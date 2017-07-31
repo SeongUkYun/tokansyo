@@ -47,12 +47,12 @@
 			<ul id="mnb_p">
 				<li class="m1">
 					<strong>
-						<a href="/" title="ホーム">ホーム</a>
+            <a href="/" title="ホーム">{% trans "Home" %}</a>
 					</strong>
 				</li>
 				<li class="m2">
 					<strong>
-            <a href="javascript:void(0)" title="東京韓商概要">東京韓商概要</a>
+            <a href="javascript:void(0)" title="東京韓商概要">{% trans "about tks" %}</a>
 					</strong>
 					<div class="mnb_sub_menu">
 						<ul>
@@ -79,7 +79,7 @@
 				</li>
 				<li class="m3">
 					<strong>
-						<a href="javascript:void(0)" title="ニュース">ニュース</a>
+            <a href="javascript:void(0)" title="ニュース">{% trans "news" %}</a>
 					</strong>
 					<div class="mnb_sub_menu">
 						<ul>
@@ -100,13 +100,13 @@
 				</li>
 				<li class="m4">
 					<strong>
-						<a href="/calendar/" title="スケジュール">スケジュール</a>
+            <a href="/calendar/" title="スケジュール">{% trans "schedule" %}</a>
 					</strong>
 				</li>
         {% if request.user.is_authenticated %}
         <li class="m5">
           <strong>
-            <a href="javascript:void(0)" titile="リクルート">リクルート</a>
+            <a href="javascript:void(0)" titile="リクルート">{% trans "recruit" %}</a>
           </strong>
           <div class="mnb_sub_menu">
             <ul>
@@ -122,18 +122,18 @@
         {% else %}
           <li class="m5">
             <strong>
-              <a href="/recruit/" title="リクルート">リクルート</a>
+              <a href="/recruit/" title="リクルート">{% trans "recruit" %}</a>
             </strong>
           </li>
         {% endif %}
 				<li class="m6">
 					<strong>
-						<a href="/member/" title="会員">会員</a>
+            <a href="/member/" title="会員">{% trans "member" %}</a>
 					</strong>
 				</li>
 				<li class="m7">
 					<strong>
-						<a href="/inquiry/" title="問合せ">お問い合わせ</a>
+            <a href="/inquiry/" title="問合せ">{% trans "inquiry" %}</a>
 					</strong>
 				</li>
 			</ul>
@@ -141,18 +141,18 @@
         {% if request.user.is_authenticated %}
 				<li class="gm2">
 					<strong>
-						<a href="/member/update/" title="マイページ">マイページ</a>
+            <a href="/member/update/" title="マイページ">{% trans "mypage" %}</a>
 					</strong>
 				</li>
 				<li class="gm1">
 					<strong>
-						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
+            <a href="/accounts/logout/" title="ログアウト">{% trans "logout" %}</a>
 					</strong>
 				</li>
         {% else %}
         <li class="gm1">
           <strong>
-            <a href="/accounts/login/" title="ログイン">ログイン</a>
+            <a href="/accounts/login/" title="ログイン">{% trans "login" %}</a>
           </strong>
         </li>
         {% endif %}

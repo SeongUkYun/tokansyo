@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 18:26+0900\n"
+"POT-Creation-Date: 2017-08-01 00:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "비밀번호"
 msgid ""
 "You're already logged in. If you'd like to log in as a different user, "
 "you'll need to log out first."
-msgstr ""
+msgstr "로그인 상태입니다."
 
 #: templates/accounts/account_password_reset.html:6
 msgid ""
@@ -106,7 +106,7 @@ msgid "View entries"
 msgstr ""
 
 #: templates/admin/forms/entries.html:14 templates/admin/index.html:15
-#: templates/pages/menus/breadcrumb.html:4
+#: templates/index.html:50 templates/pages/menus/breadcrumb.html:4
 #: templates/pages/menus/breadcrumb.html:10
 #: templates/pages/menus/dropdown.html:10
 #: templates/pages/menus/footer_tree.html:11
@@ -193,7 +193,7 @@ msgstr ""
 #: templates/generic/includes/comment.html:59 templates/twitter/tweets.html:19
 #, python-format
 msgid "%(sometime)s ago"
-msgstr "%(sometime) 전"
+msgstr ""
 
 #: templates/admin/index.html:17
 msgid "Dashboard"
@@ -234,6 +234,26 @@ msgstr "패스워드를 잃어버리셨습니까?"
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
 msgstr "프로파일 정보"
+
+#: templates/base.old.html:55
+msgid "Toggle Navigation"
+msgstr ""
+
+#: templates/base.old.html:134
+msgid "Powered by"
+msgstr ""
+
+#: templates/base.old.html:137
+msgid "and"
+msgstr ""
+
+#: templates/base.old.html:140
+msgid "Theme by"
+msgstr ""
+
+#: templates/base.old.html:143
+msgid "View Mobile Site"
+msgstr ""
 
 #: templates/blog/blog_post_detail.html:29
 #: templates/blog/blog_post_list.html:85
@@ -516,6 +536,42 @@ msgstr ""
 #: templates/includes/search_form.html:26
 msgid "Go"
 msgstr ""
+
+#: templates/index.html:55
+msgid "about tks"
+msgstr "동경한상개요"
+
+#: templates/index.html:82
+msgid "news"
+msgstr "뉴스"
+
+#: templates/index.html:103
+msgid "schedule"
+msgstr "스케쥴"
+
+#: templates/index.html:109 templates/index.html:125
+msgid "recruit"
+msgstr "리쿠르트"
+
+#: templates/index.html:131
+msgid "member"
+msgstr "회원"
+
+#: templates/index.html:136
+msgid "inquiry"
+msgstr "문의"
+
+#: templates/index.html:144
+msgid "mypage"
+msgstr "마이페이지"
+
+#: templates/index.html:149
+msgid "logout"
+msgstr "로그아웃"
+
+#: templates/index.html:155
+msgid "login"
+msgstr "로그인"
 
 #: templates/pages/form.html:29
 msgid "Submit"
