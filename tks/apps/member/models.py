@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
+from simple_history.models import HistoricalRecords
 
 
 class member(models.Model):
@@ -28,8 +29,8 @@ class member(models.Model):
 
     auth_user = models.ForeignKey('auth.User', null=True, blank=True, related_name='member')
     accessibility = models.IntegerField(choices=accessibility_choices)
-    rank = models.CharField(max_length=2, choices=rank_choices)
-    name = models.CharField(max_length=128, null=False)
+    rank = models.CharField('役職', max_length=2, choices=rank_choices)
+    name = models.CharField('お名前', max_length=128, null=False)
     popular_name = models.CharField(max_length=128, blank=True, null=True)
     job_title = models.CharField(max_length=128)
     company_name = models.CharField(max_length=128, null=False)
@@ -42,14 +43,18 @@ class member(models.Model):
     url = models.URLField(max_length=256, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     init_entry = models.BooleanField(default=False)
-    home_zipcode = models.CharField(max_length=8, null=True)
-    home_address = models.CharField(max_length=256, null=True)
-    home_tel = models.CharField(max_length=128, null=True)
-    home_fax = models.CharField(max_length=128, null=True)
+    home_zipcode = models.CharField(max_length=8, blank=True, null=True)
+    home_address = models.CharField(max_length=256, blank=True, null=True)
+    home_tel = models.CharField(max_length=128, blank=True, null=True)
+    home_fax = models.CharField(max_length=128, blank=True, null=True)
     created_at = models.DateTimeField(
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(
         'updated time', auto_now=True, blank=True, null=True)
+    history = HistoricalRecords(table_name='member_history')
+
+    def __unicode__(self):
+        return self.name
 
     def parsedName(self):
         return self.name.split(' ')
