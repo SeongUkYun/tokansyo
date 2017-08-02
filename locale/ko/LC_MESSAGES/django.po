@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-01 00:38+0900\n"
+"POT-Creation-Date: 2017-08-03 01:34+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -537,41 +537,108 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: templates/index.html:55
+#: templates/index.html:7 templates/index.html:292 templates/index.html:299
+msgid "tks"
+msgstr "동경한국상공회의소"
+
+#: templates/index.html:55 templates/index.html:174
 msgid "about tks"
 msgstr "동경한상개요"
 
-#: templates/index.html:82
+#: templates/index.html:60 templates/index.html:179
+msgid "about"
+msgstr "개요"
+
+#: templates/index.html:63 templates/index.html:182
+msgid "greeting"
+msgstr "회장인사"
+
+#: templates/index.html:66 templates/index.html:185
+msgid "organize"
+msgstr "조직체제"
+
+#: templates/index.html:69 templates/index.html:188
+msgid "history"
+msgstr "연혁"
+
+#: templates/index.html:72 templates/index.html:191
+msgid "article"
+msgstr "정관"
+
+#: templates/index.html:75 templates/index.html:194
+msgid "map"
+msgstr "오시는길"
+
+#: templates/index.html:82 templates/index.html:164 templates/index.html:201
+#: templates/index.html:397
 msgid "news"
 msgstr "뉴스"
 
-#: templates/index.html:103
+#: templates/index.html:87 templates/index.html:206
+msgid "tks news"
+msgstr "동경한상뉴스"
+
+#: templates/index.html:90 templates/index.html:209
+msgid "tokyo taxbiz club"
+msgstr "동경세경클럽"
+
+#: templates/index.html:93 templates/index.html:212
+msgid "japan biz brife"
+msgstr "주간일본경제동향(대사관제공)"
+
+#: templates/index.html:96 templates/index.html:215 templates/index.html:444
+msgid "gallery"
+msgstr "갤러리"
+
+#: templates/index.html:103 templates/index.html:222 templates/index.html:378
 msgid "schedule"
 msgstr "스케쥴"
 
-#: templates/index.html:109 templates/index.html:125
+#: templates/index.html:109 templates/index.html:114 templates/index.html:125
+#: templates/index.html:228 templates/index.html:233 templates/index.html:244
+#: templates/index.html:353 templates/index.html:428
 msgid "recruit"
 msgstr "리쿠르트"
 
-#: templates/index.html:131
+#: templates/index.html:117 templates/index.html:236
+msgid "recruit application"
+msgstr "구인정보 게시 신청"
+
+#: templates/index.html:131 templates/index.html:250
 msgid "member"
 msgstr "회원"
 
-#: templates/index.html:136
+#: templates/index.html:136 templates/index.html:255 templates/index.html:365
 msgid "inquiry"
 msgstr "문의"
 
-#: templates/index.html:144
+#: templates/index.html:144 templates/index.html:261
 msgid "mypage"
 msgstr "마이페이지"
 
-#: templates/index.html:149
+#: templates/index.html:149 templates/index.html:266
 msgid "logout"
 msgstr "로그아웃"
 
-#: templates/index.html:155
+#: templates/index.html:155 templates/index.html:272
 msgid "login"
 msgstr "로그인"
+
+#: templates/index.html:169
+msgid "home"
+msgstr ""
+
+#: templates/index.html:291 templates/index.html:298
+msgid "japan korea business bridge"
+msgstr "한일간 비지니스 가교"
+
+#: templates/index.html:347
+msgid "tks intro"
+msgstr "동경한상소개"
+
+#: templates/index.html:359
+msgid "member page"
+msgstr "회원 페이지"
 
 #: templates/pages/form.html:29
 msgid "Submit"
