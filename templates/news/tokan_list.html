@@ -1,30 +1,30 @@
 {% extends "base.html" %}
-{% load news %}
+{% load news i18n %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-ニュース</title>
+<title>{% trans "tks" %}-{% trans "news" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>ニュース-東京韓商ニュース</strong>
+      <strong>{% trans "news" %}-{% trans "tks news" %}</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_lst">
 			<ul>
         <li class="head">
           <a class="header" href="">
-            <strong class="num_header">番号</strong>
-            <strong class="tit_header">件名</strong>
-            <strong class="date_header">登録日</strong>
+            <strong class="num_header">{% trans "number" %}</strong>
+            <strong class="tit_header">{% trans "title" %}</strong>
+            <strong class="date_header">{% trans "created at" %}</strong>
           </a>
         </li>
         {% for news in newses %}
 				<li>
           <a href="/news/tokan/{{ news.id }}">
             <span class="num">{{ forloop.revcounter }}</span>
-            <strong class="tit">{{ news.title }} (クリックして記事を見る)</strong>
+            <strong class="tit">{{ news.title }} ({% trans "click to read" %})</strong>
             <span class="date">{{ news|display_date }}</span>						
 					</a>
 				</li>

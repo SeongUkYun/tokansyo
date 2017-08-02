@@ -1,15 +1,15 @@
 {% extends "base.html" %}
-{% load mezzanine_tags %}
+{% load mezzanine_tags news i18n %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-ニュース</title>
+  <title>{% trans "tks" %}-{% trans "news" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
   {% if object.flag or user.is_authenticated %}
     <div id="sub_content">
       <h2 class="tit_page">
-        <strong>東京韓商ニュース</strong>
+        <strong>{% trans "tks news" %}</strong>
         <span class="point"></span>
       </h2>
       <div class="board_view_tit">
@@ -30,19 +30,19 @@
       </div>
       <div class="board_view_footer">
         {% if object.stream_link %}
-          <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">リンクを開く</a>
+        <a href="{{ object.stream_link }}" class="btn_lst" target="_blank">{% trans "link open" %}</a>
         {% endif %}
         {% if object.news_file %}
-          <a href="/{{ object.news_file }}" class="btn_lst">添付ファイルをダウンロード</a>
+        <a href="/{{ object.news_file }}" class="btn_lst">{% trans "file download" %}</a>
         {% endif %}
       </div>
       <div class="board_view_footer">
-        <a href="/news/tokan/" class="btn_lst">一覧</a>
+        <a href="/news/tokan/" class="btn_lst">{% trans "list" %}</a>
       </div>
     </div>
   {% else %}
     <div>
-      <p>ログイン後に閲覧出来ます。</p>
+      <p>{% trans "need to login for read" %}</p>
     </div>
   {% endif %}
 {% endblock %}

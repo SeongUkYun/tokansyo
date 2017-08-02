@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-03 01:34+0900\n"
+"POT-Creation-Date: 2017-08-03 03:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,8 @@ msgid "View entries"
 msgstr ""
 
 #: templates/admin/forms/entries.html:14 templates/admin/index.html:15
-#: templates/index.html:50 templates/pages/menus/breadcrumb.html:4
+#: templates/base.html:48 templates/base.html:167 templates/index.html:50
+#: templates/pages/menus/breadcrumb.html:4
 #: templates/pages/menus/breadcrumb.html:10
 #: templates/pages/menus/dropdown.html:10
 #: templates/pages/menus/footer_tree.html:11
@@ -234,6 +235,132 @@ msgstr ""
 #: templates/admin/profile_inline.html:10
 msgid "Profile information"
 msgstr ""
+
+#: templates/base.html:53 templates/base.html:172 templates/index.html:55
+#: templates/index.html:174
+msgid "about tks"
+msgstr "東京韓商概要"
+
+#: templates/base.html:58 templates/base.html:177 templates/index.html:60
+#: templates/index.html:179
+msgid "about"
+msgstr "概要"
+
+#: templates/base.html:61 templates/base.html:180 templates/index.html:63
+#: templates/index.html:182
+msgid "greeting"
+msgstr "会長挨拶"
+
+#: templates/base.html:64 templates/base.html:183 templates/index.html:66
+#: templates/index.html:185
+msgid "organize"
+msgstr "組織体制"
+
+#: templates/base.html:67 templates/base.html:186 templates/index.html:69
+#: templates/index.html:188
+msgid "history"
+msgstr "沿革"
+
+#: templates/base.html:70 templates/base.html:189 templates/index.html:72
+#: templates/index.html:191
+msgid "article"
+msgstr "定款"
+
+#: templates/base.html:73 templates/base.html:192 templates/index.html:75
+#: templates/index.html:194
+msgid "map"
+msgstr "案内図"
+
+#: templates/base.html:80 templates/base.html:162 templates/base.html:199
+#: templates/index.html:82 templates/index.html:164 templates/index.html:201
+#: templates/index.html:397 templates/news/tax_detail.html:5
+#: templates/news/tax_list.html:5 templates/news/tax_list.html:11
+#: templates/news/tokan_detail.html:5 templates/news/tokan_list.html:5
+#: templates/news/tokan_list.html:11 templates/news/week_detail.html:5
+#: templates/news/week_list.html:5 templates/news/week_list.html:11
+msgid "news"
+msgstr "ニュース"
+
+#: templates/base.html:85 templates/base.html:204 templates/index.html:87
+#: templates/index.html:206 templates/news/tokan_detail.html:12
+#: templates/news/tokan_list.html:11
+msgid "tks news"
+msgstr "東京韓商ニュース"
+
+#: templates/base.html:88 templates/base.html:207 templates/index.html:90
+#: templates/index.html:209 templates/news/tax_detail.html:12
+#: templates/news/tax_list.html:11
+msgid "tokyo taxbiz club"
+msgstr "東京税経クラブ"
+
+#: templates/base.html:91 templates/base.html:210 templates/index.html:93
+#: templates/index.html:212 templates/news/week_list.html:11
+msgid "japan biz brife"
+msgstr "日本経済週刊動向（韓国大使館提供）"
+
+#: templates/base.html:94 templates/base.html:213 templates/base.html:220
+#: templates/index.html:96 templates/index.html:215 templates/index.html:444
+msgid "gallery"
+msgstr "ギャラリー"
+
+#: templates/base.html:101 templates/index.html:103 templates/index.html:222
+#: templates/index.html:378
+msgid "schedule"
+msgstr "スケジュール"
+
+#: templates/base.html:107 templates/base.html:112 templates/base.html:123
+#: templates/base.html:226 templates/base.html:231 templates/base.html:242
+#: templates/index.html:109 templates/index.html:114 templates/index.html:125
+#: templates/index.html:228 templates/index.html:233 templates/index.html:244
+#: templates/index.html:353 templates/index.html:428
+msgid "recruit"
+msgstr "リクルート"
+
+#: templates/base.html:115 templates/base.html:234 templates/index.html:117
+#: templates/index.html:236
+msgid "recruit application"
+msgstr "求人掲載申請"
+
+#: templates/base.html:129 templates/base.html:248 templates/index.html:131
+#: templates/index.html:250
+msgid "member"
+msgstr "会員"
+
+#: templates/base.html:134 templates/base.html:253 templates/index.html:136
+#: templates/index.html:255 templates/index.html:365
+msgid "inquiry"
+msgstr "問合せ"
+
+#: templates/base.html:142 templates/base.html:259 templates/index.html:144
+#: templates/index.html:261
+msgid "mypage"
+msgstr "マイページ"
+
+#: templates/base.html:147 templates/base.html:264 templates/index.html:149
+#: templates/index.html:266
+msgid "logout"
+msgstr "ログアウト"
+
+#: templates/base.html:153 templates/base.html:270 templates/index.html:155
+#: templates/index.html:272
+msgid "login"
+msgstr "ログイン"
+
+#: templates/base.html:289 templates/base.html:295 templates/base.html:301
+#: templates/index.html:7 templates/index.html:292 templates/index.html:299
+#: templates/news/tax_detail.html:5 templates/news/tax_list.html:5
+#: templates/news/tokan_detail.html:5 templates/news/tokan_list.html:5
+#: templates/news/week_detail.html:5 templates/news/week_list.html:5
+msgid "tks"
+msgstr "東京韓国商工会議所"
+
+#: templates/base.html:314
+msgid "prev"
+msgstr "前へ"
+
+#: templates/base.html:317
+msgid "next"
+msgstr "次へ"
 
 #: templates/base.old.html:55
 msgid "Toggle Navigation"
@@ -537,93 +664,6 @@ msgstr ""
 msgid "Go"
 msgstr ""
 
-#: templates/index.html:7 templates/index.html:292 templates/index.html:299
-msgid "tks"
-msgstr "東京韓国商工会議所"
-
-#: templates/index.html:55 templates/index.html:174
-msgid "about tks"
-msgstr "東京韓商概要"
-
-#: templates/index.html:60 templates/index.html:179
-msgid "about"
-msgstr "概要"
-
-#: templates/index.html:63 templates/index.html:182
-msgid "greeting"
-msgstr "会長挨拶"
-
-#: templates/index.html:66 templates/index.html:185
-msgid "organize"
-msgstr "組織体制"
-
-#: templates/index.html:69 templates/index.html:188
-msgid "history"
-msgstr "沿革"
-
-#: templates/index.html:72 templates/index.html:191
-msgid "article"
-msgstr "定款"
-
-#: templates/index.html:75 templates/index.html:194
-msgid "map"
-msgstr "案内図"
-
-#: templates/index.html:82 templates/index.html:164 templates/index.html:201
-#: templates/index.html:397
-msgid "news"
-msgstr "ニュース"
-
-#: templates/index.html:87 templates/index.html:206
-msgid "tks news"
-msgstr "東京韓商ニュース"
-
-#: templates/index.html:90 templates/index.html:209
-msgid "tokyo taxbiz club"
-msgstr "東京税経クラブ"
-
-#: templates/index.html:93 templates/index.html:212
-msgid "japan biz brife"
-msgstr "日本経済週刊動向（韓国大使館提供）"
-
-#: templates/index.html:96 templates/index.html:215 templates/index.html:444
-msgid "gallery"
-msgstr "ギャラリー"
-
-#: templates/index.html:103 templates/index.html:222 templates/index.html:378
-msgid "schedule"
-msgstr "スケジュール"
-
-#: templates/index.html:109 templates/index.html:114 templates/index.html:125
-#: templates/index.html:228 templates/index.html:233 templates/index.html:244
-#: templates/index.html:353 templates/index.html:428
-msgid "recruit"
-msgstr "リクルート"
-
-#: templates/index.html:117 templates/index.html:236
-msgid "recruit application"
-msgstr "求人掲載申請"
-
-#: templates/index.html:131 templates/index.html:250
-msgid "member"
-msgstr "会員"
-
-#: templates/index.html:136 templates/index.html:255 templates/index.html:365
-msgid "inquiry"
-msgstr "問合せ"
-
-#: templates/index.html:144 templates/index.html:261
-msgid "mypage"
-msgstr "マイページ"
-
-#: templates/index.html:149 templates/index.html:266
-msgid "logout"
-msgstr "ログアウト"
-
-#: templates/index.html:155 templates/index.html:272
-msgid "login"
-msgstr "ログイン"
-
 #: templates/index.html:169
 msgid "home"
 msgstr ""
@@ -641,6 +681,51 @@ msgstr "東京韓商紹介"
 #| msgid "member"
 msgid "member page"
 msgstr "会員ページ"
+
+#: templates/news/tax_detail.html:21 templates/news/tokan_detail.html:36
+#: templates/news/week_detail.html:26
+msgid "file download"
+msgstr "添付ファイルをダウンロード"
+
+#: templates/news/tax_detail.html:25 templates/news/tokan_detail.html:40
+#: templates/news/week_detail.html:30
+msgid "list"
+msgstr "一覧"
+
+#: templates/news/tax_detail.html:30 templates/news/tokan_detail.html:45
+#: templates/news/week_detail.html:35
+msgid "need to login for read"
+msgstr "ログイン後に閲覧出来ます。"
+
+#: templates/news/tax_list.html:18 templates/news/tokan_list.html:18
+#: templates/news/week_list.html:18
+msgid "number"
+msgstr "番号"
+
+#: templates/news/tax_list.html:19 templates/news/tokan_list.html:19
+#: templates/news/week_list.html:19
+msgid "title"
+msgstr "件名"
+
+#: templates/news/tax_list.html:20 templates/news/tokan_list.html:20
+#: templates/news/week_list.html:20
+msgid "created at"
+msgstr "登録日"
+
+#: templates/news/tax_list.html:27 templates/news/tokan_list.html:27
+#: templates/news/week_list.html:27
+msgid "click to read"
+msgstr "クリックして記事を見る"
+
+#: templates/news/tokan_detail.html:33
+msgid "link open"
+msgstr "リンクを開"
+
+#: templates/news/week_detail.html:12
+#, fuzzy
+#| msgid "japan biz brife"
+msgid "japan biz brief without amb"
+msgstr "日本経済週刊動向"
 
 #: templates/pages/form.html:29
 msgid "Submit"
