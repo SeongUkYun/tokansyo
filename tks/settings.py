@@ -119,7 +119,6 @@ LANGUAGE_CODE = "ja"
 LANGUAGES = (
     ('ja', _('Japanese')),
     ('ko', _('Korean')),
-    ('en', _('English')),
 )
 
 USE_I18N = True

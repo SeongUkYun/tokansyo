@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-03 03:06+0900\n"
+"POT-Creation-Date: 2017-08-03 10:53+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -267,7 +267,7 @@ msgid "article"
 msgstr "定款"
 
 #: templates/base.html:73 templates/base.html:192 templates/index.html:75
-#: templates/index.html:194
+#: templates/index.html:194 templates/member/member_detail.html:38
 msgid "map"
 msgstr "案内図"
 
@@ -303,8 +303,10 @@ msgstr "日本経済週刊動向（韓国大使館提供）"
 msgid "gallery"
 msgstr "ギャラリー"
 
-#: templates/base.html:101 templates/index.html:103 templates/index.html:222
-#: templates/index.html:378
+#: templates/base.html:101 templates/calendar/task_detail.html:5
+#: templates/calendar/task_detail.html:11 templates/calendar/task_list.html:5
+#: templates/calendar/task_list.html:11 templates/index.html:103
+#: templates/index.html:222 templates/index.html:378
 msgid "schedule"
 msgstr "スケジュール"
 
@@ -313,6 +315,8 @@ msgstr "スケジュール"
 #: templates/index.html:109 templates/index.html:114 templates/index.html:125
 #: templates/index.html:228 templates/index.html:233 templates/index.html:244
 #: templates/index.html:353 templates/index.html:428
+#: templates/recruit/detail.html:5 templates/recruit/detail.html:11
+#: templates/recruit/list.html:5 templates/recruit/list.html:11
 msgid "recruit"
 msgstr "リクルート"
 
@@ -347,10 +351,12 @@ msgid "login"
 msgstr "ログイン"
 
 #: templates/base.html:289 templates/base.html:295 templates/base.html:301
+#: templates/calendar/task_detail.html:5 templates/calendar/task_list.html:5
 #: templates/index.html:7 templates/index.html:292 templates/index.html:299
 #: templates/news/tax_detail.html:5 templates/news/tax_list.html:5
 #: templates/news/tokan_detail.html:5 templates/news/tokan_list.html:5
 #: templates/news/week_detail.html:5 templates/news/week_list.html:5
+#: templates/recruit/detail.html:5 templates/recruit/list.html:5
 msgid "tks"
 msgstr "東京韓国商工会議所"
 
@@ -492,6 +498,39 @@ msgstr ""
 #: templates/blog/includes/filter_panel.html:99
 msgid "Atom"
 msgstr ""
+
+#: templates/calendar/task_detail.html:30 templates/news/tax_detail.html:21
+#: templates/news/tokan_detail.html:36 templates/news/week_detail.html:26
+#: templates/recruit/detail.html:30
+msgid "file download"
+msgstr "添付ファイルをダウンロード"
+
+#: templates/calendar/task_detail.html:34
+#: templates/member/member_detail.html:42 templates/news/tax_detail.html:25
+#: templates/news/tokan_detail.html:40 templates/news/week_detail.html:30
+#: templates/recruit/detail.html:34
+msgid "list"
+msgstr "一覧"
+
+#: templates/calendar/task_list.html:18 templates/news/tax_list.html:18
+#: templates/news/tokan_list.html:18 templates/news/week_list.html:18
+#: templates/recruit/list.html:18
+msgid "number"
+msgstr "番号"
+
+#: templates/calendar/task_list.html:19 templates/inquiry/inquiry.html:11
+#: templates/news/tax_list.html:19 templates/news/tokan_list.html:19
+#: templates/news/week_list.html:19
+msgid "title"
+msgstr "件名"
+
+#: templates/calendar/task_list.html:19
+msgid "place"
+msgstr "場所"
+
+#: templates/calendar/task_list.html:20
+msgid "task_date"
+msgstr "行事日"
 
 #: templates/email/account_approve.html:3 templates/email/account_approve.txt:3
 msgid "Hey there, a new account has been created and requires activation."
@@ -682,33 +721,68 @@ msgstr "東京韓商紹介"
 msgid "member page"
 msgstr "会員ページ"
 
-#: templates/news/tax_detail.html:21 templates/news/tokan_detail.html:36
-#: templates/news/week_detail.html:26
-msgid "file download"
-msgstr "添付ファイルをダウンロード"
+#: templates/inquiry/inquiry.html:10
+msgid "reply email"
+msgstr "返信用メールアドレス"
 
-#: templates/news/tax_detail.html:25 templates/news/tokan_detail.html:40
-#: templates/news/week_detail.html:30
-msgid "list"
-msgstr "一覧"
+#: templates/inquiry/inquiry.html:12
+msgid "inquiry_detail"
+msgstr "問い合わせ内容"
+
+#: templates/inquiry/inquiry.html:13
+msgid "send"
+msgstr "送信"
+
+#: templates/member/member_detail.html:9 templates/member/member_detail.html:11
+msgid "photo"
+msgstr "写真"
+
+#: templates/member/member_detail.html:13
+msgid "rank"
+msgstr "職位"
+
+#: templates/member/member_detail.html:14
+msgid "name"
+msgstr "姓名"
+
+#: templates/member/member_detail.html:15
+msgid "job_title"
+msgstr "役職"
+
+#: templates/member/member_detail.html:16
+msgid "member_company"
+msgstr "会員社名"
+
+#: templates/member/member_detail.html:17 templates/member/member_list.html:20
+msgid "biz type"
+msgstr "業種"
+
+#: templates/member/member_detail.html:18 templates/member/member_list.html:16
+msgid "president"
+msgstr "代表者名"
+
+#: templates/member/member_detail.html:19 templates/member/member_list.html:23
+#: templates/recruit/apply.html:11
+msgid "phone number"
+msgstr "電話番号"
+
+#: templates/member/member_detail.html:21 templates/recruit/apply.html:10
+#: templates/recruit/detail.html:22
+msgid "address"
+msgstr "住所"
+
+#: templates/member/member_list.html:13 templates/recruit/apply.html:9
+#: templates/recruit/detail.html:20 templates/recruit/list.html:19
+msgid "company name"
+msgstr "会社名"
 
 #: templates/news/tax_detail.html:30 templates/news/tokan_detail.html:45
 #: templates/news/week_detail.html:35
 msgid "need to login for read"
 msgstr "ログイン後に閲覧出来ます。"
 
-#: templates/news/tax_list.html:18 templates/news/tokan_list.html:18
-#: templates/news/week_list.html:18
-msgid "number"
-msgstr "番号"
-
-#: templates/news/tax_list.html:19 templates/news/tokan_list.html:19
-#: templates/news/week_list.html:19
-msgid "title"
-msgstr "件名"
-
 #: templates/news/tax_list.html:20 templates/news/tokan_list.html:20
-#: templates/news/week_list.html:20
+#: templates/news/week_list.html:20 templates/recruit/list.html:20
 msgid "created at"
 msgstr "登録日"
 
@@ -730,6 +804,34 @@ msgstr "日本経済週刊動向"
 #: templates/pages/form.html:29
 msgid "Submit"
 msgstr ""
+
+#: templates/recruit/apply.html:12
+msgid "recuruit detail"
+msgstr "募集内容"
+
+#: templates/recruit/apply.html:13
+msgid "attach file"
+msgstr "関連資料"
+
+#: templates/recruit/apply.html:14
+msgid "apply recruit"
+msgstr "上記の内容で申し込む"
+
+#: templates/recruit/apply.html:17
+#, fuzzy
+#| msgid "recruit application"
+msgid "recruit apply message"
+msgstr ""
+"記入後「上記の内容で申し込む」ボタンを押してください。<br />事務局で内容を確"
+"認した上、掲載致します。<br /> よろしくお願いいたします。"
+
+#: templates/recruit/detail.html:21
+msgid "tel"
+msgstr "連絡先"
+
+#: templates/recruit/detail.html:23
+msgid "recruit info"
+msgstr "求人情報"
 
 #: templates/search_results.html:5 templates/search_results.html:6
 #: templates/search_results.html:15
@@ -763,6 +865,5 @@ msgstr ""
 msgid "Korean"
 msgstr ""
 
-#: tks/settings.py:122
-msgid "English"
-msgstr ""
+#~ msgid "biz_type"
+#~ msgstr "業種"

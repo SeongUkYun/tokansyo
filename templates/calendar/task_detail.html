@@ -1,13 +1,14 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-スケジュール</title>
+<title>{% trans "tks" %}-{% trans "schedule" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>スケジュール</strong>
+      <strong>{% trans "schedule" %}</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_view_tit">
@@ -26,11 +27,11 @@
 		</div>
     {% if object.task_file %}
       <div class="board_view_footer">
-        <a href="/static/media/{{ object.task_file }}" class="btn_lst">添付資料を見る</a>
+        <a href="/static/media/{{ object.task_file }}" class="btn_lst">{% trans "file download" %}</a>
       </div>
     {% endif %}
 		<div class="board_view_footer">
-			<a href="/calendar/" class="btn_lst">一覧</a>
+      <a href="/calendar/" class="btn_lst">{% trans "list" %}</a>
 		</div>
 	</div>
 {% endblock %}

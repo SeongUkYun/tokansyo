@@ -1,22 +1,23 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-スケジュール</title>
+<title>{% trans "tks" %}-{% trans "schedule" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>スケジュール</strong>
+      <strong>{% trans "schedule" %}</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_lst">
 			<ul>
         <li class="head">
           <a class="header" href="">
-            <strong class="num_header">番号</strong>
-            <strong class="tit_header">件名(場所)</strong>
-            <strong class="date_header">行事日</strong>
+            <strong class="num_header">{% trans "number" %}</strong>
+            <strong class="tit_header">{% trans "title" %}({% trans "place"%})</strong>
+            <strong class="date_header">{% trans "task_date" %}</strong>
           </a>
         </li>
         {% for task in tasks %}

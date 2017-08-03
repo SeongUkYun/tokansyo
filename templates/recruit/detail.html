@@ -2,13 +2,13 @@
 {% load pages_tags mezzanine_tags i18n easy_maps_tags %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-リクルート</title>
+  <title>{% trans "tks" %}-{% trans "recruit" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>リクルート</strong>
+      <strong>{% trans "recruit" %}</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_view_tit">
@@ -17,21 +17,21 @@
 		<div class="board_view">
 			<div class="board_text">
 				<table>
-          <tr height="30"><th width="30%">会社名</th><td>{{ object.company_name }} </td></tr>
-          <tr height="30"><th>連絡先</th><td>{{ object.tel }}</td></tr>
-          <tr height="30"><th>住所</th><td>{{ object.address }}</td></tr>
-          <tr height="30"><th>求人情報</th><td>{{ object.descript|linebreaks }}</td></tr>
+          <tr height="30"><th width="30%">{% trans "company name" %}</th><td>{{ object.company_name }} </td></tr>
+          <tr height="30"><th>{% trans "tel" %}</th><td>{{ object.tel }}</td></tr>
+          <tr height="30"><th>{% trans "address" %}</th><td>{{ object.address }}</td></tr>
+          <tr height="30"><th>{% trans "recruit info" %}</th><td>{{ object.descript|linebreaks }}</td></tr>
           <tr><th></th><td>{% easy_map object.address 500 300 16 using "member/map.html" %}</td></tr>
 				</table>
 			</div>
 		</div>
     {% if object.file_name %}
     <div class="board_view_footer">
-      <a href="/static/media/{{ object.file_name }}" class="btn_lst">資料ダウンロード</a>
+      <a href="/static/media/{{ object.file_name }}" class="btn_lst">{% trans "file download" %}</a>
     </div>
     {% endif %}
 		<div class="board_view_footer">
-			<a href="/recruit/" class="btn_lst">一覧</a>
+      <a href="/recruit/" class="btn_lst">{% trans "list" %}</a>
 		</div>
 	</div>
 {% endblock %}
