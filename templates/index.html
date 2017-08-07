@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% load pages_tags mezzanine_tags i18n staticfiles %}
-{% load i18n staticfiles %}
+{% load pages_tags mezzanine_tags keyword_tags i18n staticfiles %}
 
 <html lang="ja">
 <head>
@@ -32,7 +31,7 @@
 				<span class="blind">東京韓国商工会議所 Korean Chamber of Commerce &amp; Industry in Tokyo</span>
 			</a>
 		</h1>
-    {% include "includes/language_selector.html" %}
+    {#% include "includes/language_selector.html" %#}
 		<div id="h_search_p">
 			<div class="ins_wrap">
 				<form>
@@ -610,6 +609,7 @@
 	<!-- ///////// FOOTER END //////////////////////////////////////////////////////////////////// -->
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+<!-- script type="text/javascript" src="{% static 'js/main.js' %}"></script -->
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

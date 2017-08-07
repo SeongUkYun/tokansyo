@@ -83,7 +83,7 @@ from django.utils.translation import ugettext_lazy as _
 
 # If True, the django-modeltranslation will be added to the
 # INSTALLED_APPS setting.
-USE_MODELTRANSLATION = False
+USE_MODELTRANSLATION = True
 
 
 ########################
@@ -116,13 +116,14 @@ USE_TZ = True
 LANGUAGE_CODE = "ja"
 
 # Supported languages
+gettext = lambda s: s
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'ja'
 LANGUAGES = (
-    ('ja', _('Japanese')),
-    ('ko', _('Korean')),
+    ('ja', gettext('Japanese')),
+    ('ko', gettext('Korean')),
 )
 MODELTRANSLATION_LANGUAGES = ('ja', 'ko')
-MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'ja'
+MODELTRANSLATION_AUTO_POPULATE = 'required'
 
 USE_I18N = True
 
