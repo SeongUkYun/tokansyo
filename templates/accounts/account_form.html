@@ -2,7 +2,7 @@
 {% load i18n mezzanine_tags %}
 
 {% block meta_title %}{{ title }}{% endblock %}
-{% block title %}ログイン{% endblock %}<br /><br />
+{% block title %}{% trans "login" %}{% endblock %}<br /><br />
 {% block body_id %}account{% endblock %}
 
 {% block breadcrumb_menu %}
@@ -30,6 +30,6 @@
     </fieldset>
 </form>
 <br /><br />
-<a href="/member/password/"><font color="red">初めての方はここをクリックしてログイン申請をしてください。</font></a>
+<a href="/member/password/"><font color="red">{% trans "the first login apply" %}</font></a>
 <br /><br />
 {% endblock %}

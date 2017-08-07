@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-03 10:53+0900\n"
+"POT-Creation-Date: 2017-08-04 00:22+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: templates/accounts/account_form.html:5 templates/base.html:153
+#: templates/base.html:270 templates/index.html:155 templates/index.html:272
+msgid "login"
+msgstr "로그인"
+
 #: templates/accounts/account_form.html:22
 msgid "cellphone"
 msgstr "휴대전화"
@@ -25,6 +30,10 @@ msgstr "휴대전화"
 #: templates/accounts/account_form.html:23
 msgid "password"
 msgstr "비밀번호"
+
+#: templates/accounts/account_form.html:33
+msgid "the first login apply"
+msgstr "처음 방문하신 분은 이곳을 클릭하셔서 로그인 신청을 해 주시기 바랍니다."
 
 #: templates/accounts/account_login.html:7
 msgid ""
@@ -344,11 +353,6 @@ msgstr "마이페이지"
 #: templates/index.html:266
 msgid "logout"
 msgstr "로그아웃"
-
-#: templates/base.html:153 templates/base.html:270 templates/index.html:155
-#: templates/index.html:272
-msgid "login"
-msgstr "로그인"
 
 #: templates/base.html:289 templates/base.html:295 templates/base.html:301
 #: templates/calendar/task_detail.html:5 templates/calendar/task_list.html:5
