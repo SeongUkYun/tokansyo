@@ -32,11 +32,16 @@
 			</a>
 		</h1>
 		<div id="h_search_p">
-			<div class="ins_wrap">
-				<form>
+			<div class="ins_wrap" align="right">
+        <form action="{% url "set_language" %}" method="post">{% csrf_token %}
 					<fieldset>
-						<legend accesskey="a">検索</legend>
-						<input type="text" name="search" title="検索" value="" class="input_search"><button type="submit" class="btn_search" onclick="" accesskey="b">検索</button>
+            {% if LANGUAGE_CODE == 'ko' %}
+              <input type="hidden" name="language" value="ja">
+						  <button type="submit" class="" onclick="" accesskey="b">日本語</button>
+            {% else %}
+              <input type="hidden" name="language" value="ko">
+						  <button type="submit" class="" onclick="" accesskey="b">한국어</button>
+            {% endif %}
 					</fieldset>
 				</form>
 			</div>
