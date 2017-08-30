@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-{% load pages_tags mezzanine_tags keyword_tags i18n staticfiles %}
+<html>
+{% load pages_tags mezzanine_tags keyword_tags staticfiles i18n %}
 
-<html lang="ja">
 <head>
   <title>{% trans "tks" %}</title>
 	<meta charset="UTF-8">
@@ -11,9 +11,10 @@
 
 	<!-- CSS -->
   <link type="text/css" rel="stylesheet" href="{% static 'css/common.css' %}" />
-
+  <link type="text/css" rel="stylesheet" href="{% static 'css/slider.css' %}" />
 
 	<!-- JS -->
+  <script src="{% static 'js/sliderEffects.js' %}"></script>
 
 	<!--common JS-->
 </head>
@@ -33,11 +34,16 @@
 		</h1>
     {#% include "includes/language_selector.html" %#}
 		<div id="h_search_p">
-			<div class="ins_wrap">
-				<form>
+			<div class="ins_wrap" align="right">
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
 					<fieldset>
-						<legend accesskey="a">検索</legend>
-						<input type="text" name="search" title="検索" value="" class="input_search" ><button type="submit" class="btn_search" onclick="">検索</button>
+            {% if LANGUAGE_CODE == 'ko' %}
+              <input type="hidden" name="language" value="ja">
+						  <button type="submit" class="" onclick="" accesskey="b">日本語</button>
+            {% else %}
+              <input type="hidden" name="language" value="ko">
+						  <button type="submit" class="" onclick="" accesskey="b">한국어</button>
+            {% endif %}
 					</fieldset>
 				</form>
 			</div>
@@ -369,6 +375,9 @@
 		</div>
 	</div>
 	<!-- ///////// PNB END //////////////////////////////////////////////////////////////////// -->
+  <div id="upper_slider" style="width: 1024px; height: 100px; margin: auto;">
+    <a href='http://sizebook.jp'><img></a>
+  </div>
 
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 	<div id="main_content">
@@ -609,7 +618,56 @@
 	<!-- ///////// FOOTER END //////////////////////////////////////////////////////////////////// -->
 </div>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<!-- script type="text/javascript" src="{% static 'js/main.js' %}"></script -->
-<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+<!-- script type="text/javascript" src="{% static 'js/script.js' %}"></script -->
+
+<script>
+  var images = ["{% static 'images/upper_slider/1.jpg' %}", "{% static 'images/upper_slider/2.jpg' %}", "{% static 'images/upper_slider/3.jpg' %}", "{% static 'images/upper_slider/4.jpg' %}"];
+  var timing = 3000;
+
+  KSDissolve(images[3], images[0]);
+  var currentImg = 1;
+
+  function karrotSlider() {
+      
+      var nextimg = (currentImg + 1) > images.length ? 1 : currentImg + 1;
+        
+      var effect = Math.floor (Math.random()*8 +1 );
+      
+      //effect=1;
+
+      switch (effect) {
+          case 1: 
+              KSDissolve(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 2:
+              KSSlideUp(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 3:
+              KSSlideDown(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 4:
+              KSSlideLeft(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 5:
+              KSSlideRight(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 6:
+              KSMosaic(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 7:
+              KSWindows(images[currentImg- 1], images[nextimg- 1])
+              break;
+          case 8:
+              KSDort(images[currentImg- 1], images[nextimg- 1])
+              break;
+      }
+
+      currentImg = (currentImg + 1) > images.length ? 1 :  currentImg + 1;
+      
+  }
+
+  window.onload = setInterval(function () { karrotSlider() } , timing);
+</script>
 </body>
 </html>
