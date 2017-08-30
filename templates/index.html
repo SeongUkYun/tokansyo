@@ -375,7 +375,7 @@
 		</div>
 	</div>
 	<!-- ///////// PNB END //////////////////////////////////////////////////////////////////// -->
-  <div id="upper_slider" style="width: 1024px; height: 100px; margin: auto;">
+  <div id="upper_slider" style="width: 1024px; height: 100px; margin: auto; cursor: pointer; ">
     <a href='http://sizebook.jp'><img></a>
   </div>
 
@@ -623,6 +623,7 @@
 
 <script>
   var images = ["{% static 'images/upper_slider/1.jpg' %}", "{% static 'images/upper_slider/2.jpg' %}", "{% static 'images/upper_slider/3.jpg' %}", "{% static 'images/upper_slider/4.jpg' %}"];
+  var links = ["http://sizebook.jp", "http://sizebook.co.jp", "http://pdscom.jp", "http://google.com"];
   var timing = 3000;
 
   KSDissolve(images[3], images[0]);
@@ -633,33 +634,32 @@
       var nextimg = (currentImg + 1) > images.length ? 1 : currentImg + 1;
         
       var effect = Math.floor (Math.random()*8 +1 );
-      
-      //effect=1;
+      // effect=1;
 
       switch (effect) {
           case 1: 
-              KSDissolve(images[currentImg- 1], images[nextimg- 1])
+              KSDissolve(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 2:
-              KSSlideUp(images[currentImg- 1], images[nextimg- 1])
+              KSSlideUp(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 3:
-              KSSlideDown(images[currentImg- 1], images[nextimg- 1])
+              KSSlideDown(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 4:
-              KSSlideLeft(images[currentImg- 1], images[nextimg- 1])
+              KSSlideLeft(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 5:
-              KSSlideRight(images[currentImg- 1], images[nextimg- 1])
+              KSSlideRight(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 6:
-              KSMosaic(images[currentImg- 1], images[nextimg- 1])
+              KSMosaic(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 7:
-              KSWindows(images[currentImg- 1], images[nextimg- 1])
+              KSWindows(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
           case 8:
-              KSDort(images[currentImg- 1], images[nextimg- 1])
+              KSDort(images[currentImg- 1], images[nextimg- 1], links[currentImg - 1])
               break;
       }
 
@@ -668,6 +668,11 @@
   }
 
   window.onload = setInterval(function () { karrotSlider() } , timing);
+</script>
+<script>
+  $('#upper_slider').click(function() {
+    location.href = jQuery(this).attr('data-url');
+  });
 </script>
 </body>
 </html>

@@ -38,13 +38,14 @@ function KSTransitionTimer(imgNext) {
 
 //Effects 
 
-function KSDissolve ( image, imgNext) {
+function KSDissolve ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
     upper_slider.style.backgroundOrigin = "center";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -64,12 +65,13 @@ function KSDissolve ( image, imgNext) {
 
 } 
 
-function KSSlideUp ( image, imgNext) {
+function KSSlideUp ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -92,12 +94,13 @@ function KSSlideUp ( image, imgNext) {
 
 } 
 
-function KSSlideDown ( image, imgNext) {
+function KSSlideDown ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -119,12 +122,13 @@ function KSSlideDown ( image, imgNext) {
 
 } 
 
-function KSSlideLeft ( image, imgNext) {
+function KSSlideLeft ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -147,12 +151,13 @@ function KSSlideLeft ( image, imgNext) {
 
 } 
 
-function KSSlideRight ( image, imgNext) {
+function KSSlideRight ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -175,12 +180,13 @@ function KSSlideRight ( image, imgNext) {
 
 } 
 
-function KSMosaic ( image, imgNext) {
+function KSMosaic ( image, imgNext, nextLink) {
 
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -209,12 +215,13 @@ function KSMosaic ( image, imgNext) {
 
 }
 
-function KSWindows ( image, imgNext) {
+function KSWindows ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -246,12 +253,13 @@ function KSWindows ( image, imgNext) {
 
 }
 
-function KSDoors ( image, imgNext) {
+function KSDoors ( image, imgNext, nextLink) {
     
     codeAddress();
     upper_slider.innerHTML = "";
     upper_slider.style.background = "url(" + imgNext + ")";
     upper_slider.style.backgroundSize = "cover";
+    upper_slider.setAttribute('data-url', nextLink);
 
     var width = parseInt(upper_slider.style.width);
     var height = parseInt(upper_slider.style.height);
@@ -280,8 +288,5 @@ function KSDoors ( image, imgNext) {
     timer = setInterval(function () {KSTransitionTimer(imgNext)}, 1000);
 
 } 
-
-
-
 
 window.onload = codeAddress();
