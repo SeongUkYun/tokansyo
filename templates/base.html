@@ -32,11 +32,16 @@
 			</a>
 		</h1>
 		<div id="h_search_p">
-			<div class="ins_wrap">
-				<form>
+			<div class="ins_wrap" align="right">
+        <form action="{% url "set_language" %}" method="post">{% csrf_token %}
 					<fieldset>
-						<legend accesskey="a">検索</legend>
-						<input type="text" name="search" title="検索" value="" class="input_search"><button type="submit" class="btn_search" onclick="" accesskey="b">検索</button>
+            {% if LANGUAGE_CODE == 'ko' %}
+              <input type="hidden" name="language" value="ja">
+						  <button type="submit" class="" onclick="" accesskey="b">日本語</button>
+            {% else %}
+              <input type="hidden" name="language" value="ko">
+						  <button type="submit" class="" onclick="" accesskey="b">한국어</button>
+            {% endif %}
 					</fieldset>
 				</form>
 			</div>
@@ -45,74 +50,74 @@
 			<ul id="mnb_p">
 				<li class="m1">
 					<strong>
-						<a href="/" title="ホーム">ホーム</a>
+            <a href="/" title="ホーム">{% trans "Home" %}</a>
 					</strong>
 				</li>
 				<li class="m2">
 					<strong>
-            <a href="javascript:void(0)" title="東京韓商概要">東京韓商概要</a>
+            <a href="javascript:void(0)" title="東京韓商概要">{% trans "about tks" %}</a>
 					</strong>
 					<div class="mnb_sub_menu">
 						<ul>
 							<li class="first_li">
-								<a href="/東京韓商概要/概要/">概要</a>
+                <a href="/東京韓商概要/概要/">{% trans "about" %}</a>
 							</li>
 							<li>
-								<a href="/東京韓商概要/会長挨拶/">会長挨拶</a>
+                <a href="/東京韓商概要/会長挨拶/">{% trans "greeting" %}</a>
 							</li>
 							<li>
-								<a href="/東京韓商概要/組織体制/">組織体制</a>
+                <a href="/東京韓商概要/組織体制/">{% trans "organize" %}</a>
 							</li>
 							<li>
-								<a href="/東京韓商概要/沿革/">沿革</a>
+                <a href="/東京韓商概要/沿革/">{% trans "history" %}</a>
 							</li>
 							<li>
-								<a href="/東京韓商概要/定款/">定款</a>
+                <a href="/東京韓商概要/定款/">{% trans "article" %}</a>
 							</li>
               <li>
-                <a href="/東京韓商概要/案内図/">案内図</a>
+                <a href="/東京韓商概要/案内図/">{% trans "map" %}</a>
               </li>
 						</ul>
 					</div>
 				</li>
 				<li class="m3">
 					<strong>
-						<a href="/news/tokan/" title="ニュース">ニュース</a>
+            <a href="/news/tokan/" title="ニュース">{% trans "news" %}</a>
 					</strong>
 					<div class="mnb_sub_menu">
 						<ul>
 							<li class="first_li">
-								<a href="/news/tokan/">東京韓商ニュース</a>
+                <a href="/news/tokan/">{% trans "tks news" %}</a>
 							</li>
 							<li>
-								<a href="/news/tax/">東京税経クラブ</a>
+                <a href="/news/tax/">{% trans "tokyo taxbiz club" %}</a>
 							</li>
 							<li>
-								<a href="/news/week/">日本経済週刊動向（韓国大使館提供）</a>
+                <a href="/news/week/">{% trans "japan biz brife" %}</a>
 							</li>
 							<li>
-								<a href="/gallery/">ギャラリー</a>
+                <a href="/gallery/">{% trans "gallery" %}</a>
 							</li>
 						</ul>
 					</div>
 				</li>
 				<li class="m4">
 					<strong>
-						<a href="/calendar/" title="スケジュール">スケジュール</a>
+            <a href="/calendar/" title="スケジュール">{% trans "schedule" %}</a>
 					</strong>
 				</li>
         {% if request.user.is_authenticated %}
         <li class="m5">
           <strong>
-            <a href="javascript:void(0)" titile="リクルート">リクルート</a>
+            <a href="javascript:void(0)" titile="リクルート">{% trans "recruit" %}</a>
           </strong>
           <div class="mnb_sub_menu">
             <ul>
               <li class="first_li">
-                <a href="/recruit/">リクルート</a>
+                <a href="/recruit/">{% trans "recruit" %}</a>
               </li>
               <li>
-                <a href="/recruit/apply/">求人掲載申請</a>
+                <a href="/recruit/apply/">{% trans "recruit application" %}</a>
               </li>
             </ul>
           </div>
@@ -120,18 +125,18 @@
         {% else %}
           <li class="m5">
             <strong>
-              <a href="/recruit/" title="リクルート">リクルート</a>
+              <a href="/recruit/" title="リクルート">{% trans "recruit" %}</a>
             </strong>
           </li>
         {% endif %}
 				<li class="m6">
 					<strong>
-						<a href="/member/" title="会員">会員</a>
+            <a href="/member/" title="会員">{% trans "member" %}</a>
 					</strong>
 				</li>
 				<li class="m7">
 					<strong>
-						<a href="/inquiry/" title="問合せ">お問い合わせ</a>
+            <a href="/inquiry/" title="問合せ">{% trans "inquiry" %}</a>
 					</strong>
 				</li>
 			</ul>
@@ -139,18 +144,18 @@
         {% if request.user.is_authenticated %}
 				<li class="gm2">
 					<strong>
-						<a href="/member/update/" title="マイページ">マイページ</a>
+            <a href="/member/update/" title="マイページ">{% trans "mypage" %}</a>
 					</strong>
 				</li>
 				<li class="gm1">
 					<strong>
-						<a href="/accounts/logout/" title="ログアウト">ログアウト</a>
+            <a href="/accounts/logout/" title="ログアウト">{% trans "logout" %}</a>
 					</strong>
 				</li>
         {% else %}
 				<li class="gm1">
 					<strong>
-						<a href="/accounts/login/" title="ログイン">ログイン</a>
+            <a href="/accounts/login/" title="ログイン">{% trans "login" %}</a>
 					</strong>
 				</li>
         {% endif %}
@@ -159,79 +164,79 @@
 		<div id="menu_m">
 			<div class="ins_menu_m">
 				<a href="javascript:void(0);" title="メニュー" class="btn_menu_m">
-					<span class="blind">メニュー</span>
+          <span class="blind">{% trans "news" %}</span>
 				</a>
 				<ul id="mnb_m">
 					<li class="m1">
 						<strong>
-							<a href="/" title="ホーム">ホーム</a>
+              <a href="/" title="ホーム">{% trans "Home" %}</a>
 						</strong>
 					</li>
           <li class="m2">
             <strong>
-              <a href="javascript:void(0)" title="東京韓商概要">東京韓商概要</a>
+              <a href="javascript:void(0)" title="東京韓商概要">{% trans "about tks" %}</a>
             </strong>
             <div class="mnb_sub_menu">
               <ul>
                 <li class="first_li">
-                  <a href="/東京韓商概要/概要/">概要</a>
+                  <a href="/東京韓商概要/概要/">{% trans "about" %}</a>
                 </li>
                 <li>
-                  <a href="/東京韓商概要/会長挨拶/">会長挨拶</a>
+                  <a href="/東京韓商概要/会長挨拶/">{% trans "greeting" %}</a>
                 </li>
                 <li>
-                  <a href="/東京韓商概要/組織体制/">組織体制</a>
+                  <a href="/東京韓商概要/組織体制/">{% trans "organize" %}</a>
                 </li>
                 <li>
-                  <a href="/東京韓商概要/沿革/">沿革</a>
+                  <a href="/東京韓商概要/沿革/">{% trans "history" %}</a>
                 </li>
                 <li>
-                  <a href="/東京韓商概要/定款/">定款</a>
+                  <a href="/東京韓商概要/定款/">{% trans "article" %}</a>
                 </li>
                 <li>
-                  <a href="/東京韓商概要/案内図/">案内図</a>
+                  <a href="/東京韓商概要/案内図/">{% trans "map" %}</a>
                 </li>
               </ul>
             </div>
           </li>
 					<li class="m3">
 						<strong>
-							<a href="javascript:void(0)" title="ニュース">ニュース</a>
+              <a href="javascript:void(0)" title="ニュース">{% trans "news" %}</a>
 						</strong>
 						<div class="mnb_sub_menu">
 						<ul>
 							<li class="first_li">
-								<a href="/news/tokan/">東京韓商ニュース</a>
+                <a href="/news/tokan/">{% trans "tks news" %}</a>
 							</li>
 							<li>
-								<a href="/news/tax/">東京税経クラブ</a>
+                <a href="/news/tax/">{% trans "tokyo taxbiz club" %}</a>
 							</li>
 							<li>
-								<a href="/news/week/">日本経済週刊動向（韓国大使館提供）</a>
+                <a href="/news/week/">{% trans "japan biz brife" %}</a>
 							</li>
 							<li>
-								<a href="/gallery/">ギャラリー</a>
+                <a href="/gallery/">{% trans "gallery" %}</a>
 							</li>
 						</ul>
 					</div>
 					</li>
 					<li class="m4">
 						<strong>
-							<a href="/calendar/" title="スケジュール">スケジュール</a>
+              <a href="/calendar/" title="スケジュール">{% trans "gallery" %}</a>
 						</strong>
 					</li>
           {% if request.user.is_authenticated %}
           <li class="m5">
             <strong>
-              <a href="javascript:void(0)" titile="リクルート">リクルート</a>
+              <a href="javascript:void(0)" titile="リクルート">{% trans "recruit" %}</a>
             </strong>
             <div class="mnb_sub_menu">
               <ul>
                 <li class="first_li">
-                  <a href="/recruit/">リクルート</a>
+                  <a href="/recruit/">{% trans "recruit" %}</a>
                 </li>
                 <li>
-                  <a href="/recruit/apply/">求人掲載申請</a>
+                  <a href="/recruit/apply/">{% trans "recruit application" %}</a>
                 </li>
               </ul>
             </div>
@@ -239,35 +244,35 @@
           {% else %}
             <li class="m5">
               <strong>
-                <a href="/recruit/" title="リクルート">リクルート</a>
+                <a href="/recruit/" title="リクルート">{% trans "recruit" %}</a>
               </strong>
             </li>
           {% endif %}
           <li class="m6">
             <strong>
-              <a href="/member/" title="会員">会員</a>
+              <a href="/member/" title="会員">{% trans "member" %}</a>
             </strong>
           </li>
           <li class="m7">
             <strong>
-              <a href="/inquiry/" title="問合せ">お問い合わせ</a>
+              <a href="/inquiry/" title="問合せ">{% trans "inquiry" %}</a>
             </strong>
           </li>
           {% if request.user.is_authenticated %}
           <li class="gm2">
             <strong>
-              <a href="/member/update/" title="マイページ">マイページ</a>
+              <a href="/member/update/" title="マイページ">{% trans "mypage" %}</a>
             </strong>
           </li>
           <li class="gm1">
             <strong>
-              <a href="/accounts/logout/" title="ログアウト">ログアウト</a>
+              <a href="/accounts/logout/" title="ログアウト">{% trans "logout" %}</a>
             </strong>
           </li>
           {% else %}
 					<li class="gm1">
 						<strong>
-							<a href="/accounts/login/" title="ログイン">ログイン</a>
+              <a href="/accounts/login/" title="ログイン">{% trans "login" %}</a>
 						</strong>
 					</li>
           {% endif %}
@@ -286,19 +291,19 @@
 					<li class="spot1 spot_image spot_image1">
 						<img src="/static/images/sub/sub_visual_01.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
 						<p class="para_spot2">						
-							<span class="tx1">東京韓国商工会議所</span>
+            <span class="tx1">{% trans "tks" %}</span>
 						</p>
 					</li>
 					<li class="spot2 spot_image spot_image2">
 						<img src="/static/images/sub/sub_visual_02.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
 						<p class="para_spot2">						
-							<span class="tx1">東京韓国商工会議所</span>
+            <span class="tx1">{% trans "tks" %}</span>
 						</p>
 					</li>
 					<li class="spot3 spot_image spot_image3">
 						<img src="/static/images/sub/sub_visual_03.jpg" alt="東京韓国商工会議所" title="東京韓国商工会議所" />
 						<p class="para_spot2">						
-						<span class="tx1">東京韓国商工会議所</span>
+            <span class="tx1">{% trans "tks" %}</span>
 					</p>
 					</li>
 				</ul>
@@ -311,10 +316,10 @@
 				</div>
 				<div class="btn_wrap">
 					<a href="javascript:void(0)" title="前へ" class="btn_spot_left">
-						<span class="blind">前へ</span>
+            <span class="blind">{% trans "prev" %}</span>
 					</a>
 					<a href="javascript:void(0)" title="次へ" class="btn_spot_rig">
-						<span class="blind">次へ</span>
+            <span class="blind">{% trans "next" %}</span>
 					</a>
 				</div>
 			</div>

@@ -1,0 +1,873 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-04 00:22+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/accounts/account_form.html:5 templates/base.html:153
+#: templates/base.html:270 templates/index.html:155 templates/index.html:272
+msgid "login"
+msgstr "ログイン"
+
+#: templates/accounts/account_form.html:22
+msgid "cellphone"
+msgstr "携帯電話"
+
+#: templates/accounts/account_form.html:23
+msgid "password"
+msgstr "パスワード"
+
+#: templates/accounts/account_form.html:33
+msgid "the first login apply"
+msgstr "初めての方はここをクリックしてログイン申請をしてください。"
+
+#: templates/accounts/account_login.html:7
+msgid ""
+"You're already logged in. If you'd like to log in as a different user, "
+"you'll need to log out first."
+msgstr "既にログインされております。"
+
+#: templates/accounts/account_password_reset.html:6
+msgid ""
+"Enter your username or email address and you'll receive an email with a link "
+"you need to click, in order to log in and change your password."
+msgstr ""
+
+#: templates/accounts/account_profile.html:18
+#: templates/accounts/includes/user_panel.html:11
+msgid "Update profile"
+msgstr ""
+
+#: templates/accounts/account_signup.html:7
+msgid ""
+"You're already logged in. If you'd like to create a new account, you'll need "
+"to log out first."
+msgstr ""
+
+#: templates/accounts/account_signup.html:11
+msgid ""
+"After signing up, your account will be reviewed for approval. You'll receive "
+"an email when your account is activated."
+msgstr ""
+
+#: templates/accounts/account_signup.html:13
+msgid ""
+"After signing up, you'll receive an email with a link you need to click, in "
+"order to activate your account."
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:5
+msgid "Logged in as: "
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:17
+#: templates/accounts/includes/user_panel_nav.html:11
+#: templates/includes/editable_toolbar.html:9
+msgid "Log out"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:20
+#: templates/accounts/includes/user_panel_nav.html:14
+#: templates/admin/login.html:63
+msgid "Log in"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:21
+msgid "or"
+msgstr ""
+
+#: templates/accounts/includes/user_panel.html:23
+#: templates/accounts/includes/user_panel_nav.html:16
+msgid "Sign up"
+msgstr ""
+
+#: templates/admin/base_site.html:20
+msgid "View site"
+msgstr ""
+
+#: templates/admin/conf/setting/change_list.html:8
+#: templates/includes/form_errors.html:8
+msgid "Please correct the errors below."
+msgstr ""
+
+#: templates/admin/conf/setting/change_list.html:31
+#: templates/includes/editable_form.html:16
+msgid "Save"
+msgstr ""
+
+#: templates/admin/forms/change_form.html:5
+#: templates/admin/forms/entries.html:57
+msgid "View entries"
+msgstr ""
+
+#: templates/admin/forms/entries.html:14 templates/admin/index.html:15
+#: templates/base.html:48 templates/base.html:167 templates/index.html:50
+#: templates/pages/menus/breadcrumb.html:4
+#: templates/pages/menus/breadcrumb.html:10
+#: templates/pages/menus/dropdown.html:10
+#: templates/pages/menus/footer_tree.html:11
+#: templates/pages/menus/mobile.html:10 templates/pages/menus/primary.html:8
+#: templates/pages/menus/tree.html:9 templates/search_results.html:13
+msgid "Home"
+msgstr "ホーム"
+
+#: templates/admin/forms/entries.html:28
+msgid "Field"
+msgstr ""
+
+#: templates/admin/forms/entries.html:29
+msgid "Include"
+msgstr ""
+
+#: templates/admin/forms/entries.html:30
+msgid "Filter by"
+msgstr ""
+
+#: templates/admin/forms/entries.html:48
+msgid "All"
+msgstr ""
+
+#: templates/admin/forms/entries.html:56 templates/admin/forms/entries.html:93
+msgid "Back to form"
+msgstr ""
+
+#: templates/admin/forms/entries.html:58
+msgid "Export CSV"
+msgstr ""
+
+#: templates/admin/forms/entries.html:60
+msgid "Entries"
+msgstr ""
+
+#: templates/admin/forms/entries.html:94
+msgid "Delete selected"
+msgstr ""
+
+#: templates/admin/forms/entries.html:98
+msgid "No entries to display"
+msgstr ""
+
+#: templates/admin/includes/app_list.html:20
+#: templates/admin/includes/content_typed_change_list.html:24
+#: templates/pages/menus/admin.html:31
+msgid "Add"
+msgstr ""
+
+#: templates/admin/includes/app_list.html:27
+#: templates/includes/language_selector.html:19
+msgid "Change"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:18
+msgid "Quick Blog"
+msgstr ""
+
+#: templates/admin/includes/quick_blog.html:27
+msgid "Save Draft"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:4
+msgid "Recent Actions"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:5
+msgid "My Actions"
+msgstr ""
+
+#: templates/admin/includes/recent_actions.html:9
+msgid "None available"
+msgstr ""
+
+#: templates/admin/includes/recent_comments.html:4
+msgid "Recent Comments"
+msgstr ""
+
+#: templates/admin/includes/recent_comments.html:22
+#: templates/blog/blog_post_detail.html:33
+#: templates/blog/blog_post_list.html:97
+#: templates/generic/includes/comment.html:22
+#: templates/generic/includes/comment.html:59 templates/twitter/tweets.html:19
+#, python-format
+msgid "%(sometime)s ago"
+msgstr ""
+
+#: templates/admin/index.html:17
+msgid "Dashboard"
+msgstr ""
+
+#: templates/admin/login.html:24
+msgid "You don't have permission to access the admin for this site."
+msgstr ""
+
+#: templates/admin/login.html:31
+msgid "Username or email:"
+msgstr ""
+
+#: templates/admin/login.html:35
+msgid "Password:"
+msgstr ""
+
+#: templates/admin/login.html:42
+msgid "Language"
+msgstr ""
+
+#: templates/admin/login.html:53
+msgid "Interface:"
+msgstr ""
+
+#: templates/admin/login.html:56 templates/includes/editable_toolbar.html:8
+msgid "Admin"
+msgstr ""
+
+#: templates/admin/login.html:59
+msgid "Site"
+msgstr ""
+
+#: templates/admin/login.html:66
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/admin/profile_inline.html:10
+msgid "Profile information"
+msgstr ""
+
+#: templates/base.html:53 templates/base.html:172 templates/index.html:55
+#: templates/index.html:174
+msgid "about tks"
+msgstr "東京韓商概要"
+
+#: templates/base.html:58 templates/base.html:177 templates/index.html:60
+#: templates/index.html:179
+msgid "about"
+msgstr "概要"
+
+#: templates/base.html:61 templates/base.html:180 templates/index.html:63
+#: templates/index.html:182
+msgid "greeting"
+msgstr "会長挨拶"
+
+#: templates/base.html:64 templates/base.html:183 templates/index.html:66
+#: templates/index.html:185
+msgid "organize"
+msgstr "組織体制"
+
+#: templates/base.html:67 templates/base.html:186 templates/index.html:69
+#: templates/index.html:188
+msgid "history"
+msgstr "沿革"
+
+#: templates/base.html:70 templates/base.html:189 templates/index.html:72
+#: templates/index.html:191
+msgid "article"
+msgstr "定款"
+
+#: templates/base.html:73 templates/base.html:192 templates/index.html:75
+#: templates/index.html:194 templates/member/member_detail.html:38
+msgid "map"
+msgstr "案内図"
+
+#: templates/base.html:80 templates/base.html:162 templates/base.html:199
+#: templates/index.html:82 templates/index.html:164 templates/index.html:201
+#: templates/index.html:397 templates/news/tax_detail.html:5
+#: templates/news/tax_list.html:5 templates/news/tax_list.html:11
+#: templates/news/tokan_detail.html:5 templates/news/tokan_list.html:5
+#: templates/news/tokan_list.html:11 templates/news/week_detail.html:5
+#: templates/news/week_list.html:5 templates/news/week_list.html:11
+msgid "news"
+msgstr "ニュース"
+
+#: templates/base.html:85 templates/base.html:204 templates/index.html:87
+#: templates/index.html:206 templates/news/tokan_detail.html:12
+#: templates/news/tokan_list.html:11
+msgid "tks news"
+msgstr "東京韓商ニュース"
+
+#: templates/base.html:88 templates/base.html:207 templates/index.html:90
+#: templates/index.html:209 templates/news/tax_detail.html:12
+#: templates/news/tax_list.html:11
+msgid "tokyo taxbiz club"
+msgstr "東京税経クラブ"
+
+#: templates/base.html:91 templates/base.html:210 templates/index.html:93
+#: templates/index.html:212 templates/news/week_list.html:11
+msgid "japan biz brife"
+msgstr "日本経済週刊動向（韓国大使館提供）"
+
+#: templates/base.html:94 templates/base.html:213 templates/base.html:220
+#: templates/index.html:96 templates/index.html:215 templates/index.html:444
+msgid "gallery"
+msgstr "ギャラリー"
+
+#: templates/base.html:101 templates/calendar/task_detail.html:5
+#: templates/calendar/task_detail.html:11 templates/calendar/task_list.html:5
+#: templates/calendar/task_list.html:11 templates/index.html:103
+#: templates/index.html:222 templates/index.html:378
+msgid "schedule"
+msgstr "スケジュール"
+
+#: templates/base.html:107 templates/base.html:112 templates/base.html:123
+#: templates/base.html:226 templates/base.html:231 templates/base.html:242
+#: templates/index.html:109 templates/index.html:114 templates/index.html:125
+#: templates/index.html:228 templates/index.html:233 templates/index.html:244
+#: templates/index.html:353 templates/index.html:428
+#: templates/recruit/detail.html:5 templates/recruit/detail.html:11
+#: templates/recruit/list.html:5 templates/recruit/list.html:11
+msgid "recruit"
+msgstr "リクルート"
+
+#: templates/base.html:115 templates/base.html:234 templates/index.html:117
+#: templates/index.html:236
+msgid "recruit application"
+msgstr "求人掲載申請"
+
+#: templates/base.html:129 templates/base.html:248 templates/index.html:131
+#: templates/index.html:250
+msgid "member"
+msgstr "会員"
+
+#: templates/base.html:134 templates/base.html:253 templates/index.html:136
+#: templates/index.html:255 templates/index.html:365
+msgid "inquiry"
+msgstr "問合せ"
+
+#: templates/base.html:142 templates/base.html:259 templates/index.html:144
+#: templates/index.html:261
+msgid "mypage"
+msgstr "マイページ"
+
+#: templates/base.html:147 templates/base.html:264 templates/index.html:149
+#: templates/index.html:266
+msgid "logout"
+msgstr "ログアウト"
+
+#: templates/base.html:289 templates/base.html:295 templates/base.html:301
+#: templates/calendar/task_detail.html:5 templates/calendar/task_list.html:5
+#: templates/index.html:7 templates/index.html:292 templates/index.html:299
+#: templates/news/tax_detail.html:5 templates/news/tax_list.html:5
+#: templates/news/tokan_detail.html:5 templates/news/tokan_list.html:5
+#: templates/news/week_detail.html:5 templates/news/week_list.html:5
+#: templates/recruit/detail.html:5 templates/recruit/list.html:5
+msgid "tks"
+msgstr "東京韓国商工会議所"
+
+#: templates/base.html:314
+msgid "prev"
+msgstr "前へ"
+
+#: templates/base.html:317
+msgid "next"
+msgstr "次へ"
+
+#: templates/base.old.html:55
+msgid "Toggle Navigation"
+msgstr ""
+
+#: templates/base.old.html:134
+msgid "Powered by"
+msgstr ""
+
+#: templates/base.old.html:137
+msgid "and"
+msgstr ""
+
+#: templates/base.old.html:140
+msgid "Theme by"
+msgstr ""
+
+#: templates/base.old.html:143
+msgid "View Mobile Site"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:29
+#: templates/blog/blog_post_list.html:85
+msgid "Posted by"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:43
+#: templates/blog/blog_post_list.html:136
+#: templates/generic/includes/comments.html:3
+msgid "Comments"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:46
+#: templates/blog/blog_post_list.html:140
+#, python-format
+msgid "%(comments_count)s comment"
+msgid_plural "%(comments_count)s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/blog/blog_post_detail.html:74
+#: templates/blog/blog_post_list.html:121
+#: templates/blog/includes/filter_panel.html:56
+msgid "Tags"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:93
+msgid "Share on Twitter"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:94
+msgid "Share on Facebook"
+msgstr ""
+
+#: templates/blog/blog_post_detail.html:119
+msgid "Related posts"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:4 templates/blog/blog_post_list.html:22
+msgid "Blog"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:31
+msgid "Tag:"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:33
+msgid "Category:"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:37
+msgid "Author:"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:50
+msgid "Viewing posts tagged"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:52
+msgid "Viewing posts for the category"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:54
+msgid "Viewing posts from"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:57
+msgid "Viewing posts by"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:91
+msgid "in"
+msgstr ""
+
+#: templates/blog/blog_post_list.html:130 templates/search_results.html:47
+msgid "read more"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:6
+msgid "Recent Posts"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:27
+msgid "Archive"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:43
+msgid "Categories"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:72
+msgid "Authors"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:84
+msgid "Feeds"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:86
+#: templates/blog/includes/filter_panel.html:90
+#: templates/blog/includes/filter_panel.html:94
+#: templates/blog/includes/filter_panel.html:98
+msgid "RSS"
+msgstr ""
+
+#: templates/blog/includes/filter_panel.html:87
+#: templates/blog/includes/filter_panel.html:91
+#: templates/blog/includes/filter_panel.html:95
+#: templates/blog/includes/filter_panel.html:99
+msgid "Atom"
+msgstr ""
+
+#: templates/calendar/task_detail.html:30 templates/news/tax_detail.html:21
+#: templates/news/tokan_detail.html:36 templates/news/week_detail.html:26
+#: templates/recruit/detail.html:30
+msgid "file download"
+msgstr "添付ファイルをダウンロード"
+
+#: templates/calendar/task_detail.html:34
+#: templates/member/member_detail.html:42 templates/news/tax_detail.html:25
+#: templates/news/tokan_detail.html:40 templates/news/week_detail.html:30
+#: templates/recruit/detail.html:34
+msgid "list"
+msgstr "一覧"
+
+#: templates/calendar/task_list.html:18 templates/news/tax_list.html:18
+#: templates/news/tokan_list.html:18 templates/news/week_list.html:18
+#: templates/recruit/list.html:18
+msgid "number"
+msgstr "番号"
+
+#: templates/calendar/task_list.html:19 templates/inquiry/inquiry.html:11
+#: templates/news/tax_list.html:19 templates/news/tokan_list.html:19
+#: templates/news/week_list.html:19
+msgid "title"
+msgstr "件名"
+
+#: templates/calendar/task_list.html:19
+msgid "place"
+msgstr "場所"
+
+#: templates/calendar/task_list.html:20
+msgid "task_date"
+msgstr "行事日"
+
+#: templates/email/account_approve.html:3 templates/email/account_approve.txt:3
+msgid "Hey there, a new account has been created and requires activation."
+msgstr ""
+
+#: templates/email/account_approve.html:5 templates/email/account_approve.txt:5
+msgid "Name"
+msgstr ""
+
+#: templates/email/account_approve.html:6 templates/email/account_approve.txt:6
+msgid "Email"
+msgstr ""
+
+#: templates/email/account_approve.html:11
+#: templates/email/account_approve.txt:9 templates/email/signup_verify.html:4
+#: templates/email/signup_verify.txt:4
+msgid "Please use the link below to activate it."
+msgstr ""
+
+#: templates/email/account_approve_subject.txt:2
+msgid "An account requires activation"
+msgstr ""
+
+#: templates/email/account_approved.html:3
+#: templates/email/account_approved.txt:3
+msgid "Hey there, your account has been activated."
+msgstr ""
+
+#: templates/email/account_approved.html:4
+#: templates/email/account_approved.txt:4
+msgid "Please use the link below to log in."
+msgstr ""
+
+#: templates/email/account_approved_subject.txt:2
+msgid "Your account has been activated"
+msgstr ""
+
+#: templates/email/comment_notification.html:6
+msgid "A new comment has been posted on"
+msgstr ""
+
+#: templates/email/comment_notification.html:10
+#, python-format
+msgid ""
+"\n"
+"    At %(submit_date)s %(user_name)s wrote:\n"
+"    "
+msgstr ""
+
+#: templates/email/comment_notification.txt:7
+#, python-format
+msgid ""
+"\n"
+"At %(submit_date)s %(user_name)s wrote:\n"
+msgstr ""
+
+#: templates/email/password_reset_verify.html:3
+#: templates/email/password_reset_verify.txt:3
+msgid "Hey there, the password reset form was used for your account."
+msgstr ""
+
+#: templates/email/password_reset_verify.html:4
+#: templates/email/password_reset_verify.txt:4
+msgid "Please use the link below to log in and update your password."
+msgstr ""
+
+#: templates/email/password_reset_verify.html:6
+#: templates/email/password_reset_verify.txt:6
+msgid ""
+"If you didn't request for your password to be reset, please ignore this "
+"email."
+msgstr ""
+
+#: templates/email/password_reset_verify_subject.txt:2
+msgid "Reset your password"
+msgstr ""
+
+#: templates/email/signup_verify.html:3 templates/email/signup_verify.txt:3
+msgid "Hey there, thanks for creating your account."
+msgstr ""
+
+#: templates/email/signup_verify_subject.txt:2
+msgid "Activate your account"
+msgstr ""
+
+#: templates/errors/404.html:6 templates/errors/404.html:10
+#: templates/errors/404.html:15
+msgid "Page not found"
+msgstr ""
+
+#: templates/errors/404.html:16
+msgid "The page you requested does not exist."
+msgstr ""
+
+#: templates/errors/500.html:6 templates/errors/500.html:10
+#: templates/errors/500.html:15
+msgid "Error"
+msgstr ""
+
+#: templates/errors/500.html:16
+msgid "Sorry, an error occurred."
+msgstr ""
+
+#: templates/generic/includes/comment.html:30
+msgid "Link"
+msgstr ""
+
+#: templates/generic/includes/comment.html:33
+#: templates/generic/includes/comment.html:49
+msgid "Reply"
+msgstr ""
+
+#: templates/generic/includes/comment.html:55
+msgid "Comment deleted"
+msgstr ""
+
+#: templates/generic/includes/comment.html:57
+msgid "Comment awaiting approval"
+msgstr ""
+
+#: templates/generic/includes/comment.html:71
+msgid "There are currently no comments"
+msgstr ""
+
+#: templates/generic/includes/comments.html:17
+msgid "New Comment"
+msgstr ""
+
+#: templates/generic/includes/comments.html:25
+msgid "Comment"
+msgstr ""
+
+#: templates/generic/includes/rating.html:5
+msgid "Current rating"
+msgstr ""
+
+#: templates/generic/includes/rating.html:7
+msgid "Currently unrated"
+msgstr ""
+
+#: templates/generic/includes/rating.html:17
+msgid "Rate"
+msgstr ""
+
+#: templates/includes/editable_form.html:17
+msgid "Cancel"
+msgstr ""
+
+#: templates/includes/editable_form.html:25
+msgid "Edit"
+msgstr ""
+
+#: templates/includes/pagination.html:7
+msgid "Page"
+msgstr ""
+
+#: templates/includes/pagination.html:7
+msgid "of"
+msgstr ""
+
+#: templates/includes/search_form.html:5
+msgid "Search"
+msgstr ""
+
+#: templates/includes/search_form.html:14
+msgid "Everything"
+msgstr ""
+
+#: templates/includes/search_form.html:26
+msgid "Go"
+msgstr ""
+
+#: templates/index.html:169
+msgid "home"
+msgstr ""
+
+#: templates/index.html:291 templates/index.html:298
+msgid "japan korea business bridge"
+msgstr "日韓ビジネスをつなげる架け橋"
+
+#: templates/index.html:347
+msgid "tks intro"
+msgstr "東京韓商紹介"
+
+#: templates/index.html:359
+#, fuzzy
+#| msgid "member"
+msgid "member page"
+msgstr "会員ページ"
+
+#: templates/inquiry/inquiry.html:10
+msgid "reply email"
+msgstr "返信用メールアドレス"
+
+#: templates/inquiry/inquiry.html:12
+msgid "inquiry_detail"
+msgstr "問い合わせ内容"
+
+#: templates/inquiry/inquiry.html:13
+msgid "send"
+msgstr "送信"
+
+#: templates/member/member_detail.html:9 templates/member/member_detail.html:11
+msgid "photo"
+msgstr "写真"
+
+#: templates/member/member_detail.html:13
+msgid "rank"
+msgstr "職位"
+
+#: templates/member/member_detail.html:14
+msgid "name"
+msgstr "姓名"
+
+#: templates/member/member_detail.html:15
+msgid "job_title"
+msgstr "役職"
+
+#: templates/member/member_detail.html:16
+msgid "member_company"
+msgstr "会員社名"
+
+#: templates/member/member_detail.html:17 templates/member/member_list.html:20
+msgid "biz type"
+msgstr "業種"
+
+#: templates/member/member_detail.html:18 templates/member/member_list.html:16
+msgid "president"
+msgstr "代表者名"
+
+#: templates/member/member_detail.html:19 templates/member/member_list.html:23
+#: templates/recruit/apply.html:11
+msgid "phone number"
+msgstr "電話番号"
+
+#: templates/member/member_detail.html:21 templates/recruit/apply.html:10
+#: templates/recruit/detail.html:22
+msgid "address"
+msgstr "住所"
+
+#: templates/member/member_list.html:13 templates/recruit/apply.html:9
+#: templates/recruit/detail.html:20 templates/recruit/list.html:19
+msgid "company name"
+msgstr "会社名"
+
+#: templates/news/tax_detail.html:30 templates/news/tokan_detail.html:45
+#: templates/news/week_detail.html:35
+msgid "need to login for read"
+msgstr "ログイン後に閲覧出来ます。"
+
+#: templates/news/tax_list.html:20 templates/news/tokan_list.html:20
+#: templates/news/week_list.html:20 templates/recruit/list.html:20
+msgid "created at"
+msgstr "登録日"
+
+#: templates/news/tax_list.html:27 templates/news/tokan_list.html:27
+#: templates/news/week_list.html:27
+msgid "click to read"
+msgstr "クリックして記事を見る"
+
+#: templates/news/tokan_detail.html:33
+msgid "link open"
+msgstr "リンクを開"
+
+#: templates/news/week_detail.html:12
+#, fuzzy
+#| msgid "japan biz brife"
+msgid "japan biz brief without amb"
+msgstr "日本経済週刊動向"
+
+#: templates/pages/form.html:29
+msgid "Submit"
+msgstr ""
+
+#: templates/recruit/apply.html:12
+msgid "recuruit detail"
+msgstr "募集内容"
+
+#: templates/recruit/apply.html:13
+msgid "attach file"
+msgstr "関連資料"
+
+#: templates/recruit/apply.html:14
+msgid "apply recruit"
+msgstr "上記の内容で申し込む"
+
+#: templates/recruit/apply.html:17
+#, fuzzy
+#| msgid "recruit application"
+msgid "recruit apply message"
+msgstr ""
+"記入後「上記の内容で申し込む」ボタンを押してください。<br />事務局で内容を確"
+"認した上、掲載致します。<br /> よろしくお願いいたします。"
+
+#: templates/recruit/detail.html:21
+msgid "tel"
+msgstr "連絡先"
+
+#: templates/recruit/detail.html:23
+msgid "recruit info"
+msgstr "求人情報"
+
+#: templates/search_results.html:5 templates/search_results.html:6
+#: templates/search_results.html:15
+msgid "Search Results"
+msgstr ""
+
+#: templates/search_results.html:22
+#, python-format
+msgid ""
+"\n"
+"No results were found in %(search_type)s matching your query: %(query)s\n"
+msgstr ""
+
+#: templates/search_results.html:26
+#, python-format
+msgid ""
+"\n"
+"Showing %(start)s to %(end)s of %(total)s results in %(search_type)s "
+"matching your query: %(query)s\n"
+msgstr ""
+
+#: templates/twitter/tweets.html:7
+msgid "Recent Tweets"
+msgstr ""
+
+#: tks/settings.py:120
+msgid "Japanese"
+msgstr ""
+
+#: tks/settings.py:121
+msgid "Korean"
+msgstr ""
+
+#~ msgid "biz_type"
+#~ msgstr "業種"

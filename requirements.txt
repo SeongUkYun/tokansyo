@@ -16,7 +16,7 @@ geopy==1.11.0
 grappelli-safe==0.4.5
 html5lib==0.9999999
 icalendar==3.0.1b2
-Mezzanine==4.2.0
+Mezzanine>=4.2.0
 oauthlib==2.0.0
 paramiko==1.17.2
 Pillow==3.3.1
@@ -30,3 +30,4 @@ requests-oauthlib==0.7.0
 six==1.10.0
 tzlocal==1.2.2
 django-simple-history==1.8.2
+django-modeltranslation>=0.12

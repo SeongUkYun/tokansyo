@@ -1,22 +1,23 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block head_title %}
-  <title>東京韓国商工会議所-リクルート</title>
+<title>{% trans "tks" %}-{% trans "recruit" %}</title>
 {% endblock %}
 	<!-- ///////// CONTENT START //////////////////////////////////////////////////////////////////// -->
 {% block main %}
 	<div id="sub_content">
 		<h2 class="tit_page">
-			<strong>リクルート</strong>
+      <strong>{% trans "recruit" %}</strong>
 			<span class="point"></span>
 		</h2>
 		<div class="board_lst">
 			<ul>
         <li class="header">
         <a href="">
-          <strong class="num_header">番号</strong>
-          <strong class="tit_header">会社名</strong>
-          <strong class="date_header">登録日</strong>
+          <strong class="num_header">{% trans "number" %}</strong>
+          <strong class="tit_header">{% trans "company name" %}</strong>
+          <strong class="date_header">{% trans "created at" %}</strong>
         </a>
         </li>
         {% for recruit in recruits %}

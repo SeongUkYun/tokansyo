@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block main %}
 <div id="sub_content">
@@ -6,10 +7,10 @@
     {{ form.non_field_errors }}
 
     <table>
-      <tr><td width="150px">返信用メールアドレス</td><td>{{ form.email }}</td></tr>
-      <tr><td>件名</td><td>{{ form.title }}</td></tr>
-      <tr><td>問い合わせ内容</td><td>{{ form.content }}</td></tr>
-      <tr><td></td><td><input type="submit" value="送信" /></td></tr>
+      <tr><td width="150px">{% trans "reply email" %}</td><td>{{ form.email }}</td></tr>
+      <tr><td>{% trans "title" %}</td><td>{{ form.title }}</td></tr>
+      <tr><td>{% trans "inquiry_detail" %}</td><td>{{ form.content }}</td></tr>
+      <tr><td></td><td><input type="submit" value="{% trans "send" %}" /></td></tr>
     </table>
   </form>
 </div>

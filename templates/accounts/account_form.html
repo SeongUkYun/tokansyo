@@ -2,7 +2,7 @@
 {% load i18n mezzanine_tags %}
 
 {% block meta_title %}{{ title }}{% endblock %}
-{% block title %}ログイン{% endblock %}<br /><br />
+{% block title %}{% trans "login" %}{% endblock %}<br /><br />
 {% block body_id %}account{% endblock %}
 
 {% block breadcrumb_menu %}
@@ -19,8 +19,8 @@
     <legend>{{ title }}</legend>
     {% csrf_token %}
     <table>
-      <tr><th align="center">携帯番号</th><td>：{{ form.username }}</td></tr>
-      <tr><th align="center">パスワード</th><td>：{{ form.password }}</td></tr>
+      <tr><th align="center">{% trans "cellphone" %}</th><td>：{{ form.username }}</td></tr>
+      <tr><th align="center">{% trans "password" %}</th><td>：{{ form.password }}</td></tr>
     </table>
     <div class="form-actions">
         {% block account_form_actions %}
@@ -30,6 +30,6 @@
     </fieldset>
 </form>
 <br /><br />
-<a href="/member/password/"><font color="red">初めての方はここをクリックしてログイン申請をしてください。</font></a>
+<a href="/member/password/"><font color="red">{% trans "the first login apply" %}</font></a>
 <br /><br />
 {% endblock %}

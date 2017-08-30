@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block main %}
 <div id="sub_content">
@@ -9,17 +10,17 @@
         <strong>#</strong>
       </div>
       <div class="col-xs-6 col-md-3">
-        <strong>会社名</strong>
+        <strong>{% trans "company name" %}</strong>
       </div>
       <div class="col-xs-4 col-md-1">
-        <strong>代表者名</strong>
+        <strong>{% trans "president" %}</strong>
       </div>
       <div class="col-xs-12 col-md-5">
         <div class="col-xs-7 col-md-7">
-          <strong>業種</strong>
+          <strong>{% trans "biz type" %}</strong>
         </div>
         <div class="col-xs-5 col-md-5">
-          <strong>電話番号</strong>
+          <strong>{% trans "phone number" %}</strong>
         </div>
       </div>
     </div>

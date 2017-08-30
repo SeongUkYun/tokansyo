@@ -83,7 +83,7 @@ from django.utils.translation import ugettext_lazy as _
 
 # If True, the django-modeltranslation will be added to the
 # INSTALLED_APPS setting.
-USE_MODELTRANSLATION = False
+USE_MODELTRANSLATION = True
 
 
 ########################
@@ -116,10 +116,14 @@ USE_TZ = True
 LANGUAGE_CODE = "ja"
 
 # Supported languages
+gettext = lambda s: s
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ja'
 LANGUAGES = (
-    ('ja', _('Japanese')),
-    ('en', _('English')),
+    ('ja', gettext('Japanese')),
+    ('ko', gettext('Korean')),
 )
+MODELTRANSLATION_LANGUAGES = ('ja', 'ko')
+MODELTRANSLATION_AUTO_POPULATE = 'required'
 
 USE_I18N = True
 
@@ -140,7 +144,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+# USE_I18N = False
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -243,6 +247,7 @@ if DJANGO_VERSION < (1, 9):
 ################
 
 INSTALLED_APPS = (
+    "modeltranslation",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
