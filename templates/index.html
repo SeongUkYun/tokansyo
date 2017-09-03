@@ -278,6 +278,21 @@
 						</strong>
 					</li>
           {% endif %}
+          <li class="m8">
+            <strong>
+              <form action="{% url "set_language" %}" method="post">{% csrf_token %}
+                <fieldset>
+                  {% if LANGUAGE_CODE == 'ko' %}
+                    <input type="hidden" name="language" value="ja">
+                    <button type="submit" class="" onclick="" accesskey="b" style="margin-left: 10px; font-size: 17px; color: white">日本語</button>
+                  {% else %}
+                    <input type="hidden" name="language" value="ko">
+                    <button type="submit" class="" onclick="" accesskey="b" style="margin-left: 10px; font-size: 17px; color: white">한국어</button>
+                  {% endif %}
+                </fieldset>
+              </form>
+            </strong>
+          </li>
 				</ul>
 			</div>
 		</div>
