@@ -511,3 +511,6 @@ Animations
         filter: alpha(opacity=00); /* For IE8 and earlier */
     }
 }
+
+p.resizeimage { width: 100%; }
+p.resizeimage img { width: 100%; }
