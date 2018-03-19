@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
-from simple_history.models import HistoricalRecords
+# from simple_history.models import HistoricalRecords
 
 
 class member(models.Model):
@@ -51,7 +51,7 @@ class member(models.Model):
         'created time', auto_now_add=True, blank=True, null=True)
     updated_at = models.DateTimeField(
         'updated time', auto_now=True, blank=True, null=True)
-    history = HistoricalRecords(table_name='member_history')
+    # history = HistoricalRecords(table_name='member_history')
 
     def __unicode__(self):
         return self.name
