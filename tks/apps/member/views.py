@@ -82,31 +82,19 @@ class ApplyCompleteView(TemplateView):
         context = super(ApplyCompleteView, self).get_context_data(**kwargs)
 
         tel = self.request.GET['tel'].replace('-', '')
-        password = self.request.GET['password']
-        try:
-            user = User.objects.get(username=tel)
-            member = Member.objects.get(auth_user=user)
-            if not member.init_entry:
-                member.init_entry = True
-                member.save()
-                user.set_password(password)
-                user.is_active = False
-                user.save()
-                context['message'] = '申込受付を完了しました。'
+        name = self.request.GET['password']
 
-                content = '携帯番号{0}からパスワード設定申請が届きました。'.format(tel)
-                message = EmailMessage(
-                    'パスワード設定申請が届きました。',
-                    content,
-                    'tks@tokansho.org',
-                    ['tks@tokansho.org'],
-                    ['tokansho@gmail.com'],
-                    headers={'Reply-To': 'tks@tokansho.org'})
-                message.send()
-            else:
-                context['message'] = '既に申込されております。事務所からのご連絡をお待ち下さい。'
-        except:
-            raise
+        context['message'] = '申込受付を完了しました。'
+
+        content = '{0}様からログイン設定申請が届きました。\n連絡先電話番号は{1}です。'.format(name, tel)
+        message = EmailMessage(
+            'ログイン設定申請が届きました。',
+            content,
+            'tks@tokansho.org',
+            ['tks@tokansho.org'],
+            ['tokansho@gmail.com'],
+            headers={'Reply-To': 'tks@tokansho.org'})
+        message.send()
 
         return context
 

@@ -33,7 +33,7 @@ msgstr "パスワード"
 
 #: templates/accounts/account_form.html:33
 msgid "the first login apply"
-msgstr "初めての方はここをクリックしてログイン申請をしてください。"
+msgstr "ログイン手続きをされていない方、パスワードをお忘れの方はクリックしてください。"
 
 #: templates/accounts/account_login.html:7
 msgid ""
